@@ -3,7 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="device" class="com.demo.XmlBeanFactory.Device"/>
-    <alias name="device" alias="myDevice" />
+    <bean id="device1" class="com.demo.ApplicationContext.Device"/>
+    <alias name="device1" alias="myDevice1" />
+
+    <bean id="device2" class="com.demo.ApplicationContext.Device"/>
+    <alias name="device2" alias="myDevice2" />
 
 </beans>
