@@ -1,4 +1,4 @@
-package com.demo;
+package com.demo.XmlBeanFactory;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;

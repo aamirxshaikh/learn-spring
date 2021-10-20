@@ -1,4 +1,4 @@
-package com.demo;
+package com.demo.XmlBeanFactory;
 
 public class Device {
     private int id = 1;
