@@ -6,16 +6,16 @@
     <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
 
     <bean id="device1" class="com.demo.ApplicationContext.Device">
-        <property name="id" value="1" />
-        <property name="device" value="Device 1" />
-        <property name="description" value="Description 1" />
+        <constructor-arg index="0" value="1"/>
+        <constructor-arg index="1"  value="Device 1"/>
+        <constructor-arg index="2" value="Description 2"/>
     </bean>
     <alias name="device1" alias="myDevice1" />
 
     <bean id="device2" class="com.demo.ApplicationContext.Device">
-        <property name="id" value="2" />
-        <property name="device" value="Device 2" />
-        <property name="description" value="Description 2" />
+        <constructor-arg index="0" value="2"/>
+        <constructor-arg index="1" value="Device 2"/>
+        <constructor-arg index="2" value="Description 2"/>
     </bean>
     <alias name="device2" alias="myDevice2" />
 

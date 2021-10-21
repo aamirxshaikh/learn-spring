@@ -8,8 +8,10 @@ public class Device {
     private String device;
     private String description;
 
-    Device() {
-        System.out.println("Object created");
+    Device(int id, String device, String description) {
+        this.id = id;
+        this.device = device;
+        this.description = description;
     }
 
     public int getId() {
