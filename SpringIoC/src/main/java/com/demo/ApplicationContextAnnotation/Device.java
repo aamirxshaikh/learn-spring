@@ -5,6 +5,10 @@ public class Device {
     private String device;
     private String description;
 
+    Device() {
+        System.out.println("Object created");
+    }
+
     public int getId() {
         return id;
     }
@@ -36,5 +40,13 @@ public class Device {
                 ", device='" + device + '\'' +
                 ", description='" + description + '\'' +
                 '}';
+    }
+
+    public  void initBean() throws Exception {
+        System.out.println("initBean()");
+    }
+
+    public void destroyBean() throws Exception {
+        System.out.println("destroyBean()");
     }
 }
