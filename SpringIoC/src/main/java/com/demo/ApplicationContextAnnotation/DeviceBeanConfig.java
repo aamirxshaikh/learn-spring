@@ -7,11 +7,23 @@ import org.springframework.context.annotation.Configuration;
 public class DeviceBeanConfig {
     @Bean(name = "device1", initMethod = "initBean", destroyMethod = "destroyBean")
     public Device DeviceBeanOne() {
-        return new Device();
+        Device device = new Device();
+
+        device.setId(1);
+        device.setDevice("Device 1");
+        device.setDescription("Description 1");
+
+        return device;
     }
 
     @Bean(name = "device2", initMethod = "initBean", destroyMethod = "destroyBean")
     public Device DeviceBeanTwo() {
-        return new Device();
+        Device device = new Device();
+
+        device.setId(2);
+        device.setDevice("Device 2");
+        device.setDescription("Description 2");
+
+        return device;
     }
 }
