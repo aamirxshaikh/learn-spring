@@ -1,8 +1,5 @@
 package com.demo.ApplicationContextAnnotation;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class Device {
     private int id;
     private String device;

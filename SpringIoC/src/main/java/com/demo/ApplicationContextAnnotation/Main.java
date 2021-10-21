@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 	    ApplicationContext applicationContext = new AnnotationConfigApplicationContext(DeviceBeanConfig.class);
 
-	    Device device = applicationContext.getBean(Device.class);
+	    Device device = (Device) applicationContext.getBean("DeviceBean");
 
 	    device.setId(1);
 	    device.setDevice("Device 1");
