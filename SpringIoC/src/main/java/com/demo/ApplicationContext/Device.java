@@ -1,5 +1,8 @@
 package com.demo.ApplicationContext;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class Device {
     private int id;
     private String device;
@@ -42,10 +45,12 @@ public class Device {
                 '}';
     }
 
+    @PostConstruct
     public  void initBean() throws Exception {
         System.out.println("initBean()");
     }
 
+    @PreDestroy
     public void destroyBean() throws Exception {
         System.out.println("destroyBean()");
     }
