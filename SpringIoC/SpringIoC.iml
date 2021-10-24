@@ -6,6 +6,9 @@
         <fileset id="fileset" name="ApplicationContext" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/applicationContext.xml</file>
           <file>file://$MODULE_DIR$/src/main/java/com/demo/ApplicationContextAnnotation/DeviceBeanConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/resources/autowiringApplicationContext.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/beanAutowiring.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/beanAutowiringAnnotation.xml</file>
         </fileset>
       </configuration>
     </facet>

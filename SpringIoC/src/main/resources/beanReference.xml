@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="deviceBean" class="com.demo.BeanReference.Device">
+        <constructor-arg index="0" value="1"/>
+        <constructor-arg index="1" value="Windows"/>
+        <constructor-arg index="2" name="ram">
+            <bean class="com.demo.BeanReference.Ram">
+                <property name="pins" value="500"/>
+                <property name="brand" value="Intel"/>
+                <property name="ramType" value="DDR4"/>
+                <property name="memory" value="8 GB"/>
+                <property name="memorySpeed" value="3.05 GHz"/>
+            </bean>
+        </constructor-arg>
+    </bean>
+</beans>
