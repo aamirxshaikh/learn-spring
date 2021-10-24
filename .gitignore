@@ -1,10 +1,10 @@
 /.metadata/
-SpringIoC/src/main/java/com/demo/BeanAutowiringAnnotation
+#SpringIoC/src/main/java/com/demo/BeanAutowiringAnnotation
 
-SpringIoC/src/main/resources/beanAutowiringAnnotation.xml
+#SpringIoC/src/main/resources/beanAutowiringAnnotation.xml
 
-SpringIoC/bin/src/main/java/com/demo/BeanAutowiringAnnotation
+#SpringIoC/bin/src/main/java/com/demo/BeanAutowiringAnnotation
 
-SpringIoC/target/classes/com/demo/BeanAutowiringAnnotation
+#SpringIoC/target/classes/com/demo/BeanAutowiringAnnotation
 
-SpringIoC/target/classes/beanAutowiringAnnotation.xml
+#SpringIoC/target/classes/beanAutowiringAnnotation.xml
