@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68050c1c-f9df-4846-baee-2398b0d00e1c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringIoC/src/main/java/com/demo/BeanReference/Device.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringIoC/src/main/java/com/demo/BeanReference/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringIoC/src/main/java/com/demo/BeanReference/Ram.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringIoC/src/main/resources/beanReference.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringIoC/target/classes/beanAutowiring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringIoC/target/classes/beanAutowiringAnnotation.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringIoC/target/classes/beanReference.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringIoC/target/classes/com/demo/BeanReference/Device.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringIoC/target/classes/com/demo/BeanReference/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringIoC/target/classes/com/demo/BeanReference/Ram.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringIoC/SpringIoC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringIoC/SpringIoC.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +38,7 @@
       <option name="presentableId" value="Default" />
       <updated>1634713190708</updated>
       <workItem from="1634713194055" duration="392000" />
-      <workItem from="1635053516058" duration="629000" />
+      <workItem from="1635053516058" duration="755000" />
     </task>
     <servers />
   </component>

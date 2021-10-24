@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="deviceBean" class="com.demo.BeanAutowiring.Device" autowire="constructor">
+        <constructor-arg index="0" name="series" value="500"/>
+        <constructor-arg index="1" name="operatingSystem" value="Windows 10"/>
+    </bean>
+
+    <bean id="ram" class="com.demo.BeanAutowiring.Ram">
+        <constructor-arg name="pins" value="500"/>
+        <constructor-arg name="brand" value="Intel"/>
+        <constructor-arg name="ramType" value="DDR4"/>
+        <constructor-arg name="memory" value="8 GB"/>
+        <constructor-arg name="memorySpeed" value="3.05 GHz"/>
+    </bean>
+</beans>
