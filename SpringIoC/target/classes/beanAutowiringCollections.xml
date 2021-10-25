@@ -27,6 +27,7 @@
         <property name="series" value="200" />
         <property name="operatingSystem" value="Windows 11" />
 
+<!--        auto by type-->
 <!--        <property name="availableHddOptions">-->
 <!--            <set>-->
 <!--                <ref bean="hdd500GB"/>-->
@@ -44,6 +45,7 @@
 
     </bean>
 
+<!--    auto by type-->
     <bean id="hdd500GB" class="com.demo.BeanAutowiringCollectionsXml.Hdd">
         <property name="storageCapacity" value="500 GB" />
         <property name="hddInterface" value="USB 3.0" />

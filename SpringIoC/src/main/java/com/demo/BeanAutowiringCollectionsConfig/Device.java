@@ -1,4 +1,4 @@
-package com.demo.BeanAutowiringCollectionsXml;
+package com.demo.BeanAutowiringCollectionsConfig;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -53,7 +53,7 @@ public class Device {
     public void setRam(Ram ram) {
         this.ram = ram;
 
-        System.out.println("Setter method");
+        System.out.println("Ram Setter method");
     }
 
     public Processor getProcessor() {
@@ -63,6 +63,8 @@ public class Device {
     @Autowired(required = false)
     public void setProcessor(Processor processor) {
         this.processor = processor;
+
+        System.out.println("Processor Setter method");
     }
 
     public Set<Hdd> getAvailableHddOptions() {
@@ -72,6 +74,8 @@ public class Device {
     @Autowired(required = false)
     public void setAvailableHddOptions(Set<Hdd> availableHddOptions) {
         this.availableHddOptions = availableHddOptions;
+
+        System.out.println("Hdd Setter method");
     }
 
     public List<String> getInfo() {
@@ -81,6 +85,8 @@ public class Device {
     @Autowired(required = false)
     public void setInfo(List<String> info) {
         this.info = info;
+
+        System.out.println("Info Setter method");
     }
 
     @Override
