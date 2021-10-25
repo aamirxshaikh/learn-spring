@@ -1,4 +1,4 @@
-package com.demo.BeanAutowiringMultipleDependencies;
+package com.demo.BeanAutowiringCollectionsXml;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -50,7 +50,7 @@ public class Device {
     }
 
     @Autowired(required = false)
-    @Qualifier("ramBean8GB")
+    @Qualifier("ramBean")
     public void setRam(Ram ram) {
         this.ram = ram;
 

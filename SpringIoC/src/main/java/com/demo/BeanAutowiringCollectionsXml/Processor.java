@@ -1,9 +1,9 @@
-package com.demo.BeanAutowiringMultipleDependencies;
+package com.demo.BeanAutowiringCollectionsXml;
 
 public class Processor {
     private String name;
     private String cpuClock;
-    private String  cacheSpeed;
+    private String cacheSpeed;
 
     public String getName() {
         return name;

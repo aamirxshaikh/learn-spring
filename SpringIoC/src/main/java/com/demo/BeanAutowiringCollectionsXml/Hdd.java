@@ -1,4 +1,4 @@
-package com.demo.BeanAutowiringMultipleDependencies;
+package com.demo.BeanAutowiringCollectionsXml;
 
 public class Hdd {
     private String storageCapacity;
