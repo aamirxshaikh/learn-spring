@@ -1,6 +1,6 @@
-package com.demo;
+package com.demo.AspectConfigXml;
 
-import com.demo.Pointcuts.Product;
+import com.demo.AspectConfigXml.Pointcuts.Product;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

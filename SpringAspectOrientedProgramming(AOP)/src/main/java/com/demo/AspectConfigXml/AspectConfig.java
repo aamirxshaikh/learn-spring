@@ -1,4 +1,4 @@
-package com.demo;
+package com.demo.AspectConfigXml;
 
 import org.aspectj.lang.JoinPoint;
 
