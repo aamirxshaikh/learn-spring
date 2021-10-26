@@ -1,12 +1,12 @@
-package com.demo.AspectConfigXml;
+package com.demo.AspectConfigAnnotation;
 
-import com.demo.AspectConfigXml.Pointcuts.Product;
+import com.demo.AspectConfigAnnotation.Pointcuts.Product;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContextXml.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContextAnnotation.xml");
 
         Product product = (Product) applicationContext.getBean("product");
 
