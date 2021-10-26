@@ -14,5 +14,9 @@ public class Main {
 
         System.out.println(product.toString());
         System.out.println(product.getProductName());
+
+        product.setProductQuantity(5);
+
+        System.out.println(product.getProductQuantity());
     }
 }

@@ -18,7 +18,9 @@
         <aop:aspect id="advise" ref="pointcutAspect">
 
             <!-- Spring AOP advises -->
-            <aop:pointcut id="pointcutExpression" expression="execution(* com.demo.Pointcuts.Product.*(..))"/>
+<!--            <aop:pointcut id="pointcutExpression" expression="execution(* com.demo.Pointcuts.Product.*(..))"/>-->
+<!--            <aop:pointcut id="pointcutExpression" expression="execution(* com.demo.Pointcuts.Product.*())"/>-->
+            <aop:pointcut id="pointcutExpression" expression="execution(* com.demo.Pointcuts.Product.*(int))"/>
             <aop:before pointcut-ref="pointcutExpression" method="print" />
 
         </aop:aspect>

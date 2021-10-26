@@ -1,7 +1,12 @@
 package com.demo;
 
+import org.aspectj.lang.JoinPoint;
+
 public class AspectConfig {
-    public void print() {
+//    cross-cutting concern
+    public void print(JoinPoint joinPoint) {
+        System.out.println("Invoked " + joinPoint.getSignature().getName());
+
         System.out.println("$$$$$$$$$$$$$$$$");
     }
 }
