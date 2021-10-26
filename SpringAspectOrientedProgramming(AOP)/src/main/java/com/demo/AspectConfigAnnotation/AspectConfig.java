@@ -9,7 +9,7 @@ import org.aspectj.lang.annotation.Pointcut;
 public class AspectConfig {
 //    cross-cutting concern
 
-    @Pointcut("execution(* com.demo.AspectConfigAnnotation.Pointcuts.Product.*(..))")
+    @Pointcut("execution(void com.demo.AspectConfigAnnotation.Pointcuts.*.*())")
     private void pointcutExpression() {}
 
     @Before("pointcutExpression()")

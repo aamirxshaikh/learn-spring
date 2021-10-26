@@ -1,6 +1,7 @@
 package com.demo.AspectConfigAnnotation;
 
 import com.demo.AspectConfigAnnotation.Pointcuts.Product;
+import com.demo.AspectConfigAnnotation.Pointcuts.ProductList;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -8,15 +9,15 @@ public class Main {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContextAnnotation.xml");
 
-        Product product = (Product) applicationContext.getBean("product");
+        Product product1 = (Product) applicationContext.getBean("product1");
+        Product product2 = (Product) applicationContext.getBean("product2");
 
-        product.printProductDetails();
+        ProductList productList = (ProductList) applicationContext.getBean("productList");
 
-        System.out.println(product.toString());
-        System.out.println(product.getProductName());
+        product1.getProductDetails();
+        product2.getProductDetails();
 
-        product.setProductQuantity(5);
-
-        System.out.println(product.getProductQuantity());
+        productList.getNumberOfProducts();
+        productList.getProductList();
     }
 }

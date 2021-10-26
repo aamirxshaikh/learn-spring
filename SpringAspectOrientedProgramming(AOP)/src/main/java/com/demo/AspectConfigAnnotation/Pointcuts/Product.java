@@ -52,7 +52,7 @@ public class Product {
     }
 
 //    concern/join point
-    public void printProductDetails() {
+    public void getProductDetails() {
         SimpleDateFormat formatter = new SimpleDateFormat("MMM dd yyyy - HH:mm:ss");
         Date date = new Date();
 

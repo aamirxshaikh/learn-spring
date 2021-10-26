@@ -12,11 +12,27 @@
 
     <bean id="pointcutAspect" class="com.demo.AspectConfigAnnotation.AspectConfig"/>
 
-    <bean id="product" class="com.demo.AspectConfigAnnotation.Pointcuts.Product">
+    <bean id="product1" class="com.demo.AspectConfigAnnotation.Pointcuts.Product">
         <property name="productId" value="1" />
         <property name="productName" value="Product 1" />
         <property name="productPrice" value="99.99" />
         <property name="productQuantity" value="3" />
+    </bean>
+
+    <bean id="product2" class="com.demo.AspectConfigAnnotation.Pointcuts.Product">
+        <property name="productId" value="2" />
+        <property name="productName" value="Product 2" />
+        <property name="productPrice" value="199.99" />
+        <property name="productQuantity" value="1" />
+    </bean>
+
+    <bean id="productList" class="com.demo.AspectConfigAnnotation.Pointcuts.ProductList">
+        <property name="products">
+            <list>
+                <ref bean="product1" />
+                <ref bean="product2" />
+            </list>
+        </property>
     </bean>
 
 </beans>
