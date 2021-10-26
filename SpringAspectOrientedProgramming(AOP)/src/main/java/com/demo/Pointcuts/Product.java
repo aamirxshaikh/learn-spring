@@ -50,4 +50,12 @@ public class Product {
                 ", productQuantity=" + productQuantity +
                 '}';
     }
+
+//    concern/join point
+    public void printProductDetails() {
+        SimpleDateFormat formatter = new SimpleDateFormat("MMM dd yyyy - HH:mm:ss");
+        Date date = new Date();
+
+        System.out.format("Product details : \n Product : %s \n At : %s \n %s \n", getProductName(), formatter.format((date)), toString());
+    }
 }
