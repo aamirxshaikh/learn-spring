@@ -30,4 +30,12 @@ public class ProductList {
             System.out.println(product.getProductId() + " " + product.getProductName() + " " + product.getProductPrice() + " " + product.getProductQuantity());
         }
     }
+
+    public void addProductToList(Product product) {
+        this.products.add(product);
+    }
+
+    public void addProductToListAtIndex(int index, Product product) {
+        this.products.add(index, product);
+    }
 }
