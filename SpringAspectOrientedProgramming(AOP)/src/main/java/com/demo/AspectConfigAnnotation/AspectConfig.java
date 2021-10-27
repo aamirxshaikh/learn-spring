@@ -16,8 +16,14 @@ public class AspectConfig {
     @Pointcut("execution(public * *.get*(..))")
     private void getPointcut() {}
 
-    @Pointcut("execution(* *.add*(..))")
+    @Pointcut("execution(* *.add*(int, com.demo.AspectConfigAnnotation.Pointcuts.Product))")
     private void addPointcut() {}
+
+    @Pointcut("within(com.demo.AspectConfigAnnotation.Pointcuts.ProductList)")
+    private void listAllMethodsProductPointcut() {}
+
+    @Pointcut("within(com.demo.AspectConfigAnnotation.Pointcuts.*)")
+    private void anyClassMethodPointcut() {}
 
     @Before("getPointcut()")
     public void getMessage(JoinPoint joinPoint) {
@@ -31,6 +37,15 @@ public class AspectConfig {
         System.out.println("Performing add | Invoked by " + joinPoint.getSignature().getName());
 
         System.out.println("$$$$$$$ Add $$$$$$$$$");
+
+        System.out.println("Args " + Arrays.toString(joinPoint.getArgs()));
+    }
+
+    @Before("anyClassMethodPointcut()")
+    public void anyClassMethodMessage(JoinPoint joinPoint) {
+        System.out.println("anyClassMethod | Invoked by " + joinPoint.getSignature().getName());
+
+        System.out.println("$$$$$$$ anyClassMethod $$$$$$$$$");
 
         System.out.println("Args " + Arrays.toString(joinPoint.getArgs()));
     }

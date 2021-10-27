@@ -29,8 +29,9 @@ public class Main {
         product4.setProductQuantity(1);
 
         productList.addProductToList(product3);
+        System.out.println();
         productList.addProductToListAtIndex(0, product4);
-
+        System.out.println();
         productList.getProductList();
     }
 }
