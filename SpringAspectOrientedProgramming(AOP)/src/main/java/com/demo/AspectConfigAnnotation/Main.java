@@ -19,9 +19,5 @@ public class Main {
 
         product1.printProductDetails();
         product2.printProductDetails();
-
-        System.out.println("Calling setter");
-
-        product1.setProductQuantity(10);
     }
 }

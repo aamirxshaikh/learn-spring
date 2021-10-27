@@ -21,6 +21,7 @@ public class ProductList {
     }
 
 //    concern/join point
+    @Publishable
     public void displayProductList() {
         System.out.println("getProductList()");
 

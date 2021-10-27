@@ -52,6 +52,7 @@ public class Product {
     }
 
 //    concern/join point
+    @Publishable
     public void printProductDetails() {
         SimpleDateFormat formatter = new SimpleDateFormat("MMM dd yyyy - HH:mm:ss");
         Date date = new Date();
