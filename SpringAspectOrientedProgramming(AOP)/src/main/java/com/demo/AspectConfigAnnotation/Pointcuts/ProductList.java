@@ -14,14 +14,14 @@ public class ProductList {
     }
 
 //    concern/join point
-    public void getNumberOfProducts() {
+    public void printNumberOfProducts() {
         System.out.println("getNumberOfProducts()");
 
         System.out.println("Number of products : " + products.size());
     }
 
 //    concern/join point
-    public void getProductList() {
+    public void displayProductList() {
         System.out.println("getProductList()");
 
         System.out.println("ID " + " Name" + " Price" + " Quantity");

@@ -14,24 +14,14 @@ public class Main {
 
         ProductList productList = (ProductList) applicationContext.getBean("productList");
 
-        Product product3 = new Product();
+        productList.printNumberOfProducts();
+        productList.displayProductList();
 
-        product3.setProductId(3);
-        product3.setProductName("Product 3");
-        product3.setProductPrice(159.99F);
-        product3.setProductQuantity(2);
+        product1.printProductDetails();
+        product2.printProductDetails();
 
-        Product product4 = new Product();
+        System.out.println("Calling setter");
 
-        product4.setProductId(4);
-        product4.setProductName("Product 4");
-        product4.setProductPrice(1559.99F);
-        product4.setProductQuantity(1);
-
-        productList.addProductToList(product3);
-        System.out.println();
-        productList.addProductToListAtIndex(0, product4);
-        System.out.println();
-        productList.getProductList();
+        product1.setProductQuantity(10);
     }
 }

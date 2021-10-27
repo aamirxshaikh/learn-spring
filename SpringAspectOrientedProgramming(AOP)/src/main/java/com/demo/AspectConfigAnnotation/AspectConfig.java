@@ -11,42 +11,43 @@ import java.util.Arrays;
 public class AspectConfig {
 //    cross-cutting concern
 
-//    @Pointcut("execution(void com.demo.AspectConfigAnnotation.Pointcuts.*.*())")
-//    @Pointcut("execution(public * *(..))")
+    @Pointcut("execution(* *.print*(..))")
+    private void printPointcut() {}
+
+    @Pointcut("execution(* *.display*(..))")
+    private void displayPointcut() {}
+
     @Pointcut("execution(public * *.get*(..))")
     private void getPointcut() {}
-
-    @Pointcut("execution(* *.add*(int, com.demo.AspectConfigAnnotation.Pointcuts.Product))")
-    private void addPointcut() {}
 
     @Pointcut("within(com.demo.AspectConfigAnnotation.Pointcuts.ProductList)")
     private void listAllMethodsProductPointcut() {}
 
-    @Pointcut("within(com.demo.AspectConfigAnnotation.Pointcuts.*)")
-    private void anyClassMethodPointcut() {}
+    @Pointcut("printPointcut() || displayPointcut()")
+    private void printOrDisplayPointcut() {}
 
-    @Before("getPointcut()")
-    public void getMessage(JoinPoint joinPoint) {
-        System.out.println("Performing get | Invoked by " + joinPoint.getSignature().getName());
+    @Pointcut("printPointcut() && listAllMethodsProductPointcut()")
+    private void printAndListAllMethodsPointcut() {}
 
-        System.out.println("$$$$$$$ GET $$$$$$$$$");
+    @Pointcut("! (printOrDisplayPointcut() || getPointcut())")
+    private void doesNotPublishOrGetPointcut() {}
+
+    @Before("printOrDisplayPointcut()")
+    public void printMessage(JoinPoint joinPoint) {
+        System.out.println("Publishing | Invoked by " + joinPoint.getSignature().getName());
+
+        System.out.println("$$$$$$$ PUBLISH $$$$$$$$$");
     }
 
-    @Before("addPointcut()")
-    public void addMessage(JoinPoint joinPoint) {
-        System.out.println("Performing add | Invoked by " + joinPoint.getSignature().getName());
+    @Before("printAndListAllMethodsPointcut()")
+    public void printAndListAllMethodsMessage(JoinPoint joinPoint) {
+        System.out.println("Printing from ProductList | Invoked by " + joinPoint.getSignature().getName());
 
-        System.out.println("$$$$$$$ Add $$$$$$$$$");
-
-        System.out.println("Args " + Arrays.toString(joinPoint.getArgs()));
+        System.out.println("$$$$$$$ Print method called from ProductList $$$$$$$$$");
     }
 
-    @Before("anyClassMethodPointcut()")
-    public void anyClassMethodMessage(JoinPoint joinPoint) {
-        System.out.println("anyClassMethod | Invoked by " + joinPoint.getSignature().getName());
-
-        System.out.println("$$$$$$$ anyClassMethod $$$$$$$$$");
-
-        System.out.println("Args " + Arrays.toString(joinPoint.getArgs()));
+    @Before("doesNotPublishOrGetPointcut()")
+    public void doesNotPublishOrGetMessage(JoinPoint joinPoint) {
+        System.out.println("Does not publish or retrieve data");
     }
 }

@@ -52,10 +52,19 @@ public class Product {
     }
 
 //    concern/join point
-    public void getProductDetails() {
+    public void printProductDetails() {
         SimpleDateFormat formatter = new SimpleDateFormat("MMM dd yyyy - HH:mm:ss");
         Date date = new Date();
 
         System.out.format("Product details : \n Product : %s \n At : %s \n %s \n", getProductName(), formatter.format((date)), toString());
+    }
+
+    public void displayProductDetails() {
+        System.out.println("Product{" +
+                "productId=" + productId +
+                ", productName='" + productName + '\'' +
+                ", productPrice=" + productPrice +
+                ", productQuantity=" + productQuantity +
+                '}');
     }
 }
