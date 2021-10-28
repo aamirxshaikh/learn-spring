@@ -1,0 +1,47 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop = "http://www.springframework.org/schema/aop"
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+
+    <aop:config>
+        <aop:aspect id="aspect" ref="aspectConfig">
+
+            <aop:pointcut id="displayOrderProducts" expression="execution(* com.demo.AdvicesAOP.Advices.Order.displayOrderProducts())"/>
+            <aop:before pointcut-ref="displayOrderProducts" method="printMethodName" />
+
+        </aop:aspect>
+    </aop:config>
+
+    <bean id="aspectConfig" class="com.demo.AdvicesAOP.AspectConfig"/>
+
+    <bean id="order" class="com.demo.AdvicesAOP.Advices.Order">
+        <property name="orderId" value="1" />
+        <property name="orderBy" value="Aamir" />
+        <property name="orderAddress" value="xyz, xyz" />
+        <property name="orderProducts">
+            <map>
+                <entry key-ref="product1" value="2" />
+                <entry key-ref="product2" value="6" />
+            </map>
+        </property>
+    </bean>
+
+    <bean id="product1" class="com.demo.AdvicesAOP.Advices.Product">
+        <constructor-arg name="productId" value="1" />
+        <constructor-arg name="productName" value="Product 1" />
+        <constructor-arg name="productPrice" value="99.99" />
+        <constructor-arg name="productQuantity" value="3" />
+    </bean>
+
+    <bean id="product2" class="com.demo.AdvicesAOP.Advices.Product">
+        <constructor-arg name="productId" value="2" />
+        <constructor-arg name="productName" value="Product 2" />
+        <constructor-arg name="productPrice" value="199.99" />
+        <constructor-arg name="productQuantity" value="3" />
+    </bean>
+
+</beans>
