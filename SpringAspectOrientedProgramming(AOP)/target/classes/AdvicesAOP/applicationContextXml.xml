@@ -10,8 +10,8 @@
     <aop:config>
         <aop:aspect id="aspect" ref="aspectConfig">
 
-            <aop:pointcut id="displayOrderProducts" expression="execution(* com.demo.AdvicesAOP.Advices.Order.displayOrderProducts())"/>
-            <aop:before pointcut-ref="displayOrderProducts" method="printMethodName" />
+            <aop:before pointcut="execution(* com.demo.AdvicesAOP.Advices.Order.displayOrderProducts())" method="printMethodName" />
+            <aop:after pointcut="execution(* com.demo.AdvicesAOP.Advices.Order.displayOrderProducts())" method="printOrderValue" />
 
         </aop:aspect>
     </aop:config>
