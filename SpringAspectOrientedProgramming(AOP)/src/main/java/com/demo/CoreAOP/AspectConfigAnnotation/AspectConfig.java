@@ -1,4 +1,4 @@
-package com.demo.AspectConfigAnnotation;
+package com.demo.CoreAOP.AspectConfigAnnotation;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class AspectConfig {
 //    cross-cutting concern
 
-    @Pointcut("@annotation(com.demo.AspectConfigAnnotation.Pointcuts.Publishable)")
+    @Pointcut("@annotation(com.demo.CoreAOP.AspectConfigAnnotation.Pointcuts.Publishable)")
     private void publishablePointcut() {}
 
 //    @Pointcut("execution(* *.print*(..))")

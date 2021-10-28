@@ -1,4 +1,4 @@
-package com.demo.AspectConfigXml.Pointcuts;
+package com.demo.CoreAOP.AspectConfigAnnotation.Pointcuts;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -52,10 +52,20 @@ public class Product {
     }
 
 //    concern/join point
+    @Publishable
     public void printProductDetails() {
         SimpleDateFormat formatter = new SimpleDateFormat("MMM dd yyyy - HH:mm:ss");
         Date date = new Date();
 
         System.out.format("Product details : \n Product : %s \n At : %s \n %s \n", getProductName(), formatter.format((date)), toString());
+    }
+
+    public void displayProductDetails() {
+        System.out.println("Product{" +
+                "productId=" + productId +
+                ", productName='" + productName + '\'' +
+                ", productPrice=" + productPrice +
+                ", productQuantity=" + productQuantity +
+                '}');
     }
 }

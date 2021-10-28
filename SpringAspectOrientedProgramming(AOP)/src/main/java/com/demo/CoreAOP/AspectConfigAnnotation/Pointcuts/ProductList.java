@@ -1,4 +1,4 @@
-package com.demo.AspectConfigAnnotation.Pointcuts;
+package com.demo.CoreAOP.AspectConfigAnnotation.Pointcuts;
 
 import java.util.List;
 

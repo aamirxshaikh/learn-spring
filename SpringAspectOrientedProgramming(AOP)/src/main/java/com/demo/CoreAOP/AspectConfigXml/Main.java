@@ -1,12 +1,12 @@
-package com.demo.AspectConfigXml;
+package com.demo.CoreAOP.AspectConfigXml;
 
-import com.demo.AspectConfigXml.Pointcuts.Product;
+import com.demo.CoreAOP.AspectConfigXml.Pointcuts.Product;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContextXml.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("CoreAOP/applicationContextXml.xml");
 
         Product product = (Product) applicationContext.getBean("product");
 

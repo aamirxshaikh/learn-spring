@@ -11,7 +11,7 @@
     <!-- We don't need to this; This is required only in annotation based AOP support -->
     <!-- <aop:aspectj-autoproxy /> -->
 
-    <bean id="pointcutAspect" class="com.demo.AspectConfigXml.AspectConfig"></bean>
+    <bean id="pointcutAspect" class="com.demo.CoreAOP.AspectConfigXml.AspectConfig"></bean>
 
     <aop:config>
         <!-- Spring AOP aspect 1 -->
@@ -20,14 +20,14 @@
             <!-- Spring AOP advises -->
 <!--            <aop:pointcut id="pointcutExpression" expression="execution(* com.demo.AspectConfigXml.Pointcuts.Product.*(..))"/>-->
 <!--            <aop:pointcut id="pointcutExpression" expression="execution(* com.demo.AspectConfigXml.Pointcuts.Product.*())"/>-->
-            <aop:pointcut id="pointcutExpression" expression="execution(* com.demo.AspectConfigXml.Pointcuts.Product.*(int))"/>
+            <aop:pointcut id="pointcutExpression" expression="execution(* com.demo.CoreAOP.AspectConfigXml.Pointcuts.Product.*(int))"/>
             <aop:before pointcut-ref="pointcutExpression" method="print" />
 
         </aop:aspect>
 
     </aop:config>
 
-    <bean id="product" class="com.demo.AspectConfigXml.Pointcuts.Product">
+    <bean id="product" class="com.demo.CoreAOP.AspectConfigXml.Pointcuts.Product">
         <property name="productId" value="1" />
         <property name="productName" value="Product 1" />
         <property name="productPrice" value="99.99" />
