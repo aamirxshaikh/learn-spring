@@ -14,6 +14,7 @@
             <aop:around pointcut="execution(* com.demo.AdvicesAOP.Advices.Order.displayOrderProducts())" method="printMethodName" />
             <aop:after pointcut="execution(* com.demo.AdvicesAOP.Advices.Order.displayOrderProducts())" method="printOrderValue" />
             <aop:after-throwing pointcut="execution(* com.demo.AdvicesAOP.Advices.Order.*(..))" throwing="exception" method="logException" />
+            <aop:after-returning pointcut="execution(* com.demo.AdvicesAOP.Advices.Order.displayOrderProducts())" method="applyDiscount" />
 
         </aop:aspect>
     </aop:config>

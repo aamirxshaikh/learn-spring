@@ -9,7 +9,7 @@ public class Main {
 
         Order order = (Order) applicationContext.getBean("order");
 
-        order.getOrderProducts().clear();
+//        order.getOrderProducts().clear(); // AfterReturning Advice will not run
 
         order.displayOrderProducts();
     }

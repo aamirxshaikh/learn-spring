@@ -37,4 +37,21 @@ public class AspectConfig {
 
         System.out.println("Exception message : " + exception.getMessage());
     }
+
+    public void applyDiscount() {
+        Order order = getOrder();
+
+        float orderValue = order.getOrderValue();
+
+        if(orderValue > 500) {
+            System.out.println("********************************");
+
+            System.out.println("You are qualified for order !");
+
+            System.out.println("Discounted Total : " + (0.8 * orderValue));
+
+            System.out.println("********************************");
+
+        }
+    }
 }
