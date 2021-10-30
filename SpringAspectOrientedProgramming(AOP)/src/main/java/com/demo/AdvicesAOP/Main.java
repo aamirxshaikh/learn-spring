@@ -9,6 +9,8 @@ public class Main {
 
         Order order = (Order) applicationContext.getBean("order");
 
+        order.getOrderProducts().clear();
+
         order.displayOrderProducts();
     }
 }

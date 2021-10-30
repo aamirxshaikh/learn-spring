@@ -1,7 +1,7 @@
 package com.demo.AdvicesAOP;
 
 import com.demo.AdvicesAOP.Advices.Order;
-import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.springframework.context.ApplicationContext;
 
 public class AspectConfig {
@@ -11,8 +11,14 @@ public class AspectConfig {
         return (Order) applicationContext.getBean("order");
     }
 
-    public void printMethodName(JoinPoint joinPoint) {
-        System.out.println("Called by : " + joinPoint.getSignature().getName());
+    public void printMethodName(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+        System.out.println("Called by : " + proceedingJoinPoint.getSignature().getName());
+
+        Order order = getOrder();
+
+        proceedingJoinPoint.proceed();
+
+        System.out.println("Number of Products : " + order.getOrderProducts().size());
     }
 
     public void printOrderValue() {
