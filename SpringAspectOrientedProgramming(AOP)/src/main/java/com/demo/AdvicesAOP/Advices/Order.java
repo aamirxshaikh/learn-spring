@@ -43,9 +43,9 @@ public class Order {
 //    concern/join point
 
     public void displayOrderProducts() {
-//        if(orderProducts.isEmpty()) {
-//            throw new IllegalStateException("No products in the cart");
-//        }
+        if(orderProducts.isEmpty()) {
+            throw new IllegalStateException("No products in the cart");
+        }
 
         System.out.println("--------------------------------------------");
 

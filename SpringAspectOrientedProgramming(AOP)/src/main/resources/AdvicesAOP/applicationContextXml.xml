@@ -13,6 +13,7 @@
 <!--            <aop:before pointcut="execution(* com.demo.AdvicesAOP.Advices.Order.displayOrderProducts())" method="printMethodName" />-->
             <aop:around pointcut="execution(* com.demo.AdvicesAOP.Advices.Order.displayOrderProducts())" method="printMethodName" />
             <aop:after pointcut="execution(* com.demo.AdvicesAOP.Advices.Order.displayOrderProducts())" method="printOrderValue" />
+            <aop:after-throwing pointcut="execution(* com.demo.AdvicesAOP.Advices.Order.*(..))" throwing="exception" method="logException" />
 
         </aop:aspect>
     </aop:config>
