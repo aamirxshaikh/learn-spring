@@ -28,17 +28,6 @@ public class AspectConfig {
         System.out.println("Number of Products : " + order.getOrderProducts().size());
     }
 
-    @After("execution(* com.demo.AdvicesAOP.AnnotationConfiguration.Advices.Order.displayOrderProducts())")
-    public void printOrderValue() {
-        Order order = getOrder();
-
-        System.out.println("============================");
-
-        System.out.println("Order Total : " + order.getOrderValue());
-
-        System.out.println("============================");
-    }
-
     @AfterThrowing(pointcut = "execution(* com.demo.AdvicesAOP.AnnotationConfiguration.Advices.Order.*(..))", throwing = "exception")
     public void logException(JoinPoint joinPoint, Throwable exception) {
         System.out.println("Exception has been thrown in : " + joinPoint.getSignature());
@@ -49,6 +38,12 @@ public class AspectConfig {
     @AfterReturning(pointcut = "execution(* com.demo.AdvicesAOP.AnnotationConfiguration.Advices.Order.displayOrderProducts())")
     public void applyDiscount() {
         Order order = getOrder();
+
+        System.out.println("============================");
+
+        System.out.println("Order Total : " + order.getOrderValue());
+
+        System.out.println("============================");
 
         float orderValue = order.getOrderValue();
 
