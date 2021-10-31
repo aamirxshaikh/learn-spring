@@ -1,4 +1,4 @@
-package com.demo.AdvicesAOP.Advices;
+package com.demo.AdvicesAOP.XmlConfiguration.Advices;
 
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package com.demo.AdvicesAOP;
+package com.demo.AdvicesAOP.XmlConfiguration;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

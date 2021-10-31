@@ -1,6 +1,6 @@
-package com.demo.AdvicesAOP;
+package com.demo.AdvicesAOP.XmlConfiguration;
 
-import com.demo.AdvicesAOP.Advices.Order;
+import com.demo.AdvicesAOP.XmlConfiguration.Advices.Order;
 import org.springframework.context.ApplicationContext;
 
 public class Main {

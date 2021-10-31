@@ -1,4 +1,4 @@
-package com.demo.AdvicesAOP.Advices;
+package com.demo.AdvicesAOP.XmlConfiguration.Advices;
 
 public class Product {
     int productId;
