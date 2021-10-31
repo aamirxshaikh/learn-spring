@@ -10,18 +10,18 @@
     <aop:config>
         <aop:aspect id="aspect" ref="aspectConfig">
 
-<!--            <aop:before pointcut="execution(* com.demo.AdvicesAOP.Advices.Order.displayOrderProducts())" method="printMethodName" />-->
-            <aop:around pointcut="execution(* com.demo.AdvicesAOP.Advices.Order.displayOrderProducts())" method="printMethodName" />
-            <aop:after pointcut="execution(* com.demo.AdvicesAOP.Advices.Order.displayOrderProducts())" method="printOrderValue" />
-            <aop:after-throwing pointcut="execution(* com.demo.AdvicesAOP.Advices.Order.*(..))" throwing="exception" method="logException" />
-            <aop:after-returning pointcut="execution(* com.demo.AdvicesAOP.Advices.Order.displayOrderProducts())" method="applyDiscount" />
+<!--            <aop:before pointcut="execution(* com.demo.AdvicesAOP.XmlConfiguration.Advices.Order.displayOrderProducts())" method="printMethodName" />-->
+            <aop:around pointcut="execution(* com.demo.AdvicesAOP.XmlConfiguration.Advices.Order.displayOrderProducts())" method="printMethodName" />
+            <aop:after pointcut="execution(* com.demo.AdvicesAOP.XmlConfiguration.Advices.Order.displayOrderProducts())" method="printOrderValue" />
+            <aop:after-throwing pointcut="execution(* com.demo.AdvicesAOP.XmlConfiguration.Advices.Order.*(..))" throwing="exception" method="logException" />
+            <aop:after-returning pointcut="execution(* com.demo.AdvicesAOP.XmlConfiguration.Advices.Order.displayOrderProducts())" method="applyDiscount" />
 
         </aop:aspect>
     </aop:config>
 
-    <bean id="aspectConfig" class="com.demo.AdvicesAOP.AspectConfig"/>
+    <bean id="aspectConfig" class="com.demo.AdvicesAOP.XmlConfiguration.AspectConfig"/>
 
-    <bean id="order" class="com.demo.AdvicesAOP.Advices.Order">
+    <bean id="order" class="com.demo.AdvicesAOP.XmlConfiguration.Advices.Order">
         <property name="orderId" value="1" />
         <property name="orderBy" value="Aamir" />
         <property name="orderAddress" value="xyz, xyz" />
@@ -33,14 +33,14 @@
         </property>
     </bean>
 
-    <bean id="product1" class="com.demo.AdvicesAOP.Advices.Product">
+    <bean id="product1" class="com.demo.AdvicesAOP.XmlConfiguration.Advices.Product">
         <constructor-arg name="productId" value="1" />
         <constructor-arg name="productName" value="Product 1" />
         <constructor-arg name="productPrice" value="99.99" />
         <constructor-arg name="productQuantity" value="3" />
     </bean>
 
-    <bean id="product2" class="com.demo.AdvicesAOP.Advices.Product">
+    <bean id="product2" class="com.demo.AdvicesAOP.XmlConfiguration.Advices.Product">
         <constructor-arg name="productId" value="2" />
         <constructor-arg name="productName" value="Product 2" />
         <constructor-arg name="productPrice" value="199.99" />
