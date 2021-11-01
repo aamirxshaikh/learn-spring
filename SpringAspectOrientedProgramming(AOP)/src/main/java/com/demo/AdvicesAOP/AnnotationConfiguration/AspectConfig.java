@@ -1,6 +1,8 @@
 package com.demo.AdvicesAOP.AnnotationConfiguration;
 
 import com.demo.AdvicesAOP.AnnotationConfiguration.Advices.Order;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.springframework.context.ApplicationContext;
@@ -11,6 +13,8 @@ import org.springframework.stereotype.Component;
 @Aspect
 
 public class AspectConfig {
+    private static final Logger logger = LogManager.getLogger(AspectConfig.class);
+
     private Order getOrder() {
         ApplicationContext applicationContext = ApplicationContextWrapper.getApplicationContext();
 
@@ -19,7 +23,7 @@ public class AspectConfig {
 
     @Around("execution(* com.demo.AdvicesAOP.AnnotationConfiguration.Advices.Order.displayOrderProducts())")
     public void printMethodName(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
-        System.out.println("Called by : " + proceedingJoinPoint.getSignature().getName());
+        logger.info("Called by : " + proceedingJoinPoint.getSignature().getName());
 
         Order order = getOrder();
 
@@ -30,9 +34,9 @@ public class AspectConfig {
 
     @AfterThrowing(pointcut = "execution(* com.demo.AdvicesAOP.AnnotationConfiguration.Advices.Order.*(..))", throwing = "exception")
     public void logException(JoinPoint joinPoint, Throwable exception) {
-        System.out.println("Exception has been thrown in : " + joinPoint.getSignature());
+        logger.error("An Exception has been thrown when running : " + joinPoint.getSignature());
 
-        System.out.println("Exception message : " + exception.getMessage());
+        logger.error("Exception Message : " + exception.getMessage());
     }
 
     @AfterReturning(pointcut = "execution(* com.demo.AdvicesAOP.AnnotationConfiguration.Advices.Order.displayOrderProducts())")
@@ -40,6 +44,8 @@ public class AspectConfig {
         Order order = getOrder();
 
         System.out.println("============================");
+
+        logger.info("Order Total : " + order.getOrderValue());
 
         System.out.println("Order Total : " + order.getOrderValue());
 
@@ -52,7 +58,7 @@ public class AspectConfig {
 
             System.out.println("You are qualified for order !");
 
-            System.out.println("Discounted Total : " + (0.8 * orderValue));
+            logger.info("Discounted Total : " + (0.8 * orderValue));
 
             System.out.println("********************************");
 
