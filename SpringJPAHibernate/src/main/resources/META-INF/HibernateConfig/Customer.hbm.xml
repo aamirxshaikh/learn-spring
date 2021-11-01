@@ -3,7 +3,7 @@
         "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="com.demo.HibernateConfig.Employee" table="Employee">
+    <class name="com.demo.HibernateConfig.Customer" table="Customer">
         <id name="id" column="ID"><generator class="native" /></id>
         <property name="firstName" column="FirstName"/>
         <property name="lastName" column="LastName"/>

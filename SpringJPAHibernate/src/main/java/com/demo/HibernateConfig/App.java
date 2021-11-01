@@ -17,13 +17,13 @@ public class App
 
         Session session = sessionFactory.openSession();
 
-        Employee employee1 = new Employee(100, "Abc", "Xyz", "Associate", 9999);
-        Employee employee2 = new Employee(100, "Pqr", "Xyz", "Associate", 8999);
+        Customer customer1 = new Customer(100, "Abc", "Xyz", "Associate", 9999);
+        Customer customer2 = new Customer(100, "Pqr", "Xyz", "Associate", 8999);
 
         Transaction transaction = session.beginTransaction();
 
-        session.save(employee1);
-        session.save(employee2);
+        session.save(customer1);
+        session.save(customer2);
 
         transaction.commit();
 

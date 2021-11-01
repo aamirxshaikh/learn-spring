@@ -1,10 +1,6 @@
 /.metadata/
-#SpringIoC/src/main/java/com/demo/BeanAutowiringAnnotation
+SpringJPAHibernate/src/main/java/com/demo/JPAConfig
 
-#SpringIoC/src/main/resources/beanAutowiringAnnotation.xml
+SpringJPAHibernate/src/main/resources/META-INF/persistence.xml
 
-#SpringIoC/bin/src/main/java/com/demo/BeanAutowiringAnnotation
-
-#SpringIoC/target/classes/com/demo/BeanAutowiringAnnotation
-
-#SpringIoC/target/classes/beanAutowiringAnnotation.xml
+SpringJPAHibernate/target/classes/META-INF/persistence.xml

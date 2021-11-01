@@ -1,16 +1,16 @@
 package com.demo.HibernateConfig;
 
-public class Employee {
+public class Customer {
     private int id;
     private String firstName;
     private String lastName;
     private String job;
     private double salary;
 
-    public Employee() {
+    public Customer() {
     }
 
-    public Employee(int id, String firstName, String lastName, String job, double salary) {
+    public Customer(int id, String firstName, String lastName, String job, double salary) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
