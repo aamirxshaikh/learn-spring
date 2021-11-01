@@ -1,4 +1,4 @@
-package com.demo;
+package com.demo.HibernateConfig;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -11,7 +11,7 @@ public class App
     {
         Configuration configuration = new Configuration();
 
-        configuration = configuration.configure("META-INF/hibernate.cfg.xml");
+        configuration = configuration.configure("META-INF/HibernateConfig/hibernate.cfg.xml");
 
         SessionFactory sessionFactory = configuration.buildSessionFactory();
 

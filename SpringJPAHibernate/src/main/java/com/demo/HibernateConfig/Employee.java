@@ -1,4 +1,4 @@
-package com.demo;
+package com.demo.HibernateConfig;
 
 public class Employee {
     private int id;
