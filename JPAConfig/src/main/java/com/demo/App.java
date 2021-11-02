@@ -13,8 +13,8 @@ public class App
 
         entityManager.getTransaction().begin();
 
-        Employee employee1 = new Employee(200, "xyz", "abc", "Trainee", 49999);
-        Employee employee2 = new Employee(201, "lmn", "opq", "Trainee", 59999);
+        Employee employee1 = new Employee(2000, "xyz", "abc", "Trainee", 49999);
+        Employee employee2 = new Employee(2001, "lmn", "opq", "Trainee", 59999);
 
         entityManager.persist(employee1);
         entityManager.persist(employee2);
