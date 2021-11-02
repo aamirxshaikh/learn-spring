@@ -1,4 +1,4 @@
-package com.demo.HibernateConfig;
+package com.demo;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -11,13 +11,13 @@ public class App
     {
         Configuration configuration = new Configuration();
 
-        configuration = configuration.configure("META-INF/HibernateConfig/hibernate.cfg.xml");
+        configuration = configuration.configure("META-INF/hibernate.cfg.xml");
 
         SessionFactory sessionFactory = configuration.buildSessionFactory();
 
         Session session = sessionFactory.openSession();
 
-        Customer customer1 = new Customer(100, "Abc", "Xyz", "Associate", 9999);
+        Customer customer1 = new Customer(100, "Yea", "YEA", "Associate", 9999);
         Customer customer2 = new Customer(100, "Pqr", "Xyz", "Associate", 8999);
 
         Transaction transaction = session.beginTransaction();

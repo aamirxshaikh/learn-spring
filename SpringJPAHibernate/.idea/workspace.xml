@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e8485b90-704a-445a-a470-a80ae8efc888" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/.factorypath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/.settings/org.eclipse.jdt.apt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/logs/app.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/java/com/demo/AdvicesAOP/AnnotationConfiguration/Advices/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/java/com/demo/AdvicesAOP/AnnotationConfiguration/Advices/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/java/com/demo/AdvicesAOP/AnnotationConfiguration/ApplicationContextWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/java/com/demo/AdvicesAOP/AnnotationConfiguration/AspectConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/java/com/demo/AdvicesAOP/AnnotationConfiguration/BeanConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/java/com/demo/AdvicesAOP/AnnotationConfiguration/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/java/com/demo/AdvicesAOP/XmlConfiguration/Advices/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/java/com/demo/AdvicesAOP/XmlConfiguration/Advices/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/java/com/demo/AdvicesAOP/XmlConfiguration/ApplicationContextWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/java/com/demo/AdvicesAOP/XmlConfiguration/AspectConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/java/com/demo/AdvicesAOP/XmlConfiguration/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/java/com/demo/CoreAOP/AspectConfigAnnotation/AspectConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/java/com/demo/CoreAOP/AspectConfigAnnotation/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/java/com/demo/CoreAOP/AspectConfigAnnotation/Pointcuts/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/java/com/demo/CoreAOP/AspectConfigAnnotation/Pointcuts/ProductList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/java/com/demo/CoreAOP/AspectConfigAnnotation/Pointcuts/Publishable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/java/com/demo/CoreAOP/AspectConfigXml/AspectConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/java/com/demo/CoreAOP/AspectConfigXml/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/java/com/demo/CoreAOP/AspectConfigXml/Pointcuts/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/resources/AdvicesAOP/applicationContextXml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/resources/CoreAOP/applicationContextAnnotation.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/resources/CoreAOP/applicationContextXml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/src/main/resources/log4j2.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/AdvicesAOP/applicationContextXml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/CoreAOP/applicationContextAnnotation.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/CoreAOP/applicationContextXml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/com/demo/AdvicesAOP/AnnotationConfiguration/Advices/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/com/demo/AdvicesAOP/AnnotationConfiguration/Advices/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/com/demo/AdvicesAOP/AnnotationConfiguration/ApplicationContextWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/com/demo/AdvicesAOP/AnnotationConfiguration/AspectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/com/demo/AdvicesAOP/AnnotationConfiguration/BeanConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/com/demo/AdvicesAOP/AnnotationConfiguration/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/com/demo/AdvicesAOP/XmlConfiguration/Advices/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/com/demo/AdvicesAOP/XmlConfiguration/Advices/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/com/demo/AdvicesAOP/XmlConfiguration/ApplicationContextWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/com/demo/AdvicesAOP/XmlConfiguration/AspectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/com/demo/AdvicesAOP/XmlConfiguration/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/com/demo/CoreAOP/AspectConfigAnnotation/AspectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/com/demo/CoreAOP/AspectConfigAnnotation/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/com/demo/CoreAOP/AspectConfigAnnotation/Pointcuts/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/com/demo/CoreAOP/AspectConfigAnnotation/Pointcuts/ProductList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/com/demo/CoreAOP/AspectConfigAnnotation/Pointcuts/Publishable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/com/demo/CoreAOP/AspectConfigXml/AspectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/com/demo/CoreAOP/AspectConfigXml/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/com/demo/CoreAOP/AspectConfigXml/Pointcuts/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringAspectOrientedProgramming(AOP)/target/classes/log4j2.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/.settings/org.eclipse.jdt.apt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/SpringIoC.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/bin/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/bin/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/bin/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/bin/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/bin/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/bin/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/bin/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/bin/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/bin/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/bin/SpringIoC.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/bin/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/bin/src/main/java/com/demo/ApplicationContext/Device.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/bin/src/main/java/com/demo/ApplicationContext/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/bin/src/main/java/com/demo/BeanDefinitionRegistry/Device.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/bin/src/main/java/com/demo/BeanDefinitionRegistry/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/bin/src/main/java/com/demo/XmlBeanFactory/Device.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/bin/src/main/java/com/demo/XmlBeanFactory/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/bin/src/main/resources/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/bin/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/bin/target/classes/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/ApplicationContext/Device.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/ApplicationContext/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/ApplicationContextAnnotation/Device.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/ApplicationContextAnnotation/DeviceBeanConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/ApplicationContextAnnotation/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiring/Device.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiring/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiring/Ram.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiringAnnotation/Device.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiringAnnotation/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiringAnnotation/Ram.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiringAnnotationConfig/Device.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiringAnnotationConfig/DeviceBeanConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiringAnnotationConfig/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiringAnnotationConfig/Ram.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiringCollectionsConfig/Device.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiringCollectionsConfig/DeviceBeanConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiringCollectionsConfig/Hdd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiringCollectionsConfig/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiringCollectionsConfig/Processor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiringCollectionsConfig/Ram.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiringCollectionsXml/Device.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiringCollectionsXml/Hdd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiringCollectionsXml/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiringCollectionsXml/Processor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanAutowiringCollectionsXml/Ram.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanDefinitionRegistry/Device.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanDefinitionRegistry/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanReference/Device.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanReference/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/BeanReference/Ram.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/XmlBeanFactory/Device.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/java/com/demo/XmlBeanFactory/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/resources/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/resources/beanAutowiring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/resources/beanAutowiringAnnotation.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/resources/beanAutowiringCollections.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/src/main/resources/beanReference.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/beanAutowiring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/beanAutowiringAnnotation.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/beanAutowiringCollections.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/beanReference.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/ApplicationContext/Device.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/ApplicationContext/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/ApplicationContextAnnotation/Device.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/ApplicationContextAnnotation/DeviceBeanConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/ApplicationContextAnnotation/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiring/Device.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiring/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiring/Ram.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiringAnnotation/Device.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiringAnnotation/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiringAnnotation/Ram.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiringAnnotationConfig/Device.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiringAnnotationConfig/DeviceBeanConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiringAnnotationConfig/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiringAnnotationConfig/Ram.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiringCollectionsConfig/Device.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiringCollectionsConfig/DeviceBeanConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiringCollectionsConfig/Hdd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiringCollectionsConfig/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiringCollectionsConfig/Processor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiringCollectionsConfig/Ram.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiringCollectionsXml/Device.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiringCollectionsXml/Hdd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiringCollectionsXml/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiringCollectionsXml/Processor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanAutowiringCollectionsXml/Ram.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanDefinitionRegistry/Device.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanDefinitionRegistry/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanReference/Device.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanReference/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/BeanReference/Ram.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/XmlBeanFactory/Device.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringIoC/target/classes/com/demo/XmlBeanFactory/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SpringJPAHibernate.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/HibernateConfig/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/HibernateConfig/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/HibernateConfig/Customer.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/HibernateConfig/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/HibernateConfig/Customer.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/HibernateConfig/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/HibernateConfig/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/HibernateConfig/Customer.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="20K5ohFJVkXngKqxh6eyXNAGvcE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HibernateConfig" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/demo/JPAConfig" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/META-INF/HibernateConfig" />
+      <recent name="$PROJECT_DIR$/src/main/resources/META-INF" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.demo.JPAConfig.App" />
+      <module name="SpringHibernateConfig" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demo.JPAConfig.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.demo.App" />
+      <module name="SpringHibernateConfig" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.demo.HibernateConfig.App" />
+      <module name="SpringHibernateConfig" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demo.HibernateConfig.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.App (2)" />
+        <item itemvalue="Application.App (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e8485b90-704a-445a-a470-a80ae8efc888" name="Changes" comment="" />
+      <created>1635780616377</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635780616377</updated>
+      <workItem from="1635780617767" duration="135000" />
+      <workItem from="1635780775018" duration="465000" />
+      <workItem from="1635781283316" duration="1410000" />
+      <workItem from="1635787705072" duration="4586000" />
+      <workItem from="1635792315949" duration="32000" />
+      <workItem from="1635868038972" duration="819000" />
+      <workItem from="1635868870812" duration="10000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
