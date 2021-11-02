@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68050c1c-f9df-4846-baee-2398b0d00e1c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringJPAHibernate/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringJPAHibernate/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringJPAHibernate/src/main/java/com/demo/HibernateConfig/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringJPAHibernate/src/main/java/com/demo/HibernateConfig/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringJPAHibernate/src/main/java/com/demo/HibernateConfig/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringJPAHibernate/src/main/java/com/demo/HibernateConfig/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringJPAHibernate/src/main/java/com/demo/JPAConfig/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringJPAHibernate/src/main/java/com/demo/JPAConfig/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringJPAHibernate/src/main/java/com/demo/JPAConfig/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringJPAHibernate/src/main/java/com/demo/JPAConfig/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringJPAHibernate/src/main/resources/META-INF/HibernateConfig/Employee.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringJPAHibernate/src/main/resources/META-INF/HibernateConfig/Customer.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringJPAHibernate/src/main/resources/META-INF/HibernateConfig/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringJPAHibernate/src/main/resources/META-INF/HibernateConfig/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringJPAHibernate/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringJPAHibernate/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringJPAHibernate/target/classes/META-INF/HibernateConfig/Employee.hbm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringJPAHibernate/target/classes/META-INF/HibernateConfig/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringJPAHibernate/target/classes/META-INF/HibernateConfig/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringJPAHibernate/target/classes/com/demo/HibernateConfig/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/SpringJPAHibernate/target/classes/com/demo/HibernateConfig/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringJPAHibernate/target/classes/com/demo/HibernateConfig/Employee.class" beforeDir="false" />
-    </list>
+    <list default="true" id="68050c1c-f9df-4846-baee-2398b0d00e1c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +14,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1zlCFxmnY3xbIuYB5QKyNkCrOD0" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -37,9 +26,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/JPAConfig" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MTHome" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -54,6 +48,7 @@
       <workItem from="1635771539065" duration="758000" />
       <workItem from="1635778749481" duration="1680000" />
       <workItem from="1635791265392" duration="233000" />
+      <workItem from="1635869094251" duration="57000" />
     </task>
     <servers />
   </component>
