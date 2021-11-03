@@ -26,7 +26,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/JPAConfig" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MTHome" />
   </component>
@@ -49,6 +49,7 @@
       <workItem from="1635778749481" duration="1680000" />
       <workItem from="1635791265392" duration="233000" />
       <workItem from="1635869094251" duration="57000" />
+      <workItem from="1635878509386" duration="227000" />
     </task>
     <servers />
   </component>
