@@ -18,7 +18,7 @@ public class MVCConfig implements WebMvcConfigurer {
 
         viewResolver.setViewClass(JstlView.class);
 
-        viewResolver.setPrefix("/");
+        viewResolver.setPrefix("/home/");
 
         viewResolver.setSuffix(".jsp");
 

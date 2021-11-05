@@ -8,7 +8,6 @@
 </head>
 <body>
 <h2>Hello World!</h2>
-<p>Using web.xml</p>
 ${message}
 </body>
 </html>
