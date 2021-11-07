@@ -8,6 +8,9 @@
 </head>
 <body>
 <h2>Hello World!</h2>
-${message}
+
+<a href="http://localhost:8080/HandlingReqErrMVC/index">Index</a>
+<a href="http://localhost:8080/HandlingReqErrMVC/test">Test</a>
+
 </body>
 </html>
