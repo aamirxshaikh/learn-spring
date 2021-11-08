@@ -9,8 +9,6 @@
 <body>
 <h2>Hello World!</h2>
 
-<a href="http://localhost:8080/HandlingReqErrMVC/index">Index</a>
-<a href="http://localhost:8080/HandlingReqErrMVC/test">Test</a>
-
+<a href="products">Products</a>
 </body>
 </html>
