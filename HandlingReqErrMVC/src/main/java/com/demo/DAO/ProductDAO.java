@@ -1,4 +1,6 @@
-package com.demo.Controller;
+package com.demo.DAO;
+
+import com.demo.Model.Product;
 
 import java.util.List;
 

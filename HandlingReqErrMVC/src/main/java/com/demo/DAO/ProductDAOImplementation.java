@@ -1,5 +1,7 @@
-package com.demo.Controller;
+package com.demo.DAO;
 
+import com.demo.DAO.ProductDAO;
+import com.demo.Model.Product;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

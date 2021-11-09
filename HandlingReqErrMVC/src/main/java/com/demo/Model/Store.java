@@ -1,18 +1,16 @@
-package com.demo.Controller;
+package com.demo.Model;
 
 import java.io.Serializable;
 
-public class Product implements Serializable {
+public class Store implements Serializable {
     public static final long serialVersionUID = 1L;
 
     private Long id;
     private String name;
-    private String category;
 
-    public Product(String name, String category) {
+    public Store(String name) {
         this.id = (long) Math.floor(Math.random() * 100000);
         this.name = name;
-        this.category = category;
     }
 
     public Long getId() {
@@ -31,20 +29,11 @@ public class Product implements Serializable {
         this.name = name;
     }
 
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
     @Override
     public String toString() {
-        return "Product{" +
+        return "Store{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", category='" + category + '\'' +
                 '}';
     }
 }

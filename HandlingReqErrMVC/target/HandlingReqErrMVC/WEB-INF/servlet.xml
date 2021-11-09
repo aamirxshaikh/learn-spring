@@ -11,7 +11,10 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
-    <context:component-scan base-package="com.demo" />
+    <context:component-scan base-package="com.demo.Controller" />
+    <context:component-scan base-package="com.demo.DAO" />
+    <context:component-scan base-package="com.demo.Model" />
+    <context:component-scan base-package="com.demo.Service" />
 
     <mvc:annotation-driven />
 

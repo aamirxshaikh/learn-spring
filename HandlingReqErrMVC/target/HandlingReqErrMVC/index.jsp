@@ -9,6 +9,7 @@
 <body>
 <h2>Hello World!</h2>
 
-<a href="products">Products</a>
+<a href="ecommerce/products">Products</a>
+<a href="ecommerce/stores">Stores</a>
 </body>
 </html>
