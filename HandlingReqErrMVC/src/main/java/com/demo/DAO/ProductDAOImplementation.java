@@ -13,9 +13,9 @@ public class ProductDAOImplementation implements ProductDAO {
     public List<Product> getProducts() {
         List<Product> productList = new ArrayList<>();
 
-        productList.add(new Product("Product 1", "Electronics"));
-        productList.add(new Product("Product 2", "Electronics"));
-        productList.add(new Product("Product 3", "Electronics"));
+        productList.add(new Product("Product1", "Electronics"));
+        productList.add(new Product("Product2", "Electronics"));
+        productList.add(new Product("Product3", "Electronics"));
 
         return productList;
     }

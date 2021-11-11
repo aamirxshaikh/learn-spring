@@ -12,9 +12,9 @@ public class StoreDAOImplementation implements StoreDAO {
     public List<Store> getStores() {
         List<Store> storeList = new ArrayList<>();
 
-        storeList.add(new Store("Store 1"));
-        storeList.add(new Store("Store 2"));
-        storeList.add(new Store("Store 3"));
+        storeList.add(new Store("Store1"));
+        storeList.add(new Store("Store2"));
+        storeList.add(new Store("Store3"));
 
         return storeList;
     }
