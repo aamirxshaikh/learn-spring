@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 @RequestMapping("/ecommerce")
 public class ECommerceController {
@@ -48,5 +50,16 @@ public class ECommerceController {
         model.addAttribute("message", message);
 
         return "store";
+    }
+
+    @RequestMapping(value = "/dashboard")
+    public String dashboard(HttpServletRequest request, Model model) {
+        String name = request.getParameter("name");
+
+        String message = "Hi " + name;
+
+        model.addAttribute("message", message);
+
+        return "dashboard";
     }
 }
