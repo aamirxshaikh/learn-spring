@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -53,10 +54,8 @@ public class ECommerceController {
     }
 
     @RequestMapping(value = "/dashboard")
-    public String dashboard(HttpServletRequest request, Model model) {
-        String name = request.getParameter("name");
-
-        String message = "Hi " + name;
+    public String dashboard(@RequestParam String name, @RequestParam String email, Model model) {
+        String message = "Hi " + name + "|" + email;
 
         model.addAttribute("message", message);
 

@@ -9,6 +9,11 @@
         .form {
             padding-top: 10px;
         }
+
+        .email-field {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -31,9 +36,17 @@
 
 <div class="form">
     <form action="ecommerce/dashboard">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name">
-        <input type="submit" name="submit">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div class="email-field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div class="submit">
+            <input type="submit" name="submit">
+        </div>
     </form>
 </div>
 
