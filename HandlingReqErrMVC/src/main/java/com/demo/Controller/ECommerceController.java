@@ -54,8 +54,12 @@ public class ECommerceController {
     }
 
     @RequestMapping(value = "/dashboard")
-    public String dashboard(@RequestParam String name, @RequestParam String email, Model model) {
-        String message = "Hi " + name + "|" + email;
+    public String dashboard(@RequestParam String name, @RequestParam(required = false, defaultValue = "xyz@email.com") String email, Model model) {
+        String message = "Hi " + name;
+
+        if(email != null && !email.isEmpty()) {
+            message += " | " + email;
+        }
 
         model.addAttribute("message", message);
 
