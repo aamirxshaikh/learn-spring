@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/ecommerce")
@@ -54,7 +55,10 @@ public class ECommerceController {
     }
 
     @RequestMapping(value = "/dashboard")
-    public String dashboard(@RequestParam String name, @RequestParam(required = false, defaultValue = "xyz@email.com") String email, Model model) {
+    public String dashboard(@RequestParam Map<String, String> allParamsMap, Model model) {
+        String name = allParamsMap.get("name");
+        String email = allParamsMap.get("email");
+
         String message = "Hi " + name;
 
         if(email != null && !email.isEmpty()) {
