@@ -50,5 +50,21 @@
     </form>
 </div>
 
+<div class="form">
+    <form action="calculate">
+        <div>
+            <label for="name">Number 1</label>
+            <input type="text" name="number1" id="number1">
+        </div>
+        <div class="email-field">
+            <label for="email">Number 2</label>
+            <input type="text" name="number2" id="number2">
+        </div>
+        <div class="submit">
+            <input type="submit" name="submit">
+        </div>
+    </form>
+</div>
+
 </body>
 </html>
