@@ -2,8 +2,10 @@ package com.demo.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.sql.SQLException;
 
@@ -30,5 +32,14 @@ public class CalculateController {
         model.addAttribute("modulus", (number1 % number2));
 
         return "results";
+    }
+
+    @ExceptionHandler({IllegalArgumentException.class, SQLException.class, ArithmeticException.class})
+    public ModelAndView handleExceptions(Exception exception) {
+        ModelAndView model = new ModelAndView("exception");
+
+        model.addObject("exception", exception.getMessage());
+
+        return model;
     }
 }
