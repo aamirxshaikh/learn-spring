@@ -4,7 +4,100 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68050c1c-f9df-4846-baee-2398b0d00e1c" name="Changes" comment="" />
+    <list default="true" id="68050c1c-f9df-4846-baee-2398b0d00e1c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/.idea/webContexts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/HandlingReqErrMVC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/HandlingReqErrMVC.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/java/com/demo/Controller/CalculateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/java/com/demo/Controller/CalculateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/java/com/demo/Controller/ECommerceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/java/com/demo/Controller/ECommerceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/java/com/demo/DAO/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/java/com/demo/DAO/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/java/com/demo/DAO/ProductDAOImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/java/com/demo/DAO/ProductDAOImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/java/com/demo/DAO/StoreDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/java/com/demo/DAO/StoreDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/java/com/demo/DAO/StoreDAOImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/java/com/demo/DAO/StoreDAOImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/java/com/demo/Model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/java/com/demo/Model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/java/com/demo/Model/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/java/com/demo/Model/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/java/com/demo/Service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/java/com/demo/Service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/java/com/demo/Service/ProductServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/java/com/demo/Service/ProductServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/java/com/demo/Service/StoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/java/com/demo/Service/StoreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/java/com/demo/Service/StoreServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/java/com/demo/Service/StoreServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/webapp/WEB-INF/jsp/arithmeticException.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/webapp/WEB-INF/jsp/arithmeticException.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/webapp/WEB-INF/jsp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/webapp/WEB-INF/jsp/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/webapp/WEB-INF/jsp/exception.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/webapp/WEB-INF/jsp/exception.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/webapp/WEB-INF/jsp/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/webapp/WEB-INF/jsp/product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/webapp/WEB-INF/jsp/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/webapp/WEB-INF/jsp/products.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/webapp/WEB-INF/jsp/results.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/webapp/WEB-INF/jsp/results.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/webapp/WEB-INF/jsp/sqlException.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/webapp/WEB-INF/jsp/sqlException.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/webapp/WEB-INF/jsp/store.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/webapp/WEB-INF/jsp/store.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/webapp/WEB-INF/jsp/stores.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/webapp/WEB-INF/jsp/stores.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/webapp/WEB-INF/servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/webapp/WEB-INF/servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC.war" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/Controller/CalculateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/Controller/CalculateController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/Controller/ECommerceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/Controller/ECommerceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/Controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/Controller/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/Controller/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/Controller/TestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/DAO/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/DAO/ProductDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/DAO/ProductDAOImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/DAO/ProductDAOImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/DAO/StoreDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/DAO/StoreDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/DAO/StoreDAOImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/DAO/StoreDAOImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/Model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/Model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/Model/Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/Model/Store.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/Service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/Service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/Service/ProductServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/Service/ProductServiceImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/Service/StoreService.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/Service/StoreService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/Service/StoreServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/classes/com/demo/Service/StoreServiceImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/arithmeticException.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/arithmeticException.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/exception.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/exception.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/index_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/index_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/products.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/results.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/results.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/sqlException.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/sqlException.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/store.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/store.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/stores.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/stores.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/test_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/jsp/test_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/lib/spring-aop-5.3.9.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/lib/spring-aop-5.3.9.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/lib/spring-beans-5.3.9.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/lib/spring-beans-5.3.9.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/lib/spring-context-5.3.9.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/lib/spring-context-5.3.9.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/lib/spring-core-5.3.9.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/lib/spring-core-5.3.9.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/lib/spring-expression-5.3.9.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/lib/spring-expression-5.3.9.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/lib/spring-jcl-5.3.9.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/lib/spring-jcl-5.3.9.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/lib/spring-web-5.3.9.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/lib/spring-web-5.3.9.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/lib/spring-webmvc-5.3.9.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/lib/spring-webmvc-5.3.9.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/lib/standard-1.1.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/lib/standard-1.1.2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/HandlingReqErrMVC/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/HandlingReqErrMVC/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/classes/com/demo/Controller/CalculateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/classes/com/demo/Controller/CalculateController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/classes/com/demo/Controller/ECommerceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/classes/com/demo/Controller/ECommerceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/classes/com/demo/DAO/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/classes/com/demo/DAO/ProductDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/classes/com/demo/DAO/ProductDAOImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/classes/com/demo/DAO/ProductDAOImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/classes/com/demo/DAO/StoreDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/classes/com/demo/DAO/StoreDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/classes/com/demo/DAO/StoreDAOImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/classes/com/demo/DAO/StoreDAOImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/classes/com/demo/Model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/classes/com/demo/Model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/classes/com/demo/Model/Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/classes/com/demo/Model/Store.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/classes/com/demo/Service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/classes/com/demo/Service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/classes/com/demo/Service/ProductServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/classes/com/demo/Service/ProductServiceImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/classes/com/demo/Service/StoreService.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/classes/com/demo/Service/StoreService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/classes/com/demo/Service/StoreServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/classes/com/demo/Service/StoreServiceImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandlingReqErrMVC/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/HandlingReqErrMVC/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,13 +119,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/MVC" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MTHome" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/MVC" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -50,10 +146,22 @@
       <workItem from="1635791265392" duration="233000" />
       <workItem from="1635869094251" duration="57000" />
       <workItem from="1635878509386" duration="227000" />
+      <workItem from="1637516643060" duration="72000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
