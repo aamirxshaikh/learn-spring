@@ -1,0 +1,110 @@
+23-Nov-2021 00:53:05.922 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.54
+23-Nov-2021 00:53:05.925 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 28 2021 13:51:49 UTC
+23-Nov-2021 00:53:05.925 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.54.0
+23-Nov-2021 00:53:05.925 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+23-Nov-2021 00:53:05.925 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.4.0-90-generic
+23-Nov-2021 00:53:05.925 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+23-Nov-2021 00:53:05.925 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/jdk1.8.0_311/jre
+23-Nov-2021 00:53:05.925 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_311-b11
+23-Nov-2021 00:53:05.925 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+23-Nov-2021 00:53:05.925 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54
+23-Nov-2021 00:53:05.925 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54
+23-Nov-2021 00:53:05.928 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/conf/logging.properties
+23-Nov-2021 00:53:05.928 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+23-Nov-2021 00:53:05.928 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+23-Nov-2021 00:53:05.928 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+23-Nov-2021 00:53:05.928 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+23-Nov-2021 00:53:05.929 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -agentlib:jdwp=transport=dt_socket,address=localhost:8000,server=y,suspend=n
+23-Nov-2021 00:53:05.929 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+23-Nov-2021 00:53:05.929 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54
+23-Nov-2021 00:53:05.929 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54
+23-Nov-2021 00:53:05.929 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/temp
+23-Nov-2021 00:53:05.931 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+23-Nov-2021 00:53:06.336 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+23-Nov-2021 00:53:06.364 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [629] milliseconds
+23-Nov-2021 00:53:06.395 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+23-Nov-2021 00:53:06.395 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.54]
+23-Nov-2021 00:53:06.411 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/FormsAndFiles.war]
+23-Nov-2021 00:53:07.438 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+23-Nov-2021 00:53:07.507 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/FormsAndFiles.war] has finished in [1,095] ms
+23-Nov-2021 00:53:07.507 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/StarterMVC.war]
+23-Nov-2021 00:53:08.297 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+23-Nov-2021 00:53:08.391 INFO [main] org.springframework.web.servlet.FrameworkServlet.initServletBean Initializing Servlet 'dispatcher'
+23-Nov-2021 00:53:09.363 INFO [main] org.springframework.web.servlet.FrameworkServlet.initServletBean Completed initialization in 972 ms
+23-Nov-2021 00:53:09.364 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/StarterMVC.war] has finished in [1,857] ms
+23-Nov-2021 00:53:09.367 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/HandlingReqErrMVC.war]
+23-Nov-2021 00:53:09.384 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/HandlingReqErrMVC.war] has finished in [17] ms
+23-Nov-2021 00:53:09.385 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/host-manager]
+23-Nov-2021 00:53:09.416 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/host-manager] has finished in [31] ms
+23-Nov-2021 00:53:09.417 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/docs]
+23-Nov-2021 00:53:09.430 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/docs] has finished in [12] ms
+23-Nov-2021 00:53:09.430 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/StarterMVC_war]
+23-Nov-2021 00:53:10.021 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+23-Nov-2021 00:53:10.083 INFO [main] org.springframework.web.servlet.FrameworkServlet.initServletBean Initializing Servlet 'dispatcher'
+23-Nov-2021 00:53:10.711 INFO [main] org.springframework.web.servlet.FrameworkServlet.initServletBean Completed initialization in 628 ms
+23-Nov-2021 00:53:10.712 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/StarterMVC_war] has finished in [1,282] ms
+23-Nov-2021 00:53:10.712 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/examples]
+23-Nov-2021 00:53:10.814 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/examples] has finished in [102] ms
+23-Nov-2021 00:53:10.815 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/MVC]
+23-Nov-2021 00:53:10.828 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/MVC] has finished in [12] ms
+23-Nov-2021 00:53:10.828 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/manager]
+23-Nov-2021 00:53:10.841 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/manager] has finished in [13] ms
+23-Nov-2021 00:53:10.841 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/ROOT]
+23-Nov-2021 00:53:10.851 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/ROOT] has finished in [10] ms
+23-Nov-2021 00:53:10.854 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+23-Nov-2021 00:53:10.864 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [4500] milliseconds
+23-Nov-2021 00:54:17.421 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.54
+23-Nov-2021 00:54:17.423 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 28 2021 13:51:49 UTC
+23-Nov-2021 00:54:17.423 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.54.0
+23-Nov-2021 00:54:17.423 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+23-Nov-2021 00:54:17.423 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.4.0-90-generic
+23-Nov-2021 00:54:17.424 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+23-Nov-2021 00:54:17.424 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/jdk1.8.0_311/jre
+23-Nov-2021 00:54:17.424 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_311-b11
+23-Nov-2021 00:54:17.424 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+23-Nov-2021 00:54:17.424 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54
+23-Nov-2021 00:54:17.424 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54
+23-Nov-2021 00:54:17.425 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/conf/logging.properties
+23-Nov-2021 00:54:17.425 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+23-Nov-2021 00:54:17.425 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+23-Nov-2021 00:54:17.425 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+23-Nov-2021 00:54:17.425 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+23-Nov-2021 00:54:17.425 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -agentlib:jdwp=transport=dt_socket,address=localhost:8000,server=y,suspend=n
+23-Nov-2021 00:54:17.425 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+23-Nov-2021 00:54:17.426 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54
+23-Nov-2021 00:54:17.426 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54
+23-Nov-2021 00:54:17.426 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/temp
+23-Nov-2021 00:54:17.427 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+23-Nov-2021 00:54:17.788 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+23-Nov-2021 00:54:17.805 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [531] milliseconds
+23-Nov-2021 00:54:17.828 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+23-Nov-2021 00:54:17.829 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.54]
+23-Nov-2021 00:54:17.844 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/FormsAndFiles.war]
+23-Nov-2021 00:54:18.758 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+23-Nov-2021 00:54:18.803 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/FormsAndFiles.war] has finished in [958] ms
+23-Nov-2021 00:54:18.804 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/StarterMVC.war]
+23-Nov-2021 00:54:19.369 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+23-Nov-2021 00:54:19.438 INFO [main] org.springframework.web.servlet.FrameworkServlet.initServletBean Initializing Servlet 'dispatcher'
+23-Nov-2021 00:54:20.228 INFO [main] org.springframework.web.servlet.FrameworkServlet.initServletBean Completed initialization in 790 ms
+23-Nov-2021 00:54:20.230 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/StarterMVC.war] has finished in [1,426] ms
+23-Nov-2021 00:54:20.230 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/HandlingReqErrMVC.war]
+23-Nov-2021 00:54:20.248 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/HandlingReqErrMVC.war] has finished in [18] ms
+23-Nov-2021 00:54:20.248 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/host-manager]
+23-Nov-2021 00:54:20.271 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/host-manager] has finished in [23] ms
+23-Nov-2021 00:54:20.271 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/docs]
+23-Nov-2021 00:54:20.282 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/docs] has finished in [11] ms
+23-Nov-2021 00:54:20.282 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/StarterMVC_war]
+23-Nov-2021 00:54:20.977 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+23-Nov-2021 00:54:21.066 INFO [main] org.springframework.web.servlet.FrameworkServlet.initServletBean Initializing Servlet 'dispatcher'
+23-Nov-2021 00:54:21.786 INFO [main] org.springframework.web.servlet.FrameworkServlet.initServletBean Completed initialization in 719 ms
+23-Nov-2021 00:54:21.787 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/StarterMVC_war] has finished in [1,505] ms
+23-Nov-2021 00:54:21.788 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/examples]
+23-Nov-2021 00:54:21.873 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/examples] has finished in [85] ms
+23-Nov-2021 00:54:21.873 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/MVC]
+23-Nov-2021 00:54:21.883 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/MVC] has finished in [9] ms
+23-Nov-2021 00:54:21.883 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/manager]
+23-Nov-2021 00:54:21.894 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/manager] has finished in [11] ms
+23-Nov-2021 00:54:21.895 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/ROOT]
+23-Nov-2021 00:54:21.904 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/shoaib/Aamir/My Project/spring/TomcatServer/apache-tomcat-9.0.54/webapps/ROOT] has finished in [8] ms
+23-Nov-2021 00:54:21.906 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+23-Nov-2021 00:54:21.914 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [4109] milliseconds
