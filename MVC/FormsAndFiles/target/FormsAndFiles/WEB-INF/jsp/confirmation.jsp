@@ -10,6 +10,8 @@
     <div>Last Name: ${registration.lastName}</div>
     <div>Gender: ${registration.gender}</div>
     <div>Email: ${registration.email}</div>
+    <div>Age: ${registration.age}</div>
+    <div>Interest: ${registration.interest}</div>
     <div>
         Skills:
         <ul>

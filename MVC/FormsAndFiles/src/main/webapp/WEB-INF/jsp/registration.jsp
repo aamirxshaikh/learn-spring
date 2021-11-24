@@ -13,16 +13,21 @@
             <div class="row">
                 <div class="col-lg-8">
                     <form:form class="pt-2" action="submit" modelAttribute="registration">
-                        <div class="form-group pb-2"><form:input path="firstName" class="border rounded border-dark form-control" type="text" name="first-name" placeholder="First Name" style="background: rgba(255,255,255,0);" /></div>
-                        <div class="form-group pb-2"><form:input path="lastName" class="border rounded border-dark form-control" type="text" name="last-name" placeholder="Last Name" style="background: rgba(255,255,255,0);" /></div>
+                        <div class="form-group pb-2"><form:input path="firstName" class="border rounded border-dark form-control" type="text" name="first-name" placeholder="First Name" style="background: rgba(255,255,255,0);" /><form:errors path="firstName" class="text-danger"/></div>
+                        <div class="form-group pb-2"><form:input path="lastName" class="border rounded border-dark form-control" type="text" name="last-name" placeholder="Last Name" style="background: rgba(255,255,255,0);" /><form:errors path="lastName" class="text-danger"/></div>
                         <div class="form-group pb-2">
                             <div class="form-check"><form:radiobutton path="gender" value="Male" class="form-check-input" /><label class="form-check-label">Male</label></div>
                             <div class="form-check"><form:radiobutton path="gender" value="Female" class="form-check-input" /><label class="form-check-label">Female</label></div>
                         </div>
-                        <div class="form-group pb-2"><form:input path="email" class="border rounded border-dark form-control" type="email" name="email" placeholder="E-mail" style="background: rgba(255,255,255,0);" /></div>
+                        <div class="form-group pb-2"><form:input path="email" class="border rounded border-dark form-control" type="email" name="email" placeholder="E-mail" style="background: rgba(255,255,255,0);" /><form:errors path="email" class="text-danger" /></div>
+                        <div class="form-group pb-2"><form:input path="age" class="border rounded border-dark form-control" type="number" name="age" placeholder="Age" style="background: rgba(255,255,255,0);" /><form:errors path="age" class="text-danger" /></div>
                         <div class="form-group pb-2">
                             <div class="form-check"><form:checkbox path="skills" value="Spring Boot" class="form-check-input" /><label class="form-check-label">Spring Boot</label></div>
                             <div class="form-check"><form:checkbox path="skills" value="React" class="form-check-input" /><label class="form-check-label">React</label></div>
+                        </div>
+                        <div class="form-group pb-2">
+                            <form:select path="interest" class="form-select" aria-label="Select Interest" items="${interest}">
+                            </form:select>
                         </div>
                         <div class="form-group text-right"><button class="btn btn-primary text-light" type="submit" value="submit">Submit</button></div>
                     </form:form>
