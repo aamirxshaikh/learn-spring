@@ -8,5 +8,8 @@
 </head>
 <body>
 <a href="user/register">Register User</a>
+<div>
+    <a href="user/upload">Upload Document</a>
+</div>
 </body>
 </html>
