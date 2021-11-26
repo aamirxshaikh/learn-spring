@@ -4,6 +4,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.context.ServletContextAware;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -16,30 +19,36 @@ import java.io.IOException;
 
 @RequestMapping("/user")
 @Controller
-public class FileController {
+public class FileController implements ServletContextAware {
     private static final String UPLOAD_DIR = "/uploads";
 
-    @RequestMapping("/upload")
+    private ServletContext servletContext;
+
+    @Override
+    public void setServletContext(ServletContext servletContext) {
+        this.servletContext = servletContext;
+    }
+
+    @RequestMapping(value = "/upload", method = RequestMethod.GET)
     public ModelAndView upload() {
         return new ModelAndView("upload");
     }
 
-    @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public ModelAndView save(@RequestParam CommonsMultipartFile file, HttpSession session) throws IOException {
-        ServletContext context = session.getServletContext();
+    @RequestMapping(value = "/upload", method = RequestMethod.POST)
+    public @ResponseBody String upload(@RequestParam("name") String name, @RequestParam("file") MultipartFile file) throws IOException {
+        if(! file.isEmpty()) {
+            byte[] bytes = file.getBytes();
 
-        String path = context.getRealPath(UPLOAD_DIR);
+            String path = servletContext.getRealPath(UPLOAD_DIR);
 
-        System.out.println(path);
+            BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File(path + File.separator + name)));
 
-        byte[] bytes = file.getBytes();
+            stream.write(bytes);
+            stream.close();
 
-        BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File(path + File.separator + file.getOriginalFilename())));
-
-        stream.write(bytes);
-        stream.flush();
-        stream.close();
-
-        return new ModelAndView("upload", "success", "File Uploaded Successfully");
+            return "File Uploaded Successfully";
+        } else {
+            return "Cannot upload, File is empty";
+        }
     }
 }
