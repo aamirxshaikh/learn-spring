@@ -8,8 +8,6 @@
 </head>
 <body>
 <div>
-    <p class="text-success">${success}</p>
-
     <div class="form pt-3">
         <div class="container">
             <div class="row">

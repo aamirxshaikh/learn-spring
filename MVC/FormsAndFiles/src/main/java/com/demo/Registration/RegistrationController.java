@@ -33,6 +33,14 @@ public class RegistrationController {
 
     @RequestMapping(value = "/submit", method = RequestMethod.POST)
     public String submit(@Valid @ModelAttribute("registration") Registration registration, BindingResult result, Model model) {
+        List<String> interest = new ArrayList<>();
+
+        interest.add("Full Stack Development");
+        interest.add("AI/ML");
+        interest.add("Big Data");
+
+        model.addAttribute("interest", interest);
+
         if(result.hasErrors()) {
             return "registration";
         } else {

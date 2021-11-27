@@ -11,6 +11,9 @@
 <div>
 <%--    <a href="user/upload">Upload Document</a>--%>
     <input type="button" onclick="location.href='user/upload'" value="Upload Document">
+
+    <input type="button" onclick="location.href='user/upload-multiple'" value="Upload Multiple Document">
+
 </div>
 </body>
 </html>
