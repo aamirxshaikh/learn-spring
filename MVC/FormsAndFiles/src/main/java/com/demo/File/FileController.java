@@ -1,5 +1,6 @@
 package com.demo.File;
 
+import org.apache.commons.io.FilenameUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -9,12 +10,17 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 @RequestMapping("/user")
 @Controller
@@ -43,6 +49,11 @@ public class FileController implements ServletContextAware {
         model.addAttribute("uploads", new com.demo.File.File());
 
         return "upload-multiple-selection";
+    }
+
+    @RequestMapping(value = "/download", method = RequestMethod.GET)
+    public String download() {
+        return "download";
     }
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
@@ -100,7 +111,7 @@ public class FileController implements ServletContextAware {
                 String name = multipartFile.getOriginalFilename();
                 names.add(name);
 
-                java.io.File file = new java.io.File(servletRequest.getServletContext().getRealPath("/uploads"), name);
+                File file = new File(servletRequest.getServletContext().getRealPath("/uploads"), name);
 
                 try {
                     multipartFile.transferTo(file);
@@ -113,5 +124,49 @@ public class FileController implements ServletContextAware {
         model.addAttribute("uploads", uploads);
 
         return "upload-multiple-selection-details";
+    }
+
+    @RequestMapping(value = "download", method = RequestMethod.POST)
+    public void download(HttpServletRequest request, HttpServletResponse response, Model model) {
+        String name = request.getParameter("name");
+
+//        printed as log
+
+        System.out.println("Downloading.." + name);
+
+        String path = servletContext.getRealPath(UPLOAD_DIR);
+
+        Path file = Paths.get(path, name);
+
+        if(Files.exists(file)) {
+            String extension = FilenameUtils.getExtension(name);
+
+            switch(extension.toLowerCase()) {
+                case "pdf":
+                    response.setContentType("application/pdf");
+                    break;
+                case "jpeg":
+                    response.setContentType("image/jpeg");
+                    break;
+                case "jpg":
+                    response.setContentType("image/jpg");
+                    break;
+                case "png":
+                    response.setContentType("image/png");
+                    break;
+                default:
+                    break;
+            }
+
+            response.addHeader("Content-Disposition", "attachment; filename=" + name);
+
+            try {
+                Files.copy(file, response.getOutputStream());
+
+                response.getOutputStream().flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
