@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="028d43ef-062f-4297-bb44-16f1a46e83a2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HandlingReqErr/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HandlingReqErr/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HandlingReqErr/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HandlingReqErr/.idea/vcs.xml" afterDir="false" />
-    </list>
+    <list default="true" id="028d43ef-062f-4297-bb44-16f1a46e83a2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,6 +39,7 @@
       <workItem from="1636125149683" duration="164000" />
       <workItem from="1637516717939" duration="197000" />
       <workItem from="1637517074581" duration="111000" />
+      <workItem from="1638289840385" duration="135000" />
     </task>
     <servers />
   </component>
@@ -59,6 +56,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
