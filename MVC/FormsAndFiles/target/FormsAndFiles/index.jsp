@@ -14,6 +14,8 @@
 
     <input type="button" onclick="location.href='user/upload-multiple'" value="Upload Multiple Document">
 
+    <input type="button" onclick="location.href='user/upload-multiple-selection'" value="Upload Multiple Selection Document">
+
 </div>
 </body>
 </html>
