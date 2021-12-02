@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68050c1c-f9df-4846-baee-2398b0d00e1c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/FormsAndFiles/src/main/java/com/demo/File/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/FormsAndFiles/src/main/java/com/demo/File/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/FormsAndFiles/src/main/webapp/WEB-INF/jsp/upload.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/FormsAndFiles/src/main/webapp/WEB-INF/jsp/upload.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/FormsAndFiles/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/FormsAndFiles/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/FormsAndFiles/target/FormsAndFiles/WEB-INF/classes/com/demo/File/FileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/FormsAndFiles/target/FormsAndFiles/WEB-INF/classes/com/demo/File/FileController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/FormsAndFiles/target/FormsAndFiles/WEB-INF/jsp/upload.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/FormsAndFiles/target/FormsAndFiles/WEB-INF/jsp/upload.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/FormsAndFiles/target/FormsAndFiles/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/FormsAndFiles/target/FormsAndFiles/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/FormsAndFiles/target/FormsAndFiles/uploads/lakeside-pink-sky-sunset-minimal-art-gradient-background-7680x3215-4584.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/FormsAndFiles/target/classes/com/demo/File/FileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/FormsAndFiles/target/classes/com/demo/File/FileController.class" afterDir="false" />
-    </list>
+    <list default="true" id="68050c1c-f9df-4846-baee-2398b0d00e1c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +14,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1zlCFxmnY3xbIuYB5QKyNkCrOD0" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -36,7 +26,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/MVC/FormsAndFiles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/MVC/AuthCRUDMySQL" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MTHome" />
   </component>
@@ -66,6 +56,7 @@
       <workItem from="1637516643060" duration="72000" />
       <workItem from="1637653528544" duration="26000" />
       <workItem from="1637996837615" duration="412000" />
+      <workItem from="1638434345183" duration="42000" />
     </task>
     <servers />
   </component>

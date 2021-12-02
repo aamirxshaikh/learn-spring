@@ -1,0 +1,4 @@
+com\demo\Model\Login.class
+com\demo\Controller\LoginController.class
+com\demo\Model\Register.class
+com\demo\Controller\RegisterController.class
