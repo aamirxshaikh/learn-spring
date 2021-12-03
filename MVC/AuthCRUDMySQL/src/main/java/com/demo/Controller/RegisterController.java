@@ -1,6 +1,6 @@
 package com.demo.Controller;
 
-import com.demo.Model.Register;
+import com.demo.Model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,7 +15,7 @@ public class RegisterController {
     public ModelAndView show(HttpServletRequest request, HttpServletResponse response) {
         ModelAndView modelAndView = new ModelAndView("register");
 
-        modelAndView.addObject("register", new Register());
+        modelAndView.addObject("user", new User());
 
         return modelAndView;
     }

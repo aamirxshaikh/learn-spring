@@ -1,6 +1,6 @@
 package com.demo.Model;
 
-public class Register {
+public class User {
     private String name;
     private int id;
     private String college;

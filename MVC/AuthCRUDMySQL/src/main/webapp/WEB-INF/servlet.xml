@@ -22,6 +22,9 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
+    <bean id="registerService" class="com.demo.Service.UserServiceImpl" />
+    <bean id="registerDAO" class="com.demo.DAO.UserDAOImpl" />
+
     <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
         <property name="url" value="jdbc://localhost:3306/db"/>
