@@ -31,7 +31,7 @@
         <section class="portfolio-block block-intro">
             <div class="container">
                 <section class="login-clean">
-                    <form:form id="register" modelAttribute="register" action="register" method="post">
+                    <form:form id="register" modelAttribute="user" action="register" method="post">
                         <h1>Register</h1>
                         <h2 class="visually-hidden">Registration Form</h2>
                         <div class="illustration"><i class="icon ion-ios-navigate"></i></div>

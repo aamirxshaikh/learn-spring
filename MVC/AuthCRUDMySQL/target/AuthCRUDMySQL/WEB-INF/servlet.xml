@@ -22,4 +22,19 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
+    <bean id="registerService" class="com.demo.Service.UserServiceImpl" />
+    <bean id="registerDAO" class="com.demo.DAO.UserDAOImpl" />
+
+    <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/db"/>
+        <property name="username" value="root"/>
+        <property name="password" value="Root@Root"/>
+    </bean>
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="datasource" />
+    </bean>
+
+
 </beans>
