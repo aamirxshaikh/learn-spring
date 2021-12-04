@@ -18,4 +18,14 @@ public class UserServiceImpl implements UserService {
     public User validateUser(Login login) {
         return userDAO.validateUser(login);
     }
+
+    @Override
+    public boolean doesEmailExist(String email) {
+        return userDAO.doesEmailExist(email);
+    }
+
+    @Override
+    public boolean doesIdExist(Integer id) {
+        return userDAO.doesIdExist(id);
+    }
 }

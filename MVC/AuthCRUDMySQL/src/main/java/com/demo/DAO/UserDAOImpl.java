@@ -35,12 +35,42 @@ public class UserDAOImpl implements UserDAO {
     public User validateUser(Login login) {
         String sql = "SELECT * FROM registrations WHERE id = " + login.getId() + " AND password = '" + Objects.hash(login.getPassword()) + "'";
 
-        List<User> users = jdbcTemplate.query(sql, new RegisterMapper());
+        List<User> users = jdbcTemplate.query(sql, new UserMapper());
 
         return users.size() > 0 ? users.get(0) : null;
     }
 
-    private static class RegisterMapper implements RowMapper<User> {
+    @Override
+    public boolean doesEmailExist(String email) {
+        String sql = "SELECT email FROM registrations";
+
+        List<String> emails = jdbcTemplate.queryForList(sql, String.class);
+
+        for(String retrievedEmail : emails) {
+            if(retrievedEmail.toLowerCase().equals(email.toLowerCase())) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    @Override
+    public boolean doesIdExist(Integer id) {
+        String sql = "SELECT id FROM registrations";
+
+        List<Integer> ids = jdbcTemplate.queryForList(sql, Integer.class);
+
+        for(Integer retrievedId : ids) {
+            if(retrievedId.equals(id)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private static class UserMapper implements RowMapper<User> {
         @Override
         public User mapRow(ResultSet rs, int rowNum) throws SQLException {
             User user = new User();
