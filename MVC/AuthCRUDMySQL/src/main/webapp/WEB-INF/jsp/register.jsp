@@ -35,17 +35,20 @@
                         <h1>Register</h1>
                         <h2 class="visually-hidden">Registration Form</h2>
                         <div class="illustration"><i class="icon ion-ios-navigate"></i></div>
-                        <div class="mb-3"><form:input class="form-control" type="text" name="name" placeholder="Name" path="name" /></div>
-                        <div class="mb-3"><form:input class="form-control" type="text" name="student-id" placeholder="Student ID" path="id" /></div>
-                        <div class="mb-3"><form:input class="form-control" type="text" name="college" placeholder="College Name" path="college" /></div>
-                        <div class="mb-3"><label class="form-label">Stream</label><form:select class="form-select" path="stream">
-                            <option value="" selected="selected" disabled>Stream</option>
-                            <form:option value="IT" label="IT" />
-                            <form:option value="MECH" label="MECH" />
-                            <form:option value="EX" label="EX" />
-                            </form:select></div>
-                        <div class="mb-3"><form:input class="form-control" type="email" name="email" placeholder="Email" path="email" /></div>
-                        <div class="mb-3"><form:input class="form-control" type="password" name="password" placeholder="Password" path="password" /></div>
+                        <div class="mb-3"><form:input class="form-control" type="text" name="name" placeholder="Name" path="name" /><form:errors path="name" class="text-danger"/></div>
+                        <div class="mb-3"><form:input class="form-control" type="text" name="student-id" placeholder="Student ID" path="id" /><form:errors path="id" class="text-danger"/></div>
+                        <div class="mb-3"><form:input class="form-control" type="text" name="college" placeholder="College Name" path="college" /><form:errors path="college" class="text-danger"/></div>
+                        <div class="mb-3"><label class="form-label">Stream</label>
+                            <form:select class="form-select" path="stream">
+                                <option value="" selected="selected" disabled>Stream</option>
+                                <form:option value="IT" label="IT" />
+                                <form:option value="MECH" label="MECH" />
+                                <form:option value="EX" label="EX" />
+                            </form:select>
+                            <form:errors path="stream" class="text-danger"/>
+                        </div>
+                        <div class="mb-3"><form:input class="form-control" type="email" name="email" placeholder="Email" path="email" /><form:errors path="email" class="text-danger"/></div>
+                        <div class="mb-3"><form:input class="form-control" type="password" name="password" placeholder="Password" path="password" /><form:errors path="password" class="text-danger"/></div>
                         <div class="mb-3"><form:button name="register" id="register" class="btn btn-primary d-block w-100" type="submit">Register</form:button></div><a class="login" href="login">Have an account? Login here.</a>
                     </form:form>
                 </section>

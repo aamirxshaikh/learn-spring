@@ -36,8 +36,8 @@
                         <div class="illustration">
                             <h1 style="color: var(--bs-dark);">Login</h1><i class="icon ion-ios-navigate"></i>
                         </div>
-                        <div class="mb-3"><form:input class="form-control" type="text" name="student-id" placeholder="Student ID" path="id" /></div>
-                        <div class="mb-3"><form:input class="form-control" type="password" name="password" placeholder="Password" path="password" /></div>
+                        <div class="mb-3"><form:input class="form-control" type="text" name="student-id" placeholder="Student ID" path="id" /><form:errors path="id" class="text-danger"/></div>
+                        <div class="mb-3"><form:input class="form-control" type="password" name="password" placeholder="Password" path="password" /><form:errors path="password" class="text-danger"/></div>
                         <div class="mb-3"><p class="text-danger">${message}</p></div>
                         <div class="mb-3"><form:button name="login" id="login" class="btn btn-primary d-block w-100" type="submit">Log In</form:button></div><a class="register" href="register">Don't have an account? Register here.</a>
                     </form:form>
