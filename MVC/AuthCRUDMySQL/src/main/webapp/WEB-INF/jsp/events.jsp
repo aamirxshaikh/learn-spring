@@ -27,7 +27,7 @@
     <section class="portfolio-block block-intro">
         <div class="container pb-4">
             <div class="about-me">
-                <a class="btn btn-outline-primary" role="button" href="#">Create an Event</a>
+                <a class="btn btn-outline-primary" role="button" href="${pageContext.request.contextPath}/events/create">Create an Event</a>
             </div>
         </div>
         <div class="container">

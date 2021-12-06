@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface EventService {
     public List<Event> getEvents();
+
+    public void addEvent(Event event);
 }

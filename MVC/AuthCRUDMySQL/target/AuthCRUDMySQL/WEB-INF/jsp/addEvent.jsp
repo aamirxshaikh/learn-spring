@@ -1,16 +1,19 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-    <title>Events</title>
-    <link rel="stylesheet" href="static/assets/bootstrap/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Register</title>
+    <link rel="stylesheet" href="../static/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="static/assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="../static/assets/css/Footer-Dark.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <link rel="stylesheet" href="../static/assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="../static/assets/css/Registration-Form-with-Photo.css">
 </head>
 
 <body>
@@ -25,39 +28,23 @@
 </nav>
 <main class="page landing-page">
     <section class="portfolio-block block-intro">
-        <div class="container pb-4">
-            <div class="about-me">
-                <a class="btn btn-outline-primary" role="button" href="${pageContext.request.contextPath}/events/create">Create an Event</a>
-            </div>
-        </div>
         <div class="container">
-            <div class="table-responsive">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Details</th>
-                        <th>Location</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <c:forEach var="event" items="${events}">
-                        <tr>
-                            <td>${event.id}</td>
-                            <td>${event.name}</td>
-                            <td>${event.details}</td>
-                            <td>${event.location}</td>
-                        </tr>
-                    </c:forEach>
-                    </tbody>
-                </table>
-            </div>
+            <section class="login-clean">
+                <form:form id="event" modelAttribute="event" action="store" method="post">
+                    <h1>Add Event</h1>
+                    <h2 class="visually-hidden">Event Form</h2>
+                    <div class="illustration"><i class="icon ion-ios-navigate"></i></div>
+                    <div class="mb-3"><form:input class="form-control" type="text" name="name" placeholder="Name" path="name"/><form:errors path="name" class="text-danger"/></div>
+                    <div class="mb-3"><form:input class="form-control" type="text" name="details" placeholder="Details" path="details" /><form:errors path="details" class="text-danger"/></div>
+                    <div class="mb-3"><form:input class="form-control" type="text" name="location" placeholder="Location" path="location" /><form:errors path="location" class="text-danger"/></div>
+                    <div class="mb-3"><form:button name="store" id="store" class="btn btn-primary d-block w-100" type="submit">Add Event</form:button></div>
+                </form:form>
+            </section>
         </div>
     </section>
 </main>
 <footer class="footer-dark">
-    <div class="container pb-4">
+    <div class="container">
         <div class="row">
             <div class="col-sm-6 col-md-3 item">
                 <h3>Services</h3>
@@ -86,6 +73,7 @@
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
-<script src="static/assets/js/theme.js"></script>
+<script src="../static/assets/js/theme.js"></script>
 </body>
+
 </html>

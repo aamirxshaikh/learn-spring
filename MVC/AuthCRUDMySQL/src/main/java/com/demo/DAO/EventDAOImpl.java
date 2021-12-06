@@ -28,4 +28,15 @@ public class EventDAOImpl implements EventDAO {
             }
         });
     }
+
+    @Override
+    public void addEvent(Event event) {
+        String sql = "INSERT INTO events (name, details, location) VALUES " +
+                "( '" + event.getName() + "' , '" +
+                event.getDetails() + "' , '" +
+                event.getLocation() +
+                "' )";
+
+        jdbcTemplate.update(sql);
+    }
 }
