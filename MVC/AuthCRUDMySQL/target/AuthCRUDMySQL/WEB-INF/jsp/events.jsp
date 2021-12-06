@@ -1,10 +1,11 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-    <title>Dashboard</title>
+    <title>Events</title>
     <link rel="stylesheet" href="static/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
@@ -26,13 +27,37 @@
     <section class="portfolio-block block-intro">
         <div class="container pb-4">
             <div class="about-me">
-                <p>Welcome ${user.name}</p><a class="btn btn-outline-primary" href="${pageContext.request.contextPath}/events" role="button">Events</a>
+                <a class="btn btn-outline-primary" role="button" href="#">Create an Event</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Details</th>
+                        <th>Location</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <c:forEach var="event" items="${events}">
+                        <tr>
+                            <td>${event.id}</td>
+                            <td>${event.name}</td>
+                            <td>${event.details}</td>
+                            <td>${event.location}</td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
 </main>
 <footer class="footer-dark">
-    <div class="container">
+    <div class="container pb-4">
         <div class="row">
             <div class="col-sm-6 col-md-3 item">
                 <h3>Services</h3>

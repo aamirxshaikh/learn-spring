@@ -35,7 +35,7 @@
                         <h1>Register</h1>
                         <h2 class="visually-hidden">Registration Form</h2>
                         <div class="illustration"><i class="icon ion-ios-navigate"></i></div>
-                        <div class="mb-3"><form:input class="form-control" type="text" name="name" placeholder="Name" path="name" /><form:errors align="left" path="name" class="text-danger"/></div>
+                        <div class="mb-3"><form:input class="form-control" type="text" name="name" placeholder="Name" path="name" /><form:errors path="name" class="text-danger"/></div>
                         <div class="mb-3"><form:input class="form-control" type="text" name="student-id" placeholder="Student ID" path="id" /><form:errors path="id" class="text-danger"/></div>
                         <div class="mb-3"><form:input class="form-control" type="text" name="college" placeholder="College Name" path="college" /><form:errors path="college" class="text-danger"/></div>
                         <div class="mb-3"><label class="form-label">Stream</label>
