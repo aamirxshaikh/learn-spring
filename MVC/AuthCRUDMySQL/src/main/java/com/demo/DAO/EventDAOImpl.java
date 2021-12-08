@@ -39,4 +39,34 @@ public class EventDAOImpl implements EventDAO {
 
         jdbcTemplate.update(sql);
     }
+
+    @Override
+    public Event getEvent(int id) {
+        String sql = "SELECT * FROM events WHERE id = ?";
+
+        Event event = jdbcTemplate.queryForObject(sql, new Object[] {id}, new RowMapper<Event>() {
+            @Override
+            public Event mapRow(ResultSet rs, int rowNum) throws SQLException {
+                return new Event(rs.getInt("id"),
+                        rs.getString("name"),
+                        rs.getString("details"),
+                        rs.getString("location")
+                );
+            }
+        });
+
+        return event;
+    }
+
+    @Override
+    public void updateEvent(Event event) {
+        String sql = "UPDATE events set name = ?, details = ?, location = ? WHERE id = ?";
+        
+        jdbcTemplate.update(sql, new Object[] {
+                event.getName(),
+                event.getDetails(), 
+                event.getLocation(),
+                event.getId()
+        });
+    }
 }

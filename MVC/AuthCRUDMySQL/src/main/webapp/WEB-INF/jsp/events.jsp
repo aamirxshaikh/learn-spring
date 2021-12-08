@@ -39,6 +39,7 @@
                         <th>Name</th>
                         <th>Details</th>
                         <th>Location</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -48,6 +49,7 @@
                             <td>${event.name}</td>
                             <td>${event.details}</td>
                             <td>${event.location}</td>
+                            <td><input class="btn btn-warning border rounded" onclick="location.href='events/edit/${event.id}'" type="button" value="Edit"></td>
                         </tr>
                     </c:forEach>
                     </tbody>
