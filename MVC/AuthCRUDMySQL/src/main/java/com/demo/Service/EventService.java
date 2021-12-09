@@ -12,4 +12,6 @@ public interface EventService {
     public Event getEvent(int id);
 
     public void updateEvent(Event event);
+
+    public void deleteEvent(int id);
 }

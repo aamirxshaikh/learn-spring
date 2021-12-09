@@ -24,7 +24,7 @@ public class EventController {
     public String create(Model model) {
         model.addAttribute("event", new Event());
 
-        return "addEvent";
+        return "add";
     }
 
     @PostMapping(value = "/store")
@@ -46,6 +46,22 @@ public class EventController {
     @PostMapping(value = "edit/{id}")
     public String update(@ModelAttribute("event") Event event) {
         eventService.updateEvent(event);
+
+        return "redirect:/events";
+    }
+
+    @GetMapping(value = "delete/{id}")
+    public String delete(@PathVariable int id, Model model) {
+        Event event = eventService.getEvent(id);
+
+        model.addAttribute("event", event);
+
+        return "delete";
+    }
+
+    @PostMapping(value = "delete/{id}")
+    public String destroy(@ModelAttribute("event") Event event) {
+        eventService.deleteEvent(event.getId());
 
         return "redirect:/events";
     }

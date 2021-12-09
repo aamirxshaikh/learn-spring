@@ -69,4 +69,11 @@ public class EventDAOImpl implements EventDAO {
                 event.getId()
         });
     }
+
+    @Override
+    public void deleteEvent(int id) {
+        String sql = "DELETE FROM events WHERE id = ?";
+
+        jdbcTemplate.update(sql, new Object[] {id});
+    }
 }

@@ -34,24 +34,34 @@
             <div class="table-responsive">
                 <table class="table">
                     <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Details</th>
-                        <th>Location</th>
-                        <th>Action</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <c:forEach var="event" items="${events}">
-                        <tr>
-                            <td>${event.id}</td>
-                            <td>${event.name}</td>
-                            <td>${event.details}</td>
-                            <td>${event.location}</td>
-                            <td><input class="btn btn-warning border rounded" onclick="location.href='events/edit/${event.id}'" type="button" value="Edit"></td>
-                        </tr>
-                    </c:forEach>
+                    <c:choose>
+                        <c:when test="${empty events}">
+                            <p>No events created yet !</p>
+                        </c:when>
+                        <c:otherwise>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Details</th>
+                                <th>Location</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <c:forEach var="event" items="${events}">
+                                <tr>
+                                    <td>${event.id}</td>
+                                    <td>${event.name}</td>
+                                    <td>${event.details}</td>
+                                    <td>${event.location}</td>
+                                    <td>
+                                        <input class="btn btn-warning border rounded" onclick="location.href='events/edit/${event.id}'" type="button" value="Edit">
+                                        <input class="btn btn-danger border rounded" onclick="location.href='events/delete/${event.id}'" type="button" value="Delete">
+                                    </td>
+                                </tr>
+                            </c:forEach>
+                        </c:otherwise>
+                    </c:choose>
                     </tbody>
                 </table>
             </div>
