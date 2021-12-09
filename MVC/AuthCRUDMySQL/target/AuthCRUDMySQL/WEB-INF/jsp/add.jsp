@@ -35,7 +35,7 @@
                     <h2 class="visually-hidden">Event Form</h2>
                     <div class="illustration"><i class="icon ion-ios-navigate"></i></div>
                     <div class="mb-3"><form:input class="form-control" type="text" name="name" placeholder="Name" path="name"/><form:errors path="name" class="text-danger"/></div>
-                    <div class="mb-3"><form:input class="form-control" type="text" name="details" placeholder="Details" path="details" /><form:errors path="details" class="text-danger"/></div>
+                    <div class="mb-3"><form:input class="form-control" type="text" name="details" placeholder="Details" path="details" /></div>
                     <div class="mb-3"><form:input class="form-control" type="text" name="location" placeholder="Location" path="location" /><form:errors path="location" class="text-danger"/></div>
                     <div class="mb-3"><form:button name="store" id="store" class="btn btn-primary d-block w-100" type="submit">Add Event</form:button></div>
                 </form:form>

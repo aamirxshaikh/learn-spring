@@ -1,13 +1,19 @@
 package com.demo.Model;
 
+import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 
 public class Event implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private Integer id;
+
+    @NotEmpty(message = "Please Enter Name")
     private String name;
+
     private String details;
+
+    @NotEmpty(message = "Please Enter Location")
     private String location;
 
     public Event() {
