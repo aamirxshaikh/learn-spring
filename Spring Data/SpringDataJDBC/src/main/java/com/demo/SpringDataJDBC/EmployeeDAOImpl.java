@@ -1,11 +1,13 @@
 package com.demo.SpringDataJDBC;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class EmployeeDAOImpl implements EmployeeDAO<Employee> {
@@ -31,5 +33,20 @@ public class EmployeeDAOImpl implements EmployeeDAO<Employee> {
         String sql = "SELECT * FROM employees";
 
         return jdbcTemplate.query(sql, rowMap);
+    }
+
+    @Override
+    public Optional<Employee> getById(int id) {
+        String sql = "SELECT * FROM employees WHERE id = ?";
+
+        Employee employee = null;
+
+        try {
+            employee = jdbcTemplate.queryForObject(sql, rowMap, id);
+        } catch(DataAccessException exception) {
+            System.out.println(exception);
+        }
+
+        return Optional.ofNullable(employee);
     }
 }

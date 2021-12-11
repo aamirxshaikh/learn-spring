@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.List;
+import java.util.Optional;
 
 @SpringBootApplication
 public class SpringDataJdbcApplication {
@@ -18,8 +19,15 @@ public class SpringDataJdbcApplication {
 
 		List<Employee> employees = employeeDAO.list();
 
+		System.out.println("Employees");
+
 		for (Employee employee : employees) {
 			System.out.println(employee);
 		}
+
+		System.out.println("Employee");
+
+		Optional<Employee> employee = employeeDAO.getById(1);
+		System.out.println(employee);
 	}
 }
