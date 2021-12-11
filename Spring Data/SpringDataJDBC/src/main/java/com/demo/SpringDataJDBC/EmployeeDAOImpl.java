@@ -49,4 +49,11 @@ public class EmployeeDAOImpl implements EmployeeDAO<Employee> {
 
         return Optional.ofNullable(employee);
     }
+
+    @Override
+    public void add(Employee employee) {
+        String sql = "INSERT INTO employees (first_name, last_name, email) VALUES (?, ?, ?)";
+
+        jdbcTemplate.update(sql, employee.getFirstName(), employee.getLastName(), employee.getEmail());
+    }
 }

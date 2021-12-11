@@ -7,4 +7,6 @@ public interface EmployeeDAO<Table> {
     List<Table> list();
 
     Optional<Table> getById(int id);
+
+    void add(Table table);
 }

@@ -27,7 +27,21 @@ public class SpringDataJdbcApplication {
 
 		System.out.println("Employee");
 
-		Optional<Employee> employee = employeeDAO.getById(1);
-		System.out.println(employee);
+		Optional<Employee> getEmployee = employeeDAO.getById(1);
+		System.out.println(getEmployee);
+
+		System.out.println("New Employee");
+
+		Employee newEmployee = new Employee(null, "test", "test", "test@gmail.com");
+
+		employeeDAO.add(newEmployee);
+
+		employees = employeeDAO.list();
+
+		System.out.println("Employees");
+
+		for (Employee employee : employees) {
+			System.out.println(employee);
+		}
 	}
 }
