@@ -43,5 +43,20 @@ public class SpringDataJdbcApplication {
 		for (Employee employee : employees) {
 			System.out.println(employee);
 		}
+
+		System.out.println("Update");
+
+		Employee employee2 = employeeDAO.getById(2).get();
+		employee2.setEmail("johndoe@example.com");
+
+		employeeDAO.update(employee2);
+
+		employees = employeeDAO.list();
+
+		System.out.println("Updated Employees");
+
+		for (Employee employee : employees) {
+			System.out.println(employee);
+		}
 	}
 }
