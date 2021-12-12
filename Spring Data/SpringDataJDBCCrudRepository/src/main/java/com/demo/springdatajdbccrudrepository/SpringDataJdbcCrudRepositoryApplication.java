@@ -17,7 +17,7 @@ public class SpringDataJdbcCrudRepositoryApplication {
     }
 
     @Bean
-    ApplicationRunner applicationRunner(StudentRepository studentRepository, MajorRepository majorRepository) {
+    ApplicationRunner studentRunner(StudentRepository studentRepository) {
         return args -> {
 //            Student
 
@@ -40,7 +40,12 @@ public class SpringDataJdbcCrudRepositoryApplication {
             System.out.println(studentRepository.findByName("John"));
             System.out.println(studentRepository.findByEmail("john@gmail.com"));
             System.out.println(studentRepository.findByMajor(1));
+        };
+    }
 
+    @Bean
+    ApplicationRunner majorRunner(MajorRepository majorRepository) {
+        return args -> {
 //            Major
 
             Major major1 = Major.addMajor(null, "History");
