@@ -18,8 +18,21 @@ public class SpringDataJdbcCrudRepositoryApplication {
             Student student1 = new Student(null, 18, "John", "john@gmail.com");
             Student student2 = new Student(null, 20, "Jane", "jane@gmail.com");
 
-            System.out.println(studentRepository.save(student1));
-            System.out.println(studentRepository.save(student2));
+//            insert
+
+//            System.out.println(studentRepository.save(student1));
+//            System.out.println(studentRepository.save(student2));
+
+//            select/find all
+
+            System.out.println(studentRepository.findAll());
+
+//            find by
+
+            System.out.println(studentRepository.findById(1));
+            System.out.println(studentRepository.findByAge(18));
+            System.out.println(studentRepository.findByName("John"));
+            System.out.println(studentRepository.findByEmail("john@gmail.com"));
         };
     }
 }
