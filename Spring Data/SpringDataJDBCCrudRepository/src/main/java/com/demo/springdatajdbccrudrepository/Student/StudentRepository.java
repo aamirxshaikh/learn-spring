@@ -1,4 +1,4 @@
-package com.demo.springdatajdbccrudrepository;
+package com.demo.springdatajdbccrudrepository.Student;
 
 import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -23,4 +23,7 @@ public interface StudentRepository extends CrudRepository<Student, Long> {
 
     @Query("SELECT * FROM students WHERE email = :email")
     List<Student> findByEmail(@Param("email") String email);
+
+    @Query("SELECT * FROM students WHERE major = :major")
+    List<Student> findByMajor(@Param("major") int major);
 }

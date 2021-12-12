@@ -1,4 +1,4 @@
-package com.demo.springdatajdbccrudrepository;
+package com.demo.springdatajdbccrudrepository.Student;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
@@ -19,18 +19,22 @@ public class Student {
     @Column("email")
     private String email;
 
+    @Column("major")
+    private int major;
+
     public Student() {
     }
 
-    public Student(Integer id, Integer age, String name, String email) {
+    public Student(Integer id, Integer age, String name, String email, int major) {
         this.id = id;
         this.age = age;
         this.name = name;
         this.email = email;
+        this.major = major;
     }
 
-    static Student create(Integer id,  Integer age, String name, String email) {
-        return new Student(id, age, name, email);
+    public static Student create(Integer id,  Integer age, String name, String email, int major) {
+        return new Student(id, age, name, email, major);
     }
 
     public Integer getId() {
@@ -65,6 +69,14 @@ public class Student {
         this.email = email;
     }
 
+    public int getMajor() {
+        return major;
+    }
+
+    public void setMajor(int major) {
+        this.major = major;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -72,6 +84,7 @@ public class Student {
                 ", age=" + age +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
+                ", major=" + major +
                 '}';
     }
 }
