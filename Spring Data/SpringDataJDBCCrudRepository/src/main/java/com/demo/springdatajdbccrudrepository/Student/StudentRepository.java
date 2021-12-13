@@ -12,7 +12,7 @@ public interface StudentRepository extends CrudRepository<Student, Long> {
     @Query("SELECT * FROM students")
     List<Student> findAll();
 
-    @Query("SELECT * FROM students WHERE id = :id")
+    @Query("SELECT * FROM students WHERE student_id = :id")
     List<Student> findById(@Param("id") int id);
 
     @Query("SELECT * FROM students WHERE age = :age")

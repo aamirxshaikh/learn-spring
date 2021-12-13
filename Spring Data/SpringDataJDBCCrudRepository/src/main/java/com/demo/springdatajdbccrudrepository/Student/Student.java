@@ -7,7 +7,7 @@ import org.springframework.data.relational.core.mapping.Table;
 @Table("students")
 public class Student {
     @Id
-    @Column("id")
+    @Column("student_id")
     private Integer id;
 
     @Column("age")
