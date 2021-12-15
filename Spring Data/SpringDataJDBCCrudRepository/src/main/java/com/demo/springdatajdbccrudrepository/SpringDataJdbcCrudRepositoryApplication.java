@@ -1,5 +1,7 @@
 package com.demo.springdatajdbccrudrepository;
 
+import com.demo.springdatajdbccrudrepository.Conference.Conference;
+import com.demo.springdatajdbccrudrepository.Conference.ConferenceRepository;
 import com.demo.springdatajdbccrudrepository.Major.Major;
 import com.demo.springdatajdbccrudrepository.Major.MajorRepository;
 import com.demo.springdatajdbccrudrepository.Skill.Skill;
@@ -13,6 +15,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 @SpringBootApplication
 public class SpringDataJdbcCrudRepositoryApplication {
 
@@ -20,101 +25,114 @@ public class SpringDataJdbcCrudRepositoryApplication {
         SpringApplication.run(SpringDataJdbcCrudRepositoryApplication.class, args);
     }
 
+//    @Bean
+//    ApplicationRunner studentRunner(StudentRepository studentRepository) {
+//        return args -> {
+////            Student
+//
+//            Student student1 = new Student(null, 18, "John", "john@gmail.com", 1);
+//            Student student2 = new Student(null, 20, "Jane", "jane@gmail.com", 2);
+//
+////            insert
+//
+////            System.out.println(studentRepository.save(student1));
+////            System.out.println(studentRepository.save(student2));
+//
+////            select/find all
+//
+//            System.out.println(studentRepository.findAll());
+//
+////            find by
+//
+//            System.out.println(studentRepository.findById(1));
+//            System.out.println(studentRepository.findByAge(18));
+//            System.out.println(studentRepository.findByName("John"));
+//            System.out.println(studentRepository.findByEmail("john@gmail.com"));
+//            System.out.println(studentRepository.findByMajor(1));
+//        };
+//    }
+//
+//    @Bean
+//    ApplicationRunner majorRunner(MajorRepository majorRepository) {
+//        return args -> {
+////            Major
+//
+//            Major major1 = Major.addMajor(null, "History");
+//            Major major2 = Major.addMajor(null, "Psychology");
+//
+////            insert
+//
+////            System.out.println(majorRepository.save(major1));
+////            System.out.println(majorRepository.save(major2));
+//
+////            select/find all
+//
+//            System.out.println(majorRepository.findAll());
+//
+////            find by
+//
+//            System.out.println(majorRepository.findById(2L));
+//            System.out.println(majorRepository.findByName("History"));
+//        };
+//    }
+//
+//    @Bean
+//    ApplicationRunner skillRunner(SkillRepository skillRepository) {
+//        return args -> {
+////            Skill
+//
+//            Skill skill1 = Skill.addSkill(null, "React");
+//            Skill skill2 = Skill.addSkill(null, "AWS");
+//
+////            insert
+//
+////            System.out.println(skillRepository.save(skill1));
+////            System.out.println(skillRepository.save(skill2));
+//
+////            select/find all
+//
+//            System.out.println(skillRepository.findAll());
+//
+////            find by
+//
+//            System.out.println(skillRepository.findByName("AWS"));
+//        };
+//    }
+//
+//    @Bean
+//    ApplicationRunner studentSkillRunner(StudentSkillRepository studentSkillRepository) {
+//        return args -> {
+////            StudentSkill
+//
+//            Integer studentId = studentSkillRepository.findStudentByName("Aamir").getId();
+//            Long skillId = studentSkillRepository.findSkillByName("AWS").getSkillId();
+//
+//            StudentSkill studentSkill = new StudentSkill();
+//
+//            studentSkill.setStudentId(studentId);
+//            studentSkill.setSkillId(skillId);
+//
+////            insert
+//
+//            System.out.println(studentSkillRepository.save(studentSkill));
+//
+////            find by
+//
+//            System.out.println(studentSkillRepository.findStudentByName("Aamir"));
+//            System.out.println(studentSkillRepository.findSkillByName("React"));
+//        };
+//    }
+
     @Bean
-    ApplicationRunner studentRunner(StudentRepository studentRepository) {
+    ApplicationRunner conferenceRunner(ConferenceRepository conferenceRepository) {
         return args -> {
-//            Student
+            Date date1 = new SimpleDateFormat("dd/MM/yyyy").parse("20/12/2021");
+            Date date2 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2021");
+            Date date3 = new SimpleDateFormat("dd/MM/yyyy").parse("28/12/2021");
 
-            Student student1 = new Student(null, 18, "John", "john@gmail.com", 1);
-            Student student2 = new Student(null, 20, "Jane", "jane@gmail.com", 2);
-
-//            insert
-
-//            System.out.println(studentRepository.save(student1));
-//            System.out.println(studentRepository.save(student2));
-
-//            select/find all
-
-            System.out.println(studentRepository.findAll());
-
-//            find by
-
-            System.out.println(studentRepository.findById(1));
-            System.out.println(studentRepository.findByAge(18));
-            System.out.println(studentRepository.findByName("John"));
-            System.out.println(studentRepository.findByEmail("john@gmail.com"));
-            System.out.println(studentRepository.findByMajor(1));
-        };
-    }
-
-    @Bean
-    ApplicationRunner majorRunner(MajorRepository majorRepository) {
-        return args -> {
-//            Major
-
-            Major major1 = Major.addMajor(null, "History");
-            Major major2 = Major.addMajor(null, "Psychology");
-
-//            insert
-
-//            System.out.println(majorRepository.save(major1));
-//            System.out.println(majorRepository.save(major2));
-
-//            select/find all
-
-            System.out.println(majorRepository.findAll());
-
-//            find by
-
-            System.out.println(majorRepository.findById(2L));
-            System.out.println(majorRepository.findByName("History"));
-        };
-    }
-
-    @Bean
-    ApplicationRunner skillRunner(SkillRepository skillRepository) {
-        return args -> {
-//            Skill
-
-            Skill skill1 = Skill.addSkill(null, "React");
-            Skill skill2 = Skill.addSkill(null, "AWS");
-
-//            insert
-
-//            System.out.println(skillRepository.save(skill1));
-//            System.out.println(skillRepository.save(skill2));
-
-//            select/find all
-
-            System.out.println(skillRepository.findAll());
-
-//            find by
-
-            System.out.println(skillRepository.findByName("AWS"));
-        };
-    }
-
-    @Bean
-    ApplicationRunner studentSkillRunner(StudentSkillRepository studentSkillRepository) {
-        return args -> {
-//            StudentSkill
-
-            Integer studentId = studentSkillRepository.findStudentByName("Aamir").getId();
-            Long skillId = studentSkillRepository.findSkillByName("AWS").getSkillId();
-
-            StudentSkill studentSkill = new StudentSkill();
-
-            studentSkill.setStudentId(studentId);
-            studentSkill.setSkillId(skillId);
-
-//            insert
-
-            System.out.println(studentSkillRepository.save(studentSkill));
-
-//            find by
-
-            System.out.println(studentSkillRepository.findStudentByName("Aamir"));
-            System.out.println(studentSkillRepository.findSkillByName("React"));
+            conferenceRepository.save(new Conference(null, "ReactConf", "abc", 5000, date1));
+            conferenceRepository.save(new Conference(null, "Redux", "xyz", 1000, date2));
+            conferenceRepository.save(new Conference(null, "Azure", "abc", 10000, date3));
         };
     }
 }
