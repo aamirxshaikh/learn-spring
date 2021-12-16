@@ -15,4 +15,8 @@ public interface ConferenceRepository extends CrudRepository<Conference, Long> {
     List<Conference> findByCapacity(int capacity);
 
     List<Conference> findByDate(Date date);
+
+    List<Conference> findByNameAndLocation(String name, String location);
+
+    List<Conference> findByNameOrLocation(String name, String location);
 }

@@ -171,6 +171,14 @@ public class SpringDataJdbcCrudRepositoryApplication {
 
             System.out.println("find by date");
             System.out.println(conferenceRepository.findByDate(date1));
+
+            System.out.println("findByNameAndLocation()");
+
+            System.out.println(conferenceRepository.findByNameAndLocation("Redux", "xyz"));
+
+            System.out.println("findByNameOrLocation()");
+
+            System.out.println(conferenceRepository.findByNameOrLocation("ReactConf", "abc"));
         };
     }
 }
