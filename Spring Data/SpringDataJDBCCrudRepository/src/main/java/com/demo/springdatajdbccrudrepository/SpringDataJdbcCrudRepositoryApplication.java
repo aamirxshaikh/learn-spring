@@ -16,7 +16,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 @SpringBootApplication
 public class SpringDataJdbcCrudRepositoryApplication {
@@ -130,9 +133,30 @@ public class SpringDataJdbcCrudRepositoryApplication {
             Date date2 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2021");
             Date date3 = new SimpleDateFormat("dd/MM/yyyy").parse("28/12/2021");
 
-            conferenceRepository.save(new Conference(null, "ReactConf", "abc", 5000, date1));
-            conferenceRepository.save(new Conference(null, "Redux", "xyz", 1000, date2));
-            conferenceRepository.save(new Conference(null, "Azure", "abc", 10000, date3));
+//            conferenceRepository.save(new Conference(null, "ReactConf", "abc", 5000, date1));
+//            conferenceRepository.save(new Conference(null, "Redux", "xyz", 1000, date2));
+//            conferenceRepository.save(new Conference(null, "Azure", "abc", 10000, date3));
+
+            System.out.println("findAll()");
+            for (Conference conference : conferenceRepository.findAll()) {
+                System.out.println(conference);
+            }
+
+            System.out.println("findById()");
+            System.out.println(conferenceRepository.findById(2L));
+
+            List<Long> ids = new ArrayList<Long>(Arrays.asList(1L, 2L, 3L));
+
+            System.out.println("findAllById()");
+            for (Conference conference : conferenceRepository.findAllById(ids)) {
+                System.out.println(conference);
+            }
+
+            System.out.println("existsById()");
+            System.out.println(conferenceRepository.existsById(2432L));
+
+            System.out.println("count()");
+            System.out.println(conferenceRepository.count());
         };
     }
 }
