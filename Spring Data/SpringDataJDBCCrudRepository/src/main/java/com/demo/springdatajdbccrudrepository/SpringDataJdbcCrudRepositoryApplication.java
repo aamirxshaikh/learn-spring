@@ -195,6 +195,28 @@ public class SpringDataJdbcCrudRepositoryApplication {
             System.out.println(conferenceRepository.findByCapacityGreaterThanEqualOrderByCapacityDesc(10));
 
             System.out.println(conferenceRepository.findByCapacityBetween(1000, 10000));
+
+            System.out.println("Ordering results");
+
+            System.out.println(conferenceRepository.findByDateBefore(date2));
+
+            System.out.println(conferenceRepository.findByDateAfter(date2));
+
+            System.out.println(conferenceRepository.findByDateBetween(date1, date3));
+
+            System.out.println(conferenceRepository.findFirstByOrderByDate());
+
+            System.out.println(conferenceRepository.findFirstByOrderByDateDesc());
+
+            System.out.println(conferenceRepository.findFirstByLocationOrderByDate("abc"));
+
+            System.out.println(conferenceRepository.findFirstByLocationOrderByDateDesc("abc"));
+
+            System.out.println(conferenceRepository.findTop2ByOrderByDate());
+
+            System.out.println(conferenceRepository.findFirst3ByOrderByDate());
+
+            System.out.println(conferenceRepository.findFirst3ByOrderByDateDesc());
         };
     }
 }

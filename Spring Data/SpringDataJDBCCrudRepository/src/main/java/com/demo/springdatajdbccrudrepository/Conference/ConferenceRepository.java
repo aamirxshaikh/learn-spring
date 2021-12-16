@@ -33,4 +33,26 @@ public interface ConferenceRepository extends CrudRepository<Conference, Long> {
     List<Conference> findByCapacityGreaterThanEqualOrderByCapacityDesc(int capacity);
 
     List<Conference> findByCapacityBetween(int lower, int upper);
+
+    List<Conference> findByDateBefore(Date date);
+
+    List<Conference> findByDateAfter(Date date);
+
+    List<Conference> findByDateBetween(Date start, Date end);
+
+    Conference findFirstByOrderByDate();
+
+    Conference findTopByOrderByDate();
+
+    Conference findFirstByOrderByDateDesc();
+
+    Conference findFirstByLocationOrderByDate(String location);
+
+    Conference findFirstByLocationOrderByDateDesc(String location);
+
+    List<Conference> findTop2ByOrderByDate();
+
+    List<Conference> findFirst3ByOrderByDate();
+
+    List<Conference> findFirst3ByOrderByDateDesc();
 }
