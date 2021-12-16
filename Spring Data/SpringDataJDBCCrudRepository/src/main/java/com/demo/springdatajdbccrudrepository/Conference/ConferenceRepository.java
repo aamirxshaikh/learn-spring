@@ -19,4 +19,18 @@ public interface ConferenceRepository extends CrudRepository<Conference, Long> {
     List<Conference> findByNameAndLocation(String name, String location);
 
     List<Conference> findByNameOrLocation(String name, String location);
+
+    List<Conference> findByCapacityGreaterThan(int capacity);
+
+    List<Conference> findByCapacityLessThan(int capacity);
+
+    List<Conference> findByCapacityGreaterThanEqual(int capacity);
+
+    List<Conference> findByCapacityLessThanEqual(int capacity);
+
+    List<Conference> findByCapacityGreaterThanEqualOrderByCapacity(int capacity);
+
+    List<Conference> findByCapacityGreaterThanEqualOrderByCapacityDesc(int capacity);
+
+    List<Conference> findByCapacityBetween(int lower, int upper);
 }

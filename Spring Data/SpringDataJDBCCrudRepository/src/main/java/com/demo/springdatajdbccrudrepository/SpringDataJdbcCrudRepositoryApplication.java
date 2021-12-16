@@ -179,6 +179,22 @@ public class SpringDataJdbcCrudRepositoryApplication {
             System.out.println("findByNameOrLocation()");
 
             System.out.println(conferenceRepository.findByNameOrLocation("ReactConf", "abc"));
+
+            System.out.println("Range Queries");
+
+            System.out.println(conferenceRepository.findByCapacityGreaterThan(10));
+
+            System.out.println(conferenceRepository.findByCapacityGreaterThanEqual(10));
+
+            System.out.println(conferenceRepository.findByCapacityLessThan(1000));
+
+            System.out.println(conferenceRepository.findByCapacityLessThanEqual(1000));
+
+            System.out.println(conferenceRepository.findByCapacityGreaterThanEqualOrderByCapacity(10));
+
+            System.out.println(conferenceRepository.findByCapacityGreaterThanEqualOrderByCapacityDesc(10));
+
+            System.out.println(conferenceRepository.findByCapacityBetween(1000, 10000));
         };
     }
 }
