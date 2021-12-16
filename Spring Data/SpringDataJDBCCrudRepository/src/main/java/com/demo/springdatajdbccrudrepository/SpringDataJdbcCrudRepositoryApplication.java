@@ -157,6 +157,20 @@ public class SpringDataJdbcCrudRepositoryApplication {
 
             System.out.println("count()");
             System.out.println(conferenceRepository.count());
+
+//            derived query methods
+
+            System.out.println("find by conference name");
+            System.out.println(conferenceRepository.findByName("Redux"));
+
+            System.out.println("find by location");
+            System.out.println(conferenceRepository.findByLocation("abc"));
+
+            System.out.println("find by capacity");
+            System.out.println(conferenceRepository.findByCapacity(5000));
+
+            System.out.println("find by date");
+            System.out.println(conferenceRepository.findByDate(date1));
         };
     }
 }
