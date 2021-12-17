@@ -14,15 +14,17 @@ public class App
         try {
             entityManager.getTransaction().begin();
 
-            Employee employee1 = new Employee(2000, "xyz", "abc", "Trainee", 49999D);
-            Employee employee2 = new Employee(2001, "lmn", "opq", "Trainee", 59999D);
-            Employee employee3 = new Employee();
-
-            employee3.setId(1);
+            Employee employee1 = new Employee("xyz", "abc", "Trainee", 49999D);
+            Employee employee2 = new Employee("lmn", "opq", "Trainee", 59999D);
 
             entityManager.persist(employee1);
             entityManager.persist(employee2);
-            entityManager.persist(employee3);
+
+            Department department1 = new Department("IT", "abc");
+            Department department2 = new Department("HR", "xyz");
+
+            entityManager.persist(department1);
+            entityManager.persist(department2);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

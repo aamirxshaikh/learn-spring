@@ -1,13 +1,13 @@
 package com.demo;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "EmployeeDetails")
 public class Employee {
     @Id
+    @GeneratedValue
     private Integer id;
     private String firstName;
     private String lastName;
@@ -17,8 +17,7 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(Integer id, String firstName, String lastName, String job, Double salary) {
-        this.id = id;
+    public Employee(String firstName, String lastName, String job, Double salary) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.job = job;
