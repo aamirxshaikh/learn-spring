@@ -11,17 +11,25 @@ public class App
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("EmployeeDBUnit");
         EntityManager entityManager = factory.createEntityManager();
 
-        entityManager.getTransaction().begin();
+        try {
+            entityManager.getTransaction().begin();
 
-        Employee employee1 = new Employee(2000, "xyz", "abc", "Trainee", 49999);
-        Employee employee2 = new Employee(2001, "lmn", "opq", "Trainee", 59999);
+            Employee employee1 = new Employee(2000, "xyz", "abc", "Trainee", 49999D);
+            Employee employee2 = new Employee(2001, "lmn", "opq", "Trainee", 59999D);
+            Employee employee3 = new Employee();
 
-        entityManager.persist(employee1);
-        entityManager.persist(employee2);
+            employee3.setId(1);
 
-        entityManager.getTransaction().commit();
+            entityManager.persist(employee1);
+            entityManager.persist(employee2);
+            entityManager.persist(employee3);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            entityManager.getTransaction().commit();
 
-        entityManager.close();
-        factory.close();
+            entityManager.close();
+            factory.close();
+        }
     }
 }
