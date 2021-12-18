@@ -3,6 +3,8 @@ package com.demo;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class App
 {
@@ -25,6 +27,15 @@ public class App
 
             entityManager.persist(department1);
             entityManager.persist(department2);
+
+            EmployeeCheckin checkin1 = new EmployeeCheckin(1, LocalDate.now(), LocalTime.now());
+            EmployeeCheckin checkin2 = new EmployeeCheckin(1, LocalDate.now().plusDays(1), LocalTime.now());
+
+            System.out.println(checkin1.toString());
+            System.out.println(checkin2.toString());
+
+            entityManager.persist(checkin1);
+            entityManager.persist(checkin2);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

@@ -35,6 +35,14 @@ public class EmployeeCheckinComposite implements Serializable {
     }
 
     @Override
+    public String toString() {
+        return "EmployeeCheckinComposite{" +
+                "employeeId=" + employeeId +
+                ", checkinDate=" + checkinDate +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if(this == obj) {
             return true;
