@@ -5,6 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.List;
 
 public class App
 {
@@ -19,8 +20,25 @@ public class App
             Employee employee1 = new Employee("xyz", "abc", "Trainee", 49999D);
             Employee employee2 = new Employee("lmn", "opq", "Trainee", 59999D);
 
+//            create
+
             entityManager.persist(employee1);
             entityManager.persist(employee2);
+
+//            select
+
+            System.out.println("Employee 1 " + entityManager.find(Employee.class, 1));
+            System.out.println("Employee 2 " + entityManager.find(Employee.class, 2));
+
+//            select all
+
+            List<Employee> employees = entityManager.createQuery("SELECT e FROM Employee e").getResultList();
+
+            System.out.println("All Employees");
+
+            for (Employee employee : employees) {
+                System.out.println(employee);
+            }
 
             Department department1 = new Department("IT", "abc");
             Department department2 = new Department("HR", "xyz");
