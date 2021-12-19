@@ -40,6 +40,14 @@ public class App
                 System.out.println(employee);
             }
 
+//            update
+
+            entityManager.find(Employee.class, 1).setFirstName("XYZ");
+
+//            delete
+
+            entityManager.remove(entityManager.find(Employee.class, 1));
+
             Department department1 = new Department("IT", "abc");
             Department department2 = new Department("HR", "xyz");
 
