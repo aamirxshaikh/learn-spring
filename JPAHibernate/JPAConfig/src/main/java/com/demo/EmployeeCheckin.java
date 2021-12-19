@@ -1,30 +1,45 @@
 package com.demo;
 
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Entity
+@IdClass(EmployeeCheckinComposite.class)
 public class EmployeeCheckin {
-    @EmbeddedId
-    EmployeeCheckinComposite employeeCheckinComposite;
+    @Id
+    private int employeeId;
+
+    @Id
+    private LocalDate checkinDate;
+
     LocalTime checkinTime;
 
     public EmployeeCheckin() {
     }
 
     public EmployeeCheckin(int employeeId, LocalDate checkinDate, LocalTime checkinTime) {
-        this.employeeCheckinComposite = new EmployeeCheckinComposite(employeeId, checkinDate);
+        this.employeeId = employeeId;
+        this.checkinDate = checkinDate;
         this.checkinTime = checkinTime;
     }
 
-    public EmployeeCheckinComposite getEmployeeCheckinComposite() {
-        return employeeCheckinComposite;
+    public int getEmployeeId() {
+        return employeeId;
     }
 
-    public void setEmployeeCheckinComposite(EmployeeCheckinComposite employeeCheckinComposite) {
-        this.employeeCheckinComposite = employeeCheckinComposite;
+    public void setEmployeeId(int employeeId) {
+        this.employeeId = employeeId;
+    }
+
+    public LocalDate getCheckinDate() {
+        return checkinDate;
+    }
+
+    public void setCheckinDate(LocalDate checkinDate) {
+        this.checkinDate = checkinDate;
     }
 
     public LocalTime getCheckinTime() {
@@ -38,7 +53,8 @@ public class EmployeeCheckin {
     @Override
     public String toString() {
         return "EmployeeCheckin{" +
-                "employeeCheckinComposite=" + employeeCheckinComposite +
+                "employeeId=" + employeeId +
+                ", checkinDate=" + checkinDate +
                 ", checkinTime=" + checkinTime +
                 '}';
     }

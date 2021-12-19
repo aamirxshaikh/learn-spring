@@ -1,11 +1,9 @@
 package com.demo;
 
-import javax.persistence.Embeddable;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
-@Embeddable
 public class EmployeeCheckinComposite implements Serializable {
     private int employeeId;
     private LocalDate checkinDate;
