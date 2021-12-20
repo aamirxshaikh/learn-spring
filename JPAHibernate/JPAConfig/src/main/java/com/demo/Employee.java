@@ -1,8 +1,6 @@
 package com.demo;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Employee {
@@ -13,6 +11,10 @@ public class Employee {
     private String lastName;
     private String job;
     private Double salary;
+
+    @OneToOne(mappedBy = "employee", cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY, optional = false)
+    private EmployeeAccount employeeAccount;
 
     public Employee() {
     }
@@ -64,6 +66,22 @@ public class Employee {
         this.salary = salary;
     }
 
+    public EmployeeAccount getEmployeeAccount() {
+        return employeeAccount;
+    }
+
+    public void setEmployeeAccount(EmployeeAccount employeeAccount) {
+        if (employeeAccount == null) {
+            if (this.employeeAccount != null) {
+                this.employeeAccount.setEmployee(null);
+            }
+        } else {
+            employeeAccount.setEmployee(this);
+        }
+
+        this.employeeAccount = employeeAccount;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -72,6 +90,7 @@ public class Employee {
                 ", lastName='" + lastName + '\'' +
                 ", job='" + job + '\'' +
                 ", salary=" + salary +
+                ", employeeAccount=" + employeeAccount +
                 '}';
     }
 }
