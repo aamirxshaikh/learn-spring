@@ -3,7 +3,7 @@ package com.demo;
 import javax.persistence.*;
 
 @Entity
-public class EmployeeAccount {
+public class Account {
     @Id
     private Long id;
 
@@ -14,10 +14,10 @@ public class EmployeeAccount {
     @MapsId
     private Employee employee;
 
-    public EmployeeAccount() {
+    public Account() {
     }
 
-    public EmployeeAccount(String username, String password) {
+    public Account(String username, String password) {
         this.username = username;
         this.password = password;
     }
@@ -56,11 +56,10 @@ public class EmployeeAccount {
 
     @Override
     public String toString() {
-        return "EmployeeAccount{" +
+        return "Account{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", employee=" + employee +
                 '}';
     }
 }

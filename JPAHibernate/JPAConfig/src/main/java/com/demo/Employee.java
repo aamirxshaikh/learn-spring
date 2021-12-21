@@ -6,15 +6,15 @@ import javax.persistence.*;
 public class Employee {
     @Id
     @GeneratedValue
-    private Integer id;
+    private Long id;
     private String firstName;
     private String lastName;
     private String job;
     private Double salary;
 
     @OneToOne(mappedBy = "employee", cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY, optional = false)
-    private EmployeeAccount employeeAccount;
+            fetch = FetchType.LAZY, optional = true)
+    private Account account;
 
     public Employee() {
     }
@@ -26,11 +26,11 @@ public class Employee {
         this.salary = salary;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -66,20 +66,20 @@ public class Employee {
         this.salary = salary;
     }
 
-    public EmployeeAccount getEmployeeAccount() {
-        return employeeAccount;
+    public Account getAccount() {
+        return account;
     }
 
-    public void setEmployeeAccount(EmployeeAccount employeeAccount) {
-        if (employeeAccount == null) {
-            if (this.employeeAccount != null) {
-                this.employeeAccount.setEmployee(null);
+    public void setAccount(Account account) {
+        if (account == null) {
+            if (this.account != null) {
+                this.account.setEmployee(null);
             }
         } else {
-            employeeAccount.setEmployee(this);
+            account.setEmployee(this);
         }
 
-        this.employeeAccount = employeeAccount;
+        this.account = account;
     }
 
     @Override
@@ -90,7 +90,7 @@ public class Employee {
                 ", lastName='" + lastName + '\'' +
                 ", job='" + job + '\'' +
                 ", salary=" + salary +
-                ", employeeAccount=" + employeeAccount +
+                ", account=" + account +
                 '}';
     }
 }

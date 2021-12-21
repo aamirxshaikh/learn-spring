@@ -17,18 +17,32 @@ public class App
         try {
             entityManager.getTransaction().begin();
 
+            Account account1 = new Account("xyz@test.com", "password");
+            Account account2 = new Account("lmn@test.com", "password");
+            Account account3 = new Account("pqr@test.com", "password");
+
             Employee employee1 = new Employee("xyz", "abc", "Trainee", 49999D);
             Employee employee2 = new Employee("lmn", "opq", "Trainee", 59999D);
+            Employee employee3 = new Employee("pqr", "sf", "Trainee", 59999D);
+
+            employee1.setAccount(account1);
+            employee2.setAccount(account2);
+            employee3.setAccount(account3);
 
 //            create
 
             entityManager.persist(employee1);
             entityManager.persist(employee2);
+            entityManager.persist(employee3);
+
+            entityManager.persist(account1);
+            entityManager.persist(account2);
+            entityManager.persist(account3);
 
 //            select
 
-            System.out.println("Employee 1 " + entityManager.find(Employee.class, 1));
-            System.out.println("Employee 2 " + entityManager.find(Employee.class, 2));
+            System.out.println("Employee 1 " + entityManager.find(Employee.class, 1L));
+            System.out.println("Employee 2 " + entityManager.find(Employee.class, 2L));
 
 //            select all
 
@@ -40,13 +54,21 @@ public class App
                 System.out.println(employee);
             }
 
+            List<Account> accounts = entityManager.createQuery("SELECT ea FROM Account ea").getResultList();
+
+            System.out.println("All Employee Accounts");
+
+            for (Account account : accounts) {
+                System.out.println(account);
+            }
+
 //            update
 
-            entityManager.find(Employee.class, 1).setFirstName("XYZ");
+            entityManager.find(Employee.class, 1L).setFirstName("XYZ");
 
 //            delete
 
-            entityManager.remove(entityManager.find(Employee.class, 1));
+//            entityManager.remove(entityManager.find(Employee.class, 1L));
 
             Department department1 = new Department("IT", "abc");
             Department department2 = new Department("HR", "xyz");
