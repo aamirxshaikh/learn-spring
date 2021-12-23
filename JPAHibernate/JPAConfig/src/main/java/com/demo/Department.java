@@ -1,17 +1,20 @@
 package com.demo;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer departmentId;
+
     private String name;
     private String location;
+
+    @OneToMany(mappedBy = "department", fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
+    private Set<Employee> employees;
 
     public Department() {
     }
@@ -21,12 +24,12 @@ public class Department {
         this.location = location;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getDepartmentId() {
+        return departmentId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setDepartmentId(Integer departmentId) {
+        this.departmentId = departmentId;
     }
 
     public String getName() {
@@ -43,5 +46,14 @@ public class Department {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    @Override
+    public String toString() {
+        return "Department{" +
+                "departmentId=" + departmentId +
+                ", name='" + name + '\'' +
+                ", location='" + location + '\'' +
+                '}';
     }
 }

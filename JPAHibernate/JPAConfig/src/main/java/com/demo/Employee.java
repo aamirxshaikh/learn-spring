@@ -13,8 +13,12 @@ public class Employee {
     private Double salary;
 
     @OneToOne(mappedBy = "employee", cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY, optional = true)
+            fetch = FetchType.LAZY, optional = false)
     private Account account;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "departmentId", nullable = false)
+    private Department department;
 
     public Employee() {
     }
@@ -80,6 +84,14 @@ public class Employee {
         }
 
         this.account = account;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 
     @Override
