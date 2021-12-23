@@ -28,6 +28,9 @@ public class App
             Employee employee2 = new Employee("lmn", "opq", "Trainee", 59999D);
             Employee employee3 = new Employee("pqr", "sf", "Trainee", 59999D);
 
+            Project project1 = new Project("Automation", "IT", LocalDate.of(2022, 3, 10));
+            Project project2 = new Project("ChatBot", "IT", LocalDate.of(2023, 3, 10));
+
             employee1.setAccount(account1);
             employee2.setAccount(account2);
             employee3.setAccount(account3);
@@ -36,7 +39,15 @@ public class App
             employee2.setDepartment(department2);
             employee3.setDepartment(department1);
 
+            employee1.addProject(project1);
+            employee1.addProject(project2);
+            employee2.addProject(project1);
+            employee3.addProject(project2);
+
 //            create
+
+            entityManager.persist(project1);
+            entityManager.persist(project2);
 
             entityManager.persist(department1);
             entityManager.persist(department2);
@@ -78,6 +89,14 @@ public class App
 
             for (Department department : departments) {
                 System.out.println(department);
+            }
+
+            List<Project> projects = entityManager.createQuery("SELECT p FROM Project p").getResultList();
+
+            System.out.println("All Projects");
+
+            for (Project project : projects) {
+                System.out.println(project);
             }
 
 //            update

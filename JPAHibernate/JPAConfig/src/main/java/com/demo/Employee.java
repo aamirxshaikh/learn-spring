@@ -106,6 +106,10 @@ public class Employee {
         this.department = department;
     }
 
+    public void addProject(Project project) {
+        this.projects.add(project);
+    }
+
     public Set<Project> getProjects() {
         return projects;
     }

@@ -16,12 +16,13 @@ public class Project implements Serializable {
     private LocalDate projectDeadline;
 
     @ManyToMany(mappedBy = "projects", fetch = FetchType.LAZY)
-    private Set<Employee> employeeSet;
+    private Set<Employee> employees;
 
     public Project() {
     }
 
-    public Project(Long projectId, String projectName, String projectDomain, LocalDate projectDeadline, Set<Employee> employeeSet) {
+    public Project(String projectName, String projectDomain, LocalDate projectDeadline) {
+        this.projectName = projectName;
         this.projectDomain = projectDomain;
         this.projectDeadline = projectDeadline;
     }
@@ -56,14 +57,6 @@ public class Project implements Serializable {
 
     public void setProjectDeadline(LocalDate projectDeadline) {
         this.projectDeadline = projectDeadline;
-    }
-
-    public Set<Employee> getEmployeeSet() {
-        return employeeSet;
-    }
-
-    public void setEmployeeSet(Set<Employee> employeeSet) {
-        this.employeeSet = employeeSet;
     }
 
     @Override
