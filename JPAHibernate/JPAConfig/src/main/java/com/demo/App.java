@@ -17,6 +17,9 @@ public class App
         try {
             entityManager.getTransaction().begin();
 
+            Department department1 = new Department("IT", "abc");
+            Department department2 = new Department("HR", "xyz");
+
             Account account1 = new Account("xyz@test.com", "password");
             Account account2 = new Account("lmn@test.com", "password");
             Account account3 = new Account("pqr@test.com", "password");
@@ -29,7 +32,14 @@ public class App
             employee2.setAccount(account2);
             employee3.setAccount(account3);
 
+            employee1.setDepartment(department1);
+            employee2.setDepartment(department2);
+            employee3.setDepartment(department1);
+
 //            create
+
+            entityManager.persist(department1);
+            entityManager.persist(department2);
 
             entityManager.persist(employee1);
             entityManager.persist(employee2);
@@ -62,6 +72,14 @@ public class App
                 System.out.println(account);
             }
 
+            List<Department> departments = entityManager.createQuery("SELECT d FROM Department d").getResultList();
+
+            System.out.println("All Departments");
+
+            for (Department department : departments) {
+                System.out.println(department);
+            }
+
 //            update
 
             entityManager.find(Employee.class, 1L).setFirstName("XYZ");
@@ -69,12 +87,6 @@ public class App
 //            delete
 
 //            entityManager.remove(entityManager.find(Employee.class, 1L));
-
-            Department department1 = new Department("IT", "abc");
-            Department department2 = new Department("HR", "xyz");
-
-            entityManager.persist(department1);
-            entityManager.persist(department2);
 
             EmployeeCheckin checkin1 = new EmployeeCheckin(1, LocalDate.now(), LocalTime.now());
             EmployeeCheckin checkin2 = new EmployeeCheckin(1, LocalDate.now().plusDays(1), LocalTime.now());
