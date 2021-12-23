@@ -1,6 +1,8 @@
 package com.demo;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Employee {
@@ -19,6 +21,16 @@ public class Employee {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "departmentId", nullable = false)
     private Department department;
+
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
+    @JoinTable(name = "EmployeesProjects",
+                joinColumns = {
+                    @JoinColumn(name = "employeeId", referencedColumnName = "id", nullable = false)
+                },
+                inverseJoinColumns = {
+                    @JoinColumn(name = "projectId", referencedColumnName = "projectId", nullable = false)
+                })
+    private Set<Project> projects = new HashSet<>();
 
     public Employee() {
     }
@@ -94,6 +106,14 @@ public class Employee {
         this.department = department;
     }
 
+    public Set<Project> getProjects() {
+        return projects;
+    }
+
+    public void setProjects(Set<Project> projects) {
+        this.projects = projects;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -104,6 +124,7 @@ public class Employee {
                 ", salary=" + salary +
                 ", account=" + account +
                 ", department=" + department +
+                ", projects=" + projects +
                 '}';
     }
 }
