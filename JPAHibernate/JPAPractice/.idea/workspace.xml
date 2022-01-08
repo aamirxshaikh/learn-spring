@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="de2eb040-0456-4a8c-ba4d-f2810430a48b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../JPAConfig/target/classes/com/demo/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JPAConfig/target/classes/com/demo/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JPAConfig/target/classes/com/demo/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JPAConfig/target/classes/com/demo/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JPAConfig/target/classes/com/demo/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JPAConfig/target/classes/com/demo/Department.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JPAConfig/target/classes/com/demo/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JPAConfig/target/classes/com/demo/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JPAConfig/target/classes/com/demo/EmployeeCheckin.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JPAConfig/target/classes/com/demo/EmployeeCheckin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JPAConfig/target/classes/com/demo/EmployeeCheckinComposite.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JPAConfig/target/classes/com/demo/EmployeeCheckinComposite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JPAConfig/target/classes/com/demo/Project.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JPAConfig/target/classes/com/demo/Project.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MVC/AuthCRUDMySQL/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MVC/AuthCRUDMySQL/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MVC/FormsAndFiles/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MVC/FormsAndFiles/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MVC/FormsAndFiles/target/classes/com/demo/File/File.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MVC/FormsAndFiles/target/classes/com/demo/File/FileController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MVC/FormsAndFiles/target/classes/com/demo/Registration/Registration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MVC/FormsAndFiles/target/classes/com/demo/Registration/RegistrationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MVC/HandlingReqErr/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MVC/HandlingReqErr/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MVC/HandlingReqErr/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring Data/SpringDataJDBCCrudRepository/src/main/java/com/demo/springdatajdbccrudrepository/Conference/s.sol" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="23Q4JYQkQ49J3uWI45f82pNDi0P" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JPAConfigRe" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="de2eb040-0456-4a8c-ba4d-f2810430a48b" name="Changes" comment="" />
+      <created>1641652907390</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1641652907390</updated>
+      <workItem from="1641652908522" duration="141000" />
+      <workItem from="1641653061988" duration="251000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
