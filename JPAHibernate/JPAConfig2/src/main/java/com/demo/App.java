@@ -16,15 +16,23 @@ public class App
 
         EntityManager entityManager = factory.createEntityManager();
 
-        entityManager.getTransaction().begin();
+        try {
+            entityManager.getTransaction().begin();
 
-        Car car1 = new Car(1, "BMW", "x5");
+            Car car1 = new Car(1, "BMW", "x5");
+            Car car2 = new Car();
 
-        entityManager.persist(car1);
+            car2.setId(2);
 
-        entityManager.getTransaction().commit();
+            entityManager.persist(car1);
+            entityManager.persist(car2);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            entityManager.getTransaction().commit();
 
-        entityManager.close();
-        factory.close();
+            entityManager.close();
+            factory.close();
+        }
     }
 }
