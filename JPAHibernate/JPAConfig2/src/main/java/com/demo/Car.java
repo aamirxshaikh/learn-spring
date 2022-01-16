@@ -1,13 +1,13 @@
 package com.demo;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "CarDetails")
 public class Car {
     @Id
+//    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private String model;
@@ -15,8 +15,7 @@ public class Car {
     public Car() {
     }
 
-    public Car(int id, String name, String model) {
-        this.id = id;
+    public Car(String name, String model) {
         this.name = name;
         this.model = model;
     }

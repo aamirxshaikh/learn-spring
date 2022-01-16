@@ -19,10 +19,8 @@ public class App
         try {
             entityManager.getTransaction().begin();
 
-            Car car1 = new Car(1, "BMW", "x5");
+            Car car1 = new Car("BMW", "x5");
             Car car2 = new Car();
-
-            car2.setId(2);
 
             entityManager.persist(car1);
             entityManager.persist(car2);
