@@ -3,11 +3,12 @@ package com.demo;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "CarDetails")
 public class Car {
     @Id
 //    @GeneratedValue(strategy = GenerationType.AUTO)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = "seq", sequenceName = "SEQ")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq")
     private Integer id;
     private String name;
     private String model;

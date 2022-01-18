@@ -27,8 +27,7 @@ public class App
             entityManager.persist(car2);
 
             Owner owner1 = new Owner("Aamir", new GregorianCalendar(2000, 1, 3).getTime());
-            Owner owner2 = new Owner("Aamir", new GregorianCalendar(2000, 2, 3).getTime());
-
+            Owner owner2 = new Owner("Xyz", new GregorianCalendar(2000, 2, 3).getTime());
 
             entityManager.persist(owner1);
             entityManager.persist(owner2);
