@@ -5,26 +5,8 @@ import javax.persistence.*;
 @Entity
 public class Car {
     @Id
-//    auto sequence generator
-//    @GeneratedValue(strategy = GenerationType.AUTO)
+    private CarCompositeKey carCompositeKey;
 
-//    database AUTO_INCREMENT
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-//    manual sequence generator
-//    @SequenceGenerator(name = "seq", sequenceName = "SEQ")
-//    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq")
-
-//    table generator
-    @TableGenerator(name = "generator",
-        table = "Seq",
-        pkColumnName = "gen_name",
-            pkColumnValue = "car_id",
-            valueColumnName = "gen_val",
-            allocationSize = 1
-    )
-    @GeneratedValue(strategy = GenerationType.TABLE, generator = "generator")
-    private Integer id;
     private String name;
     private String model;
     private String owner;
@@ -32,18 +14,19 @@ public class Car {
     public Car() {
     }
 
-    public Car(String name, String model, String owner) {
+    public Car(String name, String model, String owner, Float price) {
+        this.carCompositeKey = new CarCompositeKey(name, model, price);
         this.name = name;
         this.model = model;
         this.owner = owner;
     }
 
-    public Integer getId() {
-        return id;
+    public CarCompositeKey getCarCompositeKey() {
+        return carCompositeKey;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setCarCompositeKey(CarCompositeKey carCompositeKey) {
+        this.carCompositeKey = carCompositeKey;
     }
 
     public String getName() {

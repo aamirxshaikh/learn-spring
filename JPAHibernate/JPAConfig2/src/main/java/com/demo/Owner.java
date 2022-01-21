@@ -6,14 +6,7 @@ import java.util.Date;
 @Entity
 public class Owner {
     @Id
-    @TableGenerator(name = "generator",
-            table = "Seq",
-            pkColumnName = "gen_name",
-            pkColumnValue = "owner_id",
-            valueColumnName = "gen_val",
-            allocationSize = 1
-    )
-    @GeneratedValue(strategy = GenerationType.TABLE, generator = "generator")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private Date dob;

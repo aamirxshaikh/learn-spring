@@ -20,11 +20,13 @@ public class App
         try {
             entityManager.getTransaction().begin();
 
-            Car car1 = new Car("BMW", "x5", "Aamir");
-            Car car2 = new Car();
+            Car car1 = new Car("BMW", "x5", "Aamir", 59400F);
+            Car car2 = new Car("BMW", "x10", "Xyz", 79400F);
+            Car car3 = new Car("XYZ", "sx10", "Abc", 24324F);
 
             entityManager.persist(car1);
             entityManager.persist(car2);
+            entityManager.persist(car3);
 
             Owner owner1 = new Owner("Aamir", new GregorianCalendar(2000, 1, 3).getTime());
             Owner owner2 = new Owner("Xyz", new GregorianCalendar(2000, 2, 3).getTime());
