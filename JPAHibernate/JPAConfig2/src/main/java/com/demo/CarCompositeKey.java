@@ -1,10 +1,8 @@
 package com.demo;
 
-import javax.persistence.Embeddable;
 import java.io.Serializable;
 import java.util.Objects;
 
-@Embeddable
 public class CarCompositeKey implements Serializable {
     private static final long serialVersionUID = 1L;
 

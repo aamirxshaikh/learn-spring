@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 public class Car {
-    @Id
+    @EmbeddedId
     private CarCompositeKey carCompositeKey;
 
     private String name;
