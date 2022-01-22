@@ -1,11 +1,19 @@
 package com.demo;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
+@IdClass(value = CarCompositeKey.class)
 public class Car {
-    @EmbeddedId
-    private CarCompositeKey carCompositeKey;
+    @Id
+    private Integer nameHash;
+
+    @Id
+    private Integer modelHash;
+
+    @Id
+    private Float price;
 
     private String name;
     private String model;
@@ -15,18 +23,12 @@ public class Car {
     }
 
     public Car(String name, String model, String owner, Float price) {
-        this.carCompositeKey = new CarCompositeKey(name, model, price);
         this.name = name;
         this.model = model;
         this.owner = owner;
-    }
-
-    public CarCompositeKey getCarCompositeKey() {
-        return carCompositeKey;
-    }
-
-    public void setCarCompositeKey(CarCompositeKey carCompositeKey) {
-        this.carCompositeKey = carCompositeKey;
+        this.nameHash = Objects.hash(name);
+        this.modelHash = Objects.hash(model);
+        this.price = price;
     }
 
     public String getName() {
