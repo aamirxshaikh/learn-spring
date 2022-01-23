@@ -13,10 +13,16 @@ public class Car {
     private Integer modelHash;
 
     @Id
+    @Column(precision = 7, scale = 4)
     private Float price;
 
+    @Column(nullable = false, name = "car_name", columnDefinition = "VARCHAR(50)")
     private String name;
+
+    @Column(nullable = false, unique = true, name = "car_model", length = 55)
     private String model;
+
+    @Column(name = "car_owner", columnDefinition = "VARCHAR(50)")
     private String owner;
 
     public Car() {

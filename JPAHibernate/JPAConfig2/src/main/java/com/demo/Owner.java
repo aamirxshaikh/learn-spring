@@ -8,7 +8,11 @@ public class Owner {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @Column(name = "owner_name", columnDefinition = "VARCHAR(50)")
     private String name;
+
+    @Column(name = "owner_dob")
     private Date dob;
 
     public Owner() {

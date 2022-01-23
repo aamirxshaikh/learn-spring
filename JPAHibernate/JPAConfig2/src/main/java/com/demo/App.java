@@ -20,9 +20,9 @@ public class App
         try {
             entityManager.getTransaction().begin();
 
-            Car car1 = new Car("BMW", "x5", "Aamir", 59400F);
-            Car car2 = new Car("BMW", "x10", "Xyz", 79400F);
-            Car car3 = new Car("XYZ", "sx10", "Abc", 24324F);
+            Car car1 = new Car("BMW", "x5", "Aamir", 99.9999F);
+            Car car2 = new Car("BMW", "x10", "Xyz", 793F);
+            Car car3 = new Car("XYZ", "sx10", "Abc", 224.1234F);
 
             entityManager.persist(car1);
             entityManager.persist(car2);
