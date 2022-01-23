@@ -12,8 +12,16 @@ public class Owner {
     @Column(name = "owner_name", columnDefinition = "VARCHAR(50)")
     private String name;
 
-    @Column(name = "owner_dob")
+    @Basic(fetch = FetchType.LAZY)
+    @Lob
+    private String bio;
+
+    @Temporal(TemporalType.DATE)
     private Date dob;
+
+    @Basic(fetch = FetchType.LAZY)
+    @Lob
+    private byte[] image;
 
     public Owner() {
     }
@@ -39,11 +47,27 @@ public class Owner {
         this.name = name;
     }
 
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
+
     public Date getDob() {
         return dob;
     }
 
     public void setDob(Date dob) {
         this.dob = dob;
+    }
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
     }
 }

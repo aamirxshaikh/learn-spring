@@ -25,6 +25,9 @@ public class Car {
     @Column(name = "car_owner", columnDefinition = "VARCHAR(50)")
     private String owner;
 
+    @Transient
+    private boolean isAvailable;
+
     public Car() {
     }
 
@@ -59,5 +62,13 @@ public class Car {
 
     public void setOwner(String owner) {
         this.owner = owner;
+    }
+
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+
+    public void setAvailable(boolean available) {
+        isAvailable = available;
     }
 }
