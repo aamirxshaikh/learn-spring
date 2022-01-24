@@ -23,6 +23,9 @@ public class Owner {
     @Lob
     private byte[] image;
 
+    @Embedded
+    private Address address;
+
     public Owner() {
     }
 
@@ -69,5 +72,13 @@ public class Owner {
 
     public void setImage(byte[] image) {
         this.image = image;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 }
