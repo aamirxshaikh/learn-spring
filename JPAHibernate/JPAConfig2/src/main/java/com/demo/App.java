@@ -46,6 +46,19 @@ public class App
 
             entityManager.persist(owner1);
             entityManager.persist(owner2);
+
+            Driver driver1 = new Driver("John Doe");
+            Address address3 = new Address("MA", "USA");
+
+            driver1.setAddress(address3);
+
+            Driver driver2 = new Driver("Jane Doe");
+            Address address4 = new Address("MA", "USA");
+
+            driver2.setAddress(address4);
+
+            entityManager.persist(driver1);
+            entityManager.persist(driver2);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
