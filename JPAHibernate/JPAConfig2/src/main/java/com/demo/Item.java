@@ -2,16 +2,11 @@ package com.demo;
 
 import javax.persistence.*;
 
-@Entity
 public class Item {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, unique = true, length = 55)
     private String name;
 
-    @Column(precision = 7, scale = 4)
     private Float price;
 
     public Item() {
