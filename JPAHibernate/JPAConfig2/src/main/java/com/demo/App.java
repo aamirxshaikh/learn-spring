@@ -12,6 +12,7 @@ import java.util.List;
  */
 public class App 
 {
+    @SuppressWarnings("unchecked")
     public static void main( String[] args )
     {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("CarDB_Unit");
@@ -68,6 +69,26 @@ public class App
             entityManager.persist(item1);
             entityManager.persist(item2);
             entityManager.persist(item3);
+
+//            read
+
+            Item itemOne = entityManager.find(Item.class, 1);
+
+            System.out.println(itemOne);
+
+            List<Item> itemList = entityManager.createQuery("SELECT i FROM Item i").getResultList();
+
+            System.out.println(itemList);
+
+//            update
+
+            itemOne.setPrice(101.99F);
+
+            entityManager.merge(itemOne);
+
+//            delete
+
+            entityManager.remove(itemOne);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
