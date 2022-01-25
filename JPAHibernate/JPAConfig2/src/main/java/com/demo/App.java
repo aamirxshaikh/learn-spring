@@ -4,6 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 /**
  * Hello world!
@@ -59,6 +60,14 @@ public class App
 
             entityManager.persist(driver1);
             entityManager.persist(driver2);
+
+            Item item1 = new Item("abc", 10.88F);
+            Item item2 = new Item("xyz", 10.99F);
+            Item item3 = new Item("xss", 103.11F);
+
+            entityManager.persist(item1);
+            entityManager.persist(item2);
+            entityManager.persist(item3);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
