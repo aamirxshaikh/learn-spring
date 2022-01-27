@@ -21,6 +21,7 @@ public class Order implements Serializable {
     private Date orderDate;
 
     @OneToOne
+    @JoinColumn(name = "invoiceKey", referencedColumnName = "invoiceKey")
     private Invoice invoice;
 
     public Order() {

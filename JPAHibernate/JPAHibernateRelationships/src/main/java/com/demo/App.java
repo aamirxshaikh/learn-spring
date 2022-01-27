@@ -34,6 +34,14 @@ public class App
 
             entityManager.persist(invoice1);
             entityManager.persist(invoice2);
+
+            Order orderOne = entityManager.find(Order.class, 1);
+
+            System.out.println(orderOne);
+
+            Order orderTwo = entityManager.find(Order.class, 2);
+
+            System.out.println(orderTwo);
         } catch(Exception e) {
             e.printStackTrace();
         } finally {
