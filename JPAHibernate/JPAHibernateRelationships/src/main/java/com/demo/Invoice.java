@@ -9,12 +9,12 @@ public class Invoice implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private Float amount;
 
-    @OneToOne(mappedBy = "invoice")
+    @OneToOne
+    @MapsId
     private Order order;
 
     public Invoice() {
@@ -38,6 +38,14 @@ public class Invoice implements Serializable {
 
     public void setAmount(Float amount) {
         this.amount = amount;
+    }
+
+    public Order getOrder() {
+        return order;
+    }
+
+    public void setOrder(Order order) {
+        this.order = order;
     }
 
     @Override

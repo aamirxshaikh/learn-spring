@@ -20,7 +20,7 @@ public class Order implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date orderDate;
 
-    @OneToOne
+    @OneToOne(mappedBy = "order")
     private Invoice invoice;
 
     public Order() {
