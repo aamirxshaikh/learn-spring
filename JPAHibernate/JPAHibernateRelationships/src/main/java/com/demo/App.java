@@ -20,28 +20,36 @@ public class App
         try {
             entityManager.getTransaction().begin();
 
-            Invoice invoice1 = new Invoice(499.99F);
-            Invoice invoice2 = new Invoice(59.99F);
+//            Invoice invoice1 = new Invoice(499.99F);
+//            Invoice invoice2 = new Invoice(59.99F);
+//
+//            Order order1 = new Order("PS5", 1, new GregorianCalendar(2022, 1, 3).getTime());
+//            Order order2 = new Order("PS5 Controller", 1, new GregorianCalendar(2022, 1, 3).getTime());
+//
+//            order1.setInvoice(invoice1);
+//            order2.setInvoice(invoice2);
+//
+//            entityManager.persist(order1);
+//            entityManager.persist(order2);
+//
+//            entityManager.persist(invoice1);
+//            entityManager.persist(invoice2);
 
-            Order order1 = new Order("PS5", 1, new GregorianCalendar(2022, 1, 3).getTime());
-            Order order2 = new Order("PS5 Controller", 1, new GregorianCalendar(2022, 1, 3).getTime());
+//            Order orderOne = entityManager.find(Order.class, 1);
+//
+//            System.out.println(orderOne);
+//
+//            Order orderTwo = entityManager.find(Order.class, 2);
+//
+//            System.out.println(orderTwo);
 
-            order1.setInvoice(invoice1);
-            order2.setInvoice(invoice2);
+            Invoice invoiceOne = entityManager.find(Invoice.class, 1);
 
-            entityManager.persist(order1);
-            entityManager.persist(order2);
+            System.out.println(invoiceOne);
 
-            entityManager.persist(invoice1);
-            entityManager.persist(invoice2);
+            Invoice invoiceTwo = entityManager.find(Invoice.class, 2);
 
-            Order orderOne = entityManager.find(Order.class, 1);
-
-            System.out.println(orderOne);
-
-            Order orderTwo = entityManager.find(Order.class, 2);
-
-            System.out.println(orderTwo);
+            System.out.println(invoiceTwo);
         } catch(Exception e) {
             e.printStackTrace();
         } finally {

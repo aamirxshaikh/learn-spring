@@ -14,14 +14,14 @@ public class Invoice implements Serializable {
 
     private Float amount;
 
-    private Long invoiceKey;
+    @OneToOne(mappedBy = "invoice")
+    private Order order;
 
     public Invoice() {
     }
 
     public Invoice(Float amount) {
         this.amount = amount;
-        this.invoiceKey = ((Double) (Math.random() * 1000000)).longValue();
     }
 
     public Integer getId() {
@@ -40,20 +40,12 @@ public class Invoice implements Serializable {
         this.amount = amount;
     }
 
-    public long getInvoiceKey() {
-        return invoiceKey;
-    }
-
-    public void setInvoiceKey(long invoiceKey) {
-        this.invoiceKey = invoiceKey;
-    }
-
     @Override
     public String toString() {
         return "Invoice{" +
                 "id=" + id +
                 ", amount=" + amount +
-                ", invoiceKey=" + invoiceKey +
+                ", order=" + order +
                 '}';
     }
 }

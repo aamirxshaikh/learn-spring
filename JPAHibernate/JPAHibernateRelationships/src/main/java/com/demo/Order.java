@@ -21,7 +21,6 @@ public class Order implements Serializable {
     private Date orderDate;
 
     @OneToOne
-    @JoinColumn(name = "invoiceKey", referencedColumnName = "invoiceKey")
     private Invoice invoice;
 
     public Order() {
@@ -80,7 +79,6 @@ public class Order implements Serializable {
                 ", productName='" + productName + '\'' +
                 ", quantity=" + quantity +
                 ", orderDate=" + orderDate +
-                ", invoice=" + invoice +
                 '}';
     }
 }
