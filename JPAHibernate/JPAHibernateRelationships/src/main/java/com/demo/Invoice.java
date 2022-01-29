@@ -9,12 +9,12 @@ public class Invoice implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private Float amount;
 
-    @OneToOne
-    @MapsId
+    @OneToOne(mappedBy = "invoice")
     private Order order;
 
     public Invoice() {

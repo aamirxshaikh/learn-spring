@@ -25,31 +25,17 @@ public class App
 
             Order order1 = new Order("PS5", 1, new GregorianCalendar(2022, 1, 3).getTime());
             Order order2 = new Order("PS5 Controller", 1, new GregorianCalendar(2022, 1, 3).getTime());
+            Order order3 = new Order("Xbox One", 1, new GregorianCalendar(2022, 1, 3).getTime());
 
-            invoice1.setOrder(order1);
-            invoice2.setOrder(order2);
+            order1.setInvoice(invoice1);
+            order2.setInvoice(invoice2);
 
             entityManager.persist(order1);
             entityManager.persist(order2);
+            entityManager.persist(order3);
 
             entityManager.persist(invoice1);
             entityManager.persist(invoice2);
-
-//            Order orderOne = entityManager.find(Order.class, 1);
-//
-//            System.out.println(orderOne);
-//
-//            Order orderTwo = entityManager.find(Order.class, 2);
-//
-//            System.out.println(orderTwo);
-
-//            Invoice invoiceOne = entityManager.find(Invoice.class, 1);
-//
-//            System.out.println(invoiceOne);
-//
-//            Invoice invoiceTwo = entityManager.find(Invoice.class, 2);
-//
-//            System.out.println(invoiceTwo);
         } catch(Exception e) {
             e.printStackTrace();
         } finally {
