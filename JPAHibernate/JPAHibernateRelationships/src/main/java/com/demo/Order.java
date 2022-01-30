@@ -3,6 +3,7 @@ package com.demo;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "Orders")
@@ -13,10 +14,6 @@ public class Order implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String productName;
-
-    private Integer quantity;
-
     @Temporal(TemporalType.DATE)
     private Date orderDate;
 
@@ -26,12 +23,14 @@ public class Order implements Serializable {
     inverseJoinColumns = { @JoinColumn(name = "invoice_id", referencedColumnName = "id") })
     private Invoice invoice;
 
+    @OneToMany
+    private List<Product> products;
+
     public Order() {
     }
 
-    public Order(String productName, Integer quantity, Date orderDate) {
-        this.productName = productName;
-        this.quantity = quantity;
+    public Order(List<Product> products, Date orderDate) {
+        this.products = products;
         this.orderDate = orderDate;
     }
 
@@ -41,22 +40,6 @@ public class Order implements Serializable {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public Integer getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
     }
 
     public Date getOrderDate() {
@@ -79,9 +62,9 @@ public class Order implements Serializable {
     public String toString() {
         return "Order{" +
                 "id=" + id +
-                ", productName='" + productName + '\'' +
-                ", quantity=" + quantity +
                 ", orderDate=" + orderDate +
+                ", invoice=" + invoice +
+                ", products=" + products +
                 '}';
     }
 }

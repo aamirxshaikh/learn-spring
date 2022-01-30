@@ -53,7 +53,6 @@ public class Invoice implements Serializable {
         return "Invoice{" +
                 "id=" + id +
                 ", amount=" + amount +
-                ", order=" + order +
                 '}';
     }
 }
