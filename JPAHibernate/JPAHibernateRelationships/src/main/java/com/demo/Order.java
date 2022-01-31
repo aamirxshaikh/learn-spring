@@ -18,12 +18,15 @@ public class Order implements Serializable {
     private Date orderDate;
 
     @OneToOne
-    @JoinTable(name = "order_invoice",
+    @JoinTable(name = "Order_Invoice",
     joinColumns = { @JoinColumn(name = "order_id", referencedColumnName = "id") },
     inverseJoinColumns = { @JoinColumn(name = "invoice_id", referencedColumnName = "id") })
     private Invoice invoice;
 
     @OneToMany
+    @JoinTable(name = "Order_Products",
+    joinColumns = { @JoinColumn(name = "order_id", referencedColumnName = "id") },
+    inverseJoinColumns = { @JoinColumn(name = "products_id", referencedColumnName = "id") })
     private List<Product> products;
 
     public Order() {
