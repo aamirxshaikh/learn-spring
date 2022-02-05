@@ -44,15 +44,23 @@ public class App
             order1.setInvoice(invoice1);
             order2.setInvoice(invoice2);
 
-            entityManager.persist(product1);
-            entityManager.persist(product2);
-            entityManager.persist(product3);
+//            entityManager.persist(product1);
+//            entityManager.persist(product2);
+//            entityManager.persist(product3);
+//
+//            entityManager.persist(order1);
+//            entityManager.persist(order2);
+//
+//            entityManager.persist(invoice1);
+//            entityManager.persist(invoice2);
 
-            entityManager.persist(order1);
-            entityManager.persist(order2);
+            Order orderOne = entityManager.find(Order.class, 1);
 
-            entityManager.persist(invoice1);
-            entityManager.persist(invoice2);
+//            System.out.println(orderOne);
+
+            Order orderTwo = entityManager.find(Order.class, 2);
+
+//            System.out.println(orderTwo);
         } catch(Exception e) {
             e.printStackTrace();
         } finally {
