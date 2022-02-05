@@ -13,6 +13,7 @@ import java.util.List;
  */
 public class App 
 {
+    @SuppressWarnings("unchecked")
     public static void main( String[] args )
     {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("ShoppingDBUnit");
@@ -44,23 +45,27 @@ public class App
             order1.setInvoice(invoice1);
             order2.setInvoice(invoice2);
 
+//            entityManager.persist(order1);
+//            entityManager.persist(order2);
+//
 //            entityManager.persist(product1);
 //            entityManager.persist(product2);
 //            entityManager.persist(product3);
-//
-//            entityManager.persist(order1);
-//            entityManager.persist(order2);
 //
 //            entityManager.persist(invoice1);
 //            entityManager.persist(invoice2);
 
             Order orderOne = entityManager.find(Order.class, 1);
 
-//            System.out.println(orderOne);
+            System.out.println(orderOne);
 
             Order orderTwo = entityManager.find(Order.class, 2);
 
-//            System.out.println(orderTwo);
+            System.out.println(orderTwo);
+
+            List<Order> orderList = entityManager.createQuery("SELECT o FROM Order o").getResultList();
+
+            System.out.println(orderList);
         } catch(Exception e) {
             e.printStackTrace();
         } finally {
