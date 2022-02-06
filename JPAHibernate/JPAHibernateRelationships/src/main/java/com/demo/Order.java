@@ -23,16 +23,10 @@ public class Order implements Serializable {
     inverseJoinColumns = { @JoinColumn(name = "invoice_id", referencedColumnName = "id") })
     private Invoice invoice;
 
-    @OneToMany
-    @JoinColumn(name = "order_id")
-    @OrderColumn(name = "order_persistence")
-    private List<Product> products;
-
     public Order() {
     }
 
-    public Order(List<Product> products, Date orderDate) {
-        this.products = products;
+    public Order(Date orderDate) {
         this.orderDate = orderDate;
     }
 
@@ -66,7 +60,6 @@ public class Order implements Serializable {
                 "id=" + id +
                 ", orderDate=" + orderDate +
                 ", invoice=" + invoice +
-                ", products=" + products +
                 '}';
     }
 }

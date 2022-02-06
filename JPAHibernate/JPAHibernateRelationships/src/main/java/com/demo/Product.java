@@ -1,9 +1,6 @@
 package com.demo;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity(name = "Products")
@@ -18,10 +15,14 @@ public class Product implements Serializable {
 
     private Integer quantity;
 
+    @ManyToOne
+    private Order order;
+
     public Product() {
     }
 
-    public Product(String name, Integer quantity) {
+    public Product(Order order, String name, Integer quantity) {
+        this.order = order;
         this.name = name;
         this.quantity = quantity;
     }
@@ -50,12 +51,21 @@ public class Product implements Serializable {
         this.quantity = quantity;
     }
 
+    public Order getOrder() {
+        return order;
+    }
+
+    public void setOrder(Order order) {
+        this.order = order;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", quantity=" + quantity +
+                ", order=" + order +
                 '}';
     }
 }

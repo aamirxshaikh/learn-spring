@@ -13,7 +13,6 @@ import java.util.List;
  */
 public class App 
 {
-    @SuppressWarnings("unchecked")
     public static void main( String[] args )
     {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("ShoppingDBUnit");
@@ -23,21 +22,12 @@ public class App
         try {
             entityManager.getTransaction().begin();
 
-            Product product1 = new Product("PS5", 1);
-            Product product2 = new Product("PS5 Controller", 1);
+            Order order1 = new Order(new GregorianCalendar(2022, 1, 3).getTime());
+            Order order2 = new Order(new GregorianCalendar(2022, 1, 3).getTime());
 
-            Product product3 = new Product("Xbox One", 1);
-
-            List<Product> list1 = new ArrayList<>();
-            list1.add(product2);
-            list1.add(product1);
-
-            Order order1 = new Order(list1, new GregorianCalendar(2022, 1, 3).getTime());
-
-            List<Product> list2 = new ArrayList<>();
-            list2.add(product3);
-
-            Order order2 = new Order(list2, new GregorianCalendar(2022, 1, 3).getTime());
+            Product product1 = new Product(order1, "PS5", 1);
+            Product product2 = new Product(order1, "PS5 Controller", 1);
+            Product product3 = new Product(order2, "Xbox One", 1);
 
             Invoice invoice1 = new Invoice(549.99F);
             Invoice invoice2 = new Invoice(499.99F);
