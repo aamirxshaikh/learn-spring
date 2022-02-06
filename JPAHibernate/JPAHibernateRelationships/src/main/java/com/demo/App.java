@@ -3,9 +3,7 @@ package com.demo;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import java.util.ArrayList;
 import java.util.GregorianCalendar;
-import java.util.List;
 
 /**
  * Hello world!
@@ -23,7 +21,7 @@ public class App
             entityManager.getTransaction().begin();
 
             Order order1 = new Order(new GregorianCalendar(2022, 1, 3).getTime());
-            Order order2 = new Order(new GregorianCalendar(2022, 1, 3).getTime());
+            Order order2 = new Order(new GregorianCalendar(2022, 4, 3).getTime());
 
             Product product1 = new Product(order1, "PS5", 1);
             Product product2 = new Product(order1, "PS5 Controller", 1);
