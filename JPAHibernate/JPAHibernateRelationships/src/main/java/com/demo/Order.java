@@ -25,8 +25,7 @@ public class Order implements Serializable {
 
     @OneToMany
     @JoinColumn(name = "order_id")
-    @OrderBy("name ASC")
-//    @OrderBy("name DESC")
+    @OrderColumn(name = "order_persistence")
     private List<Product> products;
 
     public Order() {

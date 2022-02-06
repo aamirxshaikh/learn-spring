@@ -29,8 +29,8 @@ public class App
             Product product3 = new Product("Xbox One", 1);
 
             List<Product> list1 = new ArrayList<>();
-            list1.add(product1);
             list1.add(product2);
+            list1.add(product1);
 
             Order order1 = new Order(list1, new GregorianCalendar(2022, 1, 3).getTime());
 
@@ -45,27 +45,15 @@ public class App
             order1.setInvoice(invoice1);
             order2.setInvoice(invoice2);
 
-//            entityManager.persist(order1);
-//            entityManager.persist(order2);
-//
-//            entityManager.persist(product1);
-//            entityManager.persist(product2);
-//            entityManager.persist(product3);
-//
-//            entityManager.persist(invoice1);
-//            entityManager.persist(invoice2);
+            entityManager.persist(order1);
+            entityManager.persist(order2);
 
-            Order orderOne = entityManager.find(Order.class, 1);
+            entityManager.persist(product1);
+            entityManager.persist(product2);
+            entityManager.persist(product3);
 
-            System.out.println(orderOne);
-
-            Order orderTwo = entityManager.find(Order.class, 2);
-
-            System.out.println(orderTwo);
-
-            List<Order> orderList = entityManager.createQuery("SELECT o FROM Order o").getResultList();
-
-            System.out.println(orderList);
+            entityManager.persist(invoice1);
+            entityManager.persist(invoice2);
         } catch(Exception e) {
             e.printStackTrace();
         } finally {
