@@ -23,6 +23,9 @@ public class Order implements Serializable {
     inverseJoinColumns = { @JoinColumn(name = "invoice_id", referencedColumnName = "id") })
     private Invoice invoice;
 
+    @OneToMany(mappedBy = "order")
+    private List<Product> products;
+
     public Order() {
     }
 
@@ -52,6 +55,14 @@ public class Order implements Serializable {
 
     public void setInvoice(Invoice invoice) {
         this.invoice = invoice;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 
     @Override
