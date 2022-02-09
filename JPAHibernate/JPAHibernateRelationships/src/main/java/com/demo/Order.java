@@ -23,13 +23,15 @@ public class Order implements Serializable {
     inverseJoinColumns = { @JoinColumn(name = "invoice_id", referencedColumnName = "id") })
     private Invoice invoice;
 
-    @OneToMany(mappedBy = "order")
+    @OneToMany
+    @JoinColumn(name = "order_id")
     private List<Product> products;
 
     public Order() {
     }
 
-    public Order(Date orderDate) {
+    public Order(List<Product> products, Date orderDate) {
+        this.products = products;
         this.orderDate = orderDate;
     }
 
