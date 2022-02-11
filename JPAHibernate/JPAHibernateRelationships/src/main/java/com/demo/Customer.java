@@ -20,12 +20,16 @@ public class Customer implements Serializable {
     inverseJoinColumns = { @JoinColumn(name = "product_id", referencedColumnName = "id") })
     private List<Product> products;
 
+    @OneToMany
+    private List<Order> orders;
+
     public Customer() {
     }
 
-    public Customer(String name, List<Product> products) {
+    public Customer(String name, List<Product> products, List<Order> orders) {
         this.name = name;
         this.products = products;
+        this.orders = orders;
     }
 
     public Integer getId() {
@@ -52,12 +56,21 @@ public class Customer implements Serializable {
         this.products = products;
     }
 
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", products=" + products +
+                ", orders=" + orders +
                 '}';
     }
 }

@@ -39,11 +39,17 @@ public class App
             listTwo.add(product3);
             listTwo.add(product4);
 
-            Customer customerOne = new Customer("John", listOne);
-            Customer customerTwo = new Customer("James", listTwo);
+            Order order1 = new Order(listOne, new GregorianCalendar(2022, 1, 3).getTime());
+            Order order2 = new Order(listTwo, new GregorianCalendar(2022, 4, 3).getTime());
 
-            Order order1 = new Order(customerOne.getProducts(), new GregorianCalendar(2022, 1, 3).getTime());
-            Order order2 = new Order(customerTwo.getProducts(), new GregorianCalendar(2022, 4, 3).getTime());
+            List<Order> customerOneOrders = new ArrayList<>();
+            List<Order> customerTwoOrders = new ArrayList<>();
+
+            customerOneOrders.add(order1);
+            customerTwoOrders.add(order2);
+
+            Customer customerOne = new Customer("John", order1.getProducts(), customerOneOrders);
+            Customer customerTwo = new Customer("James", order2.getProducts(), customerTwoOrders);
 
             Invoice invoice1 = new Invoice(549.99F);
             Invoice invoice2 = new Invoice(539.99F);
