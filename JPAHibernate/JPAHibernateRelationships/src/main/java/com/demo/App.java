@@ -25,51 +25,63 @@ public class App
             Product product1 = new Product("PS5", 1);
             Product product2 = new Product("PS5 Controller", 1);
             Product product3 = new Product("Xbox One", 1);
+            Product product4 = new Product("Xbox Series X/S Controller", 1);
 
             List<Product> listOne = new ArrayList<>();
+
+            List<Product> listTwo = new ArrayList<>();
+
             listOne.add(product1);
             listOne.add(product2);
 
-            Order order1 = new Order(listOne, new GregorianCalendar(2022, 1, 3).getTime());
-
-            List<Product> listTwo = new ArrayList<>();
+            listTwo.add(product1);
+            listTwo.add(product2);
             listTwo.add(product3);
+            listTwo.add(product4);
 
-            Order order2 = new Order(listTwo, new GregorianCalendar(2022, 4, 3).getTime());
+            Customer customerOne = new Customer("John", listOne);
+            Customer customerTwo = new Customer("James", listTwo);
+
+            Order order1 = new Order(customerOne.getProducts(), new GregorianCalendar(2022, 1, 3).getTime());
+            Order order2 = new Order(customerTwo.getProducts(), new GregorianCalendar(2022, 4, 3).getTime());
 
             Invoice invoice1 = new Invoice(549.99F);
-            Invoice invoice2 = new Invoice(499.99F);
+            Invoice invoice2 = new Invoice(539.99F);
 
             order1.setInvoice(invoice1);
             order2.setInvoice(invoice2);
 
-//            entityManager.persist(order1);
-//            entityManager.persist(order2);
+            entityManager.persist(customerOne);
+            entityManager.persist(customerTwo);
+
+            entityManager.persist(product1);
+            entityManager.persist(product2);
+            entityManager.persist(product3);
+            entityManager.persist(product4);
+
+            entityManager.persist(order1);
+            entityManager.persist(order2);
+
+            entityManager.persist(invoice1);
+            entityManager.persist(invoice2);
+
+//            Product productOne = entityManager.find(Product.class, 1);
 //
-//            entityManager.persist(product1);
-//            entityManager.persist(product2);
-//            entityManager.persist(product3);
+//            System.out.println(productOne);
 //
-//            entityManager.persist(invoice1);
-//            entityManager.persist(invoice2);
-
-            Product productOne = entityManager.find(Product.class, 1);
-
-            System.out.println(productOne);
-
-            Product productThree = entityManager.find(Product.class, 3);
-
-            System.out.println(productThree);
+//            Product productThree = entityManager.find(Product.class, 3);
 //
-            Order orderOne = entityManager.find(Order.class, 1);
-
-            System.out.println(orderOne);
-            System.out.println(orderOne.getProducts());
-
-            Order orderTwo = entityManager.find(Order.class, 2);
-
-            System.out.println(orderTwo);
-            System.out.println(orderTwo.getProducts());
+//            System.out.println(productThree);
+////
+//            Order orderOne = entityManager.find(Order.class, 1);
+//
+//            System.out.println(orderOne);
+//            System.out.println(orderOne.getProducts());
+//
+//            Order orderTwo = entityManager.find(Order.class, 2);
+//
+//            System.out.println(orderTwo);
+//            System.out.println(orderTwo.getProducts());
         } catch(Exception e) {
             e.printStackTrace();
         } finally {

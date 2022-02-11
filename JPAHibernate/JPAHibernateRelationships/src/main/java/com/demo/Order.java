@@ -23,8 +23,7 @@ public class Order implements Serializable {
     inverseJoinColumns = { @JoinColumn(name = "invoice_id", referencedColumnName = "id") })
     private Invoice invoice;
 
-    @OneToMany
-    @JoinColumn(name = "order_id")
+    @ManyToMany
     private List<Product> products;
 
     public Order() {

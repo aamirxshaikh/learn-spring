@@ -2,6 +2,7 @@ package com.demo;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity(name = "Products")
 public class Product implements Serializable {
@@ -15,9 +16,11 @@ public class Product implements Serializable {
 
     private Integer quantity;
 
-    @ManyToOne
-    @JoinColumn(name = "order_id")
-    private Order order;
+    @ManyToMany(mappedBy = "products")
+    private List<Order> order;
+
+    @ManyToMany(mappedBy = "products")
+    private List<Customer> customers;
 
     public Product() {
     }
@@ -51,12 +54,20 @@ public class Product implements Serializable {
         this.quantity = quantity;
     }
 
-    public Order getOrder() {
+    public List<Order> getOrder() {
         return order;
     }
 
-    public void setOrder(Order order) {
+    public void setOrder(List<Order> order) {
         this.order = order;
+    }
+
+    public List<Customer> getCustomers() {
+        return customers;
+    }
+
+    public void setCustomers(List<Customer> customers) {
+        this.customers = customers;
     }
 
     @Override
