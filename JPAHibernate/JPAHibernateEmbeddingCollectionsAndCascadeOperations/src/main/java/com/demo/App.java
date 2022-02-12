@@ -4,7 +4,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Hello world!
@@ -21,8 +23,8 @@ public class App
         try {
             entityManager.getTransaction().begin();
 
-            List<String> courses = new ArrayList<>();
-            List<String> courses2 = new ArrayList<>();
+            Set<String> courses = new HashSet<>();
+            Set<String> courses2 = new HashSet<>();
 
             courses.add("React");
             courses.add("React");

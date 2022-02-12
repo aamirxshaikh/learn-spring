@@ -2,7 +2,7 @@ package com.demo;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
+import java.util.Set;
 
 @Entity(name = "Students")
 public class Student implements Serializable {
@@ -15,12 +15,12 @@ public class Student implements Serializable {
     private String name;
 
     @ElementCollection
-    private List<String> courses;
+    private Set<String> courses;
 
     public Student() {
     }
 
-    public Student(String name, List<String> courses) {
+    public Student(String name, Set<String> courses) {
         this.name = name;
         this.courses = courses;
     }
@@ -41,11 +41,11 @@ public class Student implements Serializable {
         this.name = name;
     }
 
-    public List<String> getCourses() {
+    public Set<String> getCourses() {
         return courses;
     }
 
-    public void setCourses(List<String> courses) {
+    public void setCourses(Set<String> courses) {
         this.courses = courses;
     }
 
