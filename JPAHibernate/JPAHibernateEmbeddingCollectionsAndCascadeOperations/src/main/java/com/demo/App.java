@@ -3,10 +3,7 @@ package com.demo;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Hello world!
@@ -23,17 +20,17 @@ public class App
         try {
             entityManager.getTransaction().begin();
 
-            Set<Course> set = new HashSet<>();
-            Set<Course> set2 = new HashSet<>();
+            Map<Integer, String> map = new HashMap<>();
+            Map<Integer, String> map2 = new HashMap<>();
 
-            set.add(new Course("React"));
-            set.add(new Course("Vue"));
+            map.put(1, "Java");
+            map.put(2, "DSA");
 
-            set2.add(new Course("Spring boot"));
-            set2.add(new Course("Spring boot microservices"));
+            map2.put(3, "React");
+            map2.put(4, "AWS");
 
-            Student student = new Student("Aamir", set);
-            Student student2 = new Student("John", set2);
+            Student student = new Student("Aamir", map);
+            Student student2 = new Student("John", map2);
 
             entityManager.persist(student);
             entityManager.persist(student2);

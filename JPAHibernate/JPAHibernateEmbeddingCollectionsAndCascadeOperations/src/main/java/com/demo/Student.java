@@ -2,7 +2,7 @@ package com.demo;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Set;
+import java.util.Map;
 
 @Entity(name = "Students")
 public class Student implements Serializable {
@@ -16,14 +16,16 @@ public class Student implements Serializable {
 
     @ElementCollection
     @CollectionTable(name = "Courses")
-    private Set<Course> courses;
+    @MapKeyColumn(name = "course_id")
+    @Column(name = "course_name")
+    private Map<Integer, String> courseMap;
 
     public Student() {
     }
 
-    public Student(String name, Set<Course> courses) {
+    public Student(String name, Map<Integer, String> courseMap) {
         this.name = name;
-        this.courses = courses;
+        this.courseMap = courseMap;
     }
 
     public Integer getId() {
@@ -42,12 +44,12 @@ public class Student implements Serializable {
         this.name = name;
     }
 
-    public Set<Course> getCourses() {
-        return courses;
+    public Map<Integer, String> getCourseMap() {
+        return courseMap;
     }
 
-    public void setCourses(Set<Course> courses) {
-        this.courses = courses;
+    public void setCourseMap(Map<Integer, String> courseMap) {
+        this.courseMap = courseMap;
     }
 
     @Override
@@ -55,7 +57,7 @@ public class Student implements Serializable {
         return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", courses=" + courses +
+                ", courseMap=" + courseMap +
                 '}';
     }
 }
