@@ -23,17 +23,17 @@ public class App
         try {
             entityManager.getTransaction().begin();
 
-            Set<String> courses = new HashSet<>();
-            Set<String> courses2 = new HashSet<>();
+            Set<Course> set = new HashSet<>();
+            Set<Course> set2 = new HashSet<>();
 
-            courses.add("React");
-            courses.add("React");
-            courses.add("Spring boot Microservices");
+            set.add(new Course("React"));
+            set.add(new Course("Vue"));
 
-            courses2.add("Spring MVC");
+            set2.add(new Course("Spring boot"));
+            set2.add(new Course("Spring boot microservices"));
 
-            Student student = new Student("Aamir", courses);
-            Student student2 = new Student("John", courses2);
+            Student student = new Student("Aamir", set);
+            Student student2 = new Student("John", set2);
 
             entityManager.persist(student);
             entityManager.persist(student2);

@@ -15,12 +15,13 @@ public class Student implements Serializable {
     private String name;
 
     @ElementCollection
-    private Set<String> courses;
+    @CollectionTable(name = "Courses")
+    private Set<Course> courses;
 
     public Student() {
     }
 
-    public Student(String name, Set<String> courses) {
+    public Student(String name, Set<Course> courses) {
         this.name = name;
         this.courses = courses;
     }
@@ -41,11 +42,11 @@ public class Student implements Serializable {
         this.name = name;
     }
 
-    public Set<String> getCourses() {
+    public Set<Course> getCourses() {
         return courses;
     }
 
-    public void setCourses(Set<String> courses) {
+    public void setCourses(Set<Course> courses) {
         this.courses = courses;
     }
 
