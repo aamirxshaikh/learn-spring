@@ -20,14 +20,14 @@ public class App
         try {
             entityManager.getTransaction().begin();
 
-            Map<Integer, String> map = new HashMap<>();
-            Map<Integer, String> map2 = new HashMap<>();
+            Map<Integer, Course> map = new HashMap<>();
+            Map<Integer, Course> map2 = new HashMap<>();
 
-            map.put(1, "Java");
-            map.put(2, "DSA");
+            map.put(1, new Course("Java", 999));
+            map.put(2, new Course("DSA", 999));
 
-            map2.put(3, "React");
-            map2.put(4, "AWS");
+            map2.put(3, new Course("React", 1999));
+            map2.put(4, new Course("AWS", 1999));
 
             Student student = new Student("Aamir", map);
             Student student2 = new Student("John", map2);

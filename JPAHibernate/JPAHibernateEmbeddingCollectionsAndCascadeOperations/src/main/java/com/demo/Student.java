@@ -17,13 +17,12 @@ public class Student implements Serializable {
     @ElementCollection
     @CollectionTable(name = "Courses")
     @MapKeyColumn(name = "course_id")
-    @Column(name = "course_name")
-    private Map<Integer, String> courseMap;
+    private Map<Integer, Course> courseMap;
 
     public Student() {
     }
 
-    public Student(String name, Map<Integer, String> courseMap) {
+    public Student(String name, Map<Integer, Course> courseMap) {
         this.name = name;
         this.courseMap = courseMap;
     }
@@ -44,11 +43,11 @@ public class Student implements Serializable {
         this.name = name;
     }
 
-    public Map<Integer, String> getCourseMap() {
+    public Map<Integer, Course> getCourseMap() {
         return courseMap;
     }
 
-    public void setCourseMap(Map<Integer, String> courseMap) {
+    public void setCourseMap(Map<Integer, Course> courseMap) {
         this.courseMap = courseMap;
     }
 
