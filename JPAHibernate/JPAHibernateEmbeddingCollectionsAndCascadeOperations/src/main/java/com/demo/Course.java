@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Objects;
 
 @Entity(name = "Courses")
 public class Course {
@@ -45,6 +46,26 @@ public class Course {
 
     public void setPrice(Integer price) {
         this.price = price;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, price);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+
+        if (! (obj instanceof Course)) {
+            return false;
+        }
+
+        Course otherCourse = (Course) obj;
+
+        return name.equals(otherCourse.name) && price.equals(otherCourse.price);
     }
 
     @Override

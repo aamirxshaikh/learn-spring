@@ -14,15 +14,16 @@ public class Student implements Serializable {
 
     private String name;
 
-    @OneToMany
+    @ElementCollection
     @CollectionTable(name = "Student_Courses")
-    @MapKeyColumn(name = "course_code")
-    private Map<Integer, Course> courseMap;
+    @MapKeyJoinColumn(name = "course_id")
+    @Column(name = "course_code")
+    private Map<Course, Integer> courseMap;
 
     public Student() {
     }
 
-    public Student(String name, Map<Integer, Course> courseMap) {
+    public Student(String name, Map<Course, Integer> courseMap) {
         this.name = name;
         this.courseMap = courseMap;
     }
@@ -43,11 +44,11 @@ public class Student implements Serializable {
         this.name = name;
     }
 
-    public Map<Integer, Course> getCourseMap() {
+    public Map<Course, Integer> getCourseMap() {
         return courseMap;
     }
 
-    public void setCourseMap(Map<Integer, Course> courseMap) {
+    public void setCourseMap(Map<Course, Integer> courseMap) {
         this.courseMap = courseMap;
     }
 
