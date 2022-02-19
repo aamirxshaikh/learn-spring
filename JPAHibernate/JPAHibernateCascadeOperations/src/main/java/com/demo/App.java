@@ -19,13 +19,13 @@ public class App
         try {
             entityManager.getTransaction().begin();
 
-            Employee aamir = new Employee("Aamir");
-            Employee john = new Employee("John");
-            Employee jane = new Employee("Jane");
-            Employee mark = new Employee("Mark");
-
-            Department it = new Department("IT");
-            Department hr = new Department("HR");
+//            Employee aamir = new Employee("Aamir");
+//            Employee john = new Employee("John");
+//            Employee jane = new Employee("Jane");
+//            Employee mark = new Employee("Mark");
+//
+//            Department it = new Department("IT");
+//            Department hr = new Department("HR");
 
 //            it.addEmployee(aamir);
 //            it.addEmployee(john);
@@ -36,7 +36,13 @@ public class App
 //            entityManager.persist(it);
 //            entityManager.persist(hr);
 
-            entityManager.remove(entityManager.find(Department.class, 1));
+            Employee jim = new Employee("Jim");
+
+            Department hr = entityManager.find(Department.class, 2);
+
+            hr.addEmployee(jim);
+
+            entityManager.merge(hr);
         } catch(Exception e) {
             e.printStackTrace();
         } finally {
