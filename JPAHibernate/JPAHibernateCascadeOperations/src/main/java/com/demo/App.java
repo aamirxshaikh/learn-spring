@@ -27,19 +27,16 @@ public class App
             Department it = new Department("IT");
             Department hr = new Department("HR");
 
-            it.addEmployee(aamir);
-            it.addEmployee(john);
+//            it.addEmployee(aamir);
+//            it.addEmployee(john);
+//
+//            hr.addEmployee(jane);
+//            hr.addEmployee(mark);
+//
+//            entityManager.persist(it);
+//            entityManager.persist(hr);
 
-            hr.addEmployee(jane);
-            hr.addEmployee(mark);
-
-            entityManager.persist(it);
-            entityManager.persist(hr);
-
-            entityManager.persist(aamir);
-            entityManager.persist(john);
-            entityManager.persist(jane);
-            entityManager.persist(mark);
+            entityManager.remove(entityManager.find(Department.class, 1));
         } catch(Exception e) {
             e.printStackTrace();
         } finally {
