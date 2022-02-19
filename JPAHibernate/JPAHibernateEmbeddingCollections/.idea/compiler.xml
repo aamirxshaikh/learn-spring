@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="JPAHibernateEmbeddingCollectionsAndCascadeOperations" />
+        <module name="JPAHibernateEmbeddingCollections" />
       </profile>
     </annotationProcessing>
   </component>
