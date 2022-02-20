@@ -32,17 +32,38 @@ public class App
 //
 //            hr.addEmployee(jane);
 //            hr.addEmployee(mark);
-//
+
+//            persist
+
 //            entityManager.persist(it);
 //            entityManager.persist(hr);
 
-            Employee jim = new Employee("Jim");
+//            remove
 
-            Department hr = entityManager.find(Department.class, 2);
+//            entityManager.remove(entityManager.find(Department.class, 1));
 
-            hr.addEmployee(jim);
+//            merge
 
-            entityManager.merge(hr);
+//            Employee jim = new Employee("Jim");
+//
+//            Department hr = entityManager.find(Department.class, 2);
+//
+//            hr.addEmployee(jim);
+//
+//            entityManager.merge(hr);
+
+//            detach
+
+            Department it = entityManager.find(Department.class, 1);
+
+            Employee aamir = entityManager.find(Employee.class, 2);
+            Employee mark = entityManager.find(Employee.class, 3);
+
+            entityManager.detach(it);
+
+            System.out.println("Is IT detached " + entityManager.contains(it));
+            System.out.println("Is aamir detached " + entityManager.contains(aamir));
+            System.out.println("Is mark detached " + entityManager.contains(mark));
         } catch(Exception e) {
             e.printStackTrace();
         } finally {
