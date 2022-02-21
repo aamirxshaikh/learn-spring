@@ -42,7 +42,8 @@ public class FullTimeEmployee extends Employee implements Serializable {
     @Override
     public String toString() {
         return "FullTimeEmployee{" +
-                "name=" + super.getName() +
+                "id=" + super.getId() +
+                ", name='" + super.getName() + '\'' +
                 ", salary=" + salary +
                 '}';
     }

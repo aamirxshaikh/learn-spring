@@ -42,7 +42,8 @@ public class ContractEmployee extends Employee implements Serializable {
     @Override
     public String toString() {
         return "ContractEmployee{" +
-                "name=" + super.getName() +
+                "id=" + super.getId() +
+                ", name='" + super.getName() + '\'' +
                 ", hourlyPay=" + hourlyPay +
                 '}';
     }
