@@ -19,38 +19,38 @@ public class App
         try {
             entityManager.getTransaction().begin();
 
-//            FullTimeEmployee aamir = new FullTimeEmployee("Aamir", 99999);
-//            FullTimeEmployee jane = new FullTimeEmployee("Jane", 88888);
+            FullTimeEmployee aamir = new FullTimeEmployee("Aamir", 99999);
+            FullTimeEmployee jane = new FullTimeEmployee("Jane", 88888);
+
+            ContractEmployee john = new ContractEmployee("John", 19999);
+            ContractEmployee jim = new ContractEmployee("Jim", 28999);
+
+            Department it = new Department("IT");
+            it.addEmployee(aamir);
+            it.addEmployee(jane);
+
+            Vendor admin = new Vendor("Admin");
+            admin.addEmployee(john);
+            admin.addEmployee(jim);
+
+            entityManager.persist(it);
+            entityManager.persist(admin);
+
+//            Vendor getAdmin = entityManager.find(Vendor.class, 1);
 //
-//            ContractEmployee john = new ContractEmployee("John", 19999);
-//            ContractEmployee jim = new ContractEmployee("Jim", 28999);
+//            System.out.println(getAdmin);
 //
-//            Department it = new Department("IT");
-//            it.addEmployee(aamir);
-//            it.addEmployee(jane);
+//            Department getIT = entityManager.find(Department.class, 1);
 //
-//            Vendor admin = new Vendor("Admin");
-//            admin.addEmployee(john);
-//            admin.addEmployee(jim);
+//            System.out.println(getIT);
 //
-//            entityManager.persist(it);
-//            entityManager.persist(admin);
-
-            Vendor getAdmin = entityManager.find(Vendor.class, 1);
-
-            System.out.println(getAdmin);
-
-            Department getIT = entityManager.find(Department.class, 1);
-
-            System.out.println(getIT);
-
-            Employee getAamir = entityManager.find(FullTimeEmployee.class, 1);
-
-            System.out.println(getAamir);
-
-            Employee getJohn = entityManager.find(ContractEmployee.class, 3);
-
-            System.out.println(getJohn);
+//            Employee getAamir = entityManager.find(FullTimeEmployee.class, 1);
+//
+//            System.out.println(getAamir);
+//
+//            Employee getJohn = entityManager.find(ContractEmployee.class, 3);
+//
+//            System.out.println(getJohn);
         } catch(Exception e) {
             e.printStackTrace();
         } finally {
