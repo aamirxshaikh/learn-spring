@@ -19,22 +19,22 @@ public class App
         try {
             entityManager.getTransaction().begin();
 
-            FullTimeEmployee aamir = new FullTimeEmployee("Aamir", 99999);
-            FullTimeEmployee jane = new FullTimeEmployee("Jane", 88888);
-
-            ContractEmployee john = new ContractEmployee("John", 19999);
-            ContractEmployee jim = new ContractEmployee("Jim", 28999);
-
-            Department it = new Department("IT");
-            it.addEmployee(aamir);
-            it.addEmployee(jane);
-
-            Vendor admin = new Vendor("Admin");
-            admin.addEmployee(john);
-            admin.addEmployee(jim);
-
-            entityManager.persist(it);
-            entityManager.persist(admin);
+//            FullTimeEmployee aamir = new FullTimeEmployee("Aamir", 99999);
+//            FullTimeEmployee jane = new FullTimeEmployee("Jane", 88888);
+//
+//            ContractEmployee john = new ContractEmployee("John", 19999);
+//            ContractEmployee jim = new ContractEmployee("Jim", 28999);
+//
+//            Department it = new Department("IT");
+//            it.addEmployee(aamir);
+//            it.addEmployee(jane);
+//
+//            Vendor admin = new Vendor("Admin");
+//            admin.addEmployee(john);
+//            admin.addEmployee(jim);
+//
+//            entityManager.persist(it);
+//            entityManager.persist(admin);
 
 //            Vendor getAdmin = entityManager.find(Vendor.class, 1);
 //
@@ -43,7 +43,7 @@ public class App
 //            Department getIT = entityManager.find(Department.class, 1);
 //
 //            System.out.println(getIT);
-//
+
 //            Employee getAamir = entityManager.find(FullTimeEmployee.class, 1);
 //
 //            System.out.println(getAamir);
@@ -51,6 +51,16 @@ public class App
 //            Employee getJohn = entityManager.find(ContractEmployee.class, 3);
 //
 //            System.out.println(getJohn);
+
+            Employee getMax = entityManager.find(Employee.class, 21);
+
+            System.out.println("Null type");
+            System.out.println(getMax);
+
+            UnknownEmployee getMark = entityManager.find(UnknownEmployee.class, 20);
+
+            System.out.println("Unknown type");
+            System.out.println(getMark);
         } catch(Exception e) {
             e.printStackTrace();
         } finally {

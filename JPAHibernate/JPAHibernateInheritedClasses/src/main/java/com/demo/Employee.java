@@ -5,6 +5,7 @@ import java.io.Serializable;
 
 @Entity(name = "Employees")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorValue("null")
 @DiscriminatorColumn(name = "employee_type", discriminatorType = DiscriminatorType.STRING)
 public class Employee implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -36,5 +37,13 @@ public class Employee implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
