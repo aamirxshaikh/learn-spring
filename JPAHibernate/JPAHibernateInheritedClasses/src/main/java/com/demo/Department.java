@@ -17,7 +17,7 @@ public class Department implements Serializable {
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "department_id")
-    private Set<FullTimeEmployee> employees;
+    private Set<Employee> employees;
 
     public Department() {
     }
@@ -42,11 +42,11 @@ public class Department implements Serializable {
         this.name = name;
     }
 
-    public Set<FullTimeEmployee> getEmployees() {
+    public Set<Employee> getEmployees() {
         return employees;
     }
 
-    public void addEmployee(FullTimeEmployee employee) {
+    public void addEmployee(Employee employee) {
         if (employees == null) {
             employees = new HashSet<>();
         }

@@ -7,15 +7,10 @@ import javax.persistence.ManyToOne;
 import java.io.Serializable;
 
 @Entity(name = "ContractEmployees")
-@DiscriminatorValue("Contract")
 public class ContractEmployee extends Employee implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private Integer hourlyPay;
-
-    @ManyToOne
-    @JoinColumn(name = "vendor_id")
-    private Vendor vendor;
 
     public ContractEmployee() {
     }
@@ -31,14 +26,6 @@ public class ContractEmployee extends Employee implements Serializable {
 
     public void setHourlyPay(Integer hourlyPay) {
         this.hourlyPay = hourlyPay;
-    }
-
-    public Vendor getVendor() {
-        return vendor;
-    }
-
-    public void setVendor(Vendor vendor) {
-        this.vendor = vendor;
     }
 
     @Override
