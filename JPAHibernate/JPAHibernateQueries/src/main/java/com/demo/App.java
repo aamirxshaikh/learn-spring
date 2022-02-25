@@ -1,9 +1,6 @@
 package com.demo;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -22,17 +19,20 @@ public class App
         try {
             entityManager.getTransaction().begin();
 
-            Query query = entityManager.createNativeQuery("SELECT * FROM Categories", Category.class);
+            Query normalJpqlQuery = entityManager.createQuery("SELECT c FROM Categories c");
+            TypedQuery<Category> typedQuery = entityManager.createQuery("SELECT c FROM Categories c", Category.class);
 
-            List<Category> categories = query.getResultList();
+            typedQuery.setFirstResult(0);
+            typedQuery.setMaxResults(3);
 
-            categories.forEach(System.out::println);
+            System.out.println(typedQuery.getFirstResult());
+            System.out.println(typedQuery.getMaxResults());
 
-            query = entityManager.createNativeQuery("SELECT * FROM Products", Product.class);
+            List<Category> normalJpqlQueryCategories = (List<Category>) normalJpqlQuery.getResultList();
+            List<Category> typedQueryCategories = typedQuery.getResultList();
 
-            List<Product> products = query.getResultList();
-
-            products.forEach(System.out::println);
+            System.out.println(normalJpqlQueryCategories);
+            System.out.println(typedQueryCategories);
         } catch(Exception e) {
             e.printStackTrace();
         } finally {
