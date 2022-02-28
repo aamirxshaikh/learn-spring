@@ -19,20 +19,23 @@ public class App
         try {
             entityManager.getTransaction().begin();
 
-            Query normalJpqlQuery = entityManager.createQuery("SELECT c FROM Categories c");
-            TypedQuery<Category> typedQuery = entityManager.createQuery("SELECT c FROM Categories c", Category.class);
+//            named parameter
 
-            typedQuery.setFirstResult(0);
-            typedQuery.setMaxResults(3);
+//            TypedQuery<Product> productTypedQuery = entityManager.createQuery("SELECT p FROM Products p WHERE p.id < :id ORDER BY p.price DESC", Product.class);
 
-            System.out.println(typedQuery.getFirstResult());
-            System.out.println(typedQuery.getMaxResults());
+            TypedQuery<Product> productTypedQuery = entityManager.createQuery("SELECT p FROM Products p WHERE p.name like :name", Product.class);
 
-            List<Category> normalJpqlQueryCategories = (List<Category>) normalJpqlQuery.getResultList();
-            List<Category> typedQueryCategories = typedQuery.getResultList();
+            productTypedQuery.setParameter("name", "Sam%");
 
-            System.out.println(normalJpqlQueryCategories);
-            System.out.println(typedQueryCategories);
+//            positional parameter
+
+//            TypedQuery<Product> productTypedQuery = entityManager.createQuery("SELECT p FROM Products p WHERE p.id = ?2", Product.class);
+//
+//            productTypedQuery.setParameter(2, 2);
+
+            List<Product> product = productTypedQuery.getResultList();
+
+            System.out.println(product);
         } catch(Exception e) {
             e.printStackTrace();
         } finally {
