@@ -18,15 +18,30 @@ public class App
         try {
             entityManager.getTransaction().begin();
 
-//            referencing foreign keys
+//            inner joins
 
-            TypedQuery<Product> productTypedQuery = entityManager.createQuery("SELECT p FROM Products p WHERE p.category.id = :category_id", Product.class);
+//            inner fetch join
 
-            productTypedQuery.setParameter("category_id", 4);
+            TypedQuery<Category> fetchJoinQuery = entityManager.createQuery("SELECT c FROM Categories c INNER JOIN FETCH c.products p WHERE c.name = :name AND p.price > :price", Category.class);
 
-            List<Product> product = productTypedQuery.getResultList();
+            fetchJoinQuery.setParameter("name", "Electronics");
+            fetchJoinQuery.setParameter("price", 35000F);
 
-            System.out.println(product);
+            List<Category> categories = fetchJoinQuery.getResultList();
+
+            System.out.println(categories);
+
+//            inner join
+
+            TypedQuery<Category> innerJoinQuery = entityManager.createQuery("SELECT c FROM Categories c INNER JOIN c.products p WHERE p.name IN (?1, ?2, ?3)", Category.class);
+
+            innerJoinQuery.setParameter(1, "Learning Java");
+            innerJoinQuery.setParameter(2, "T-shirt");
+            innerJoinQuery.setParameter(3, "iPhone 13");
+
+            categories = innerJoinQuery.getResultList();
+
+            System.out.println(categories);
         } catch(Exception e) {
             e.printStackTrace();
         } finally {
