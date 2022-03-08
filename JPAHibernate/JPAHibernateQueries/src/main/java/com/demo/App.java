@@ -1,6 +1,7 @@
 package com.demo;
 
 import javax.persistence.*;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -9,6 +10,7 @@ import java.util.List;
  */
 public class App 
 {
+    @SuppressWarnings("unchecked")
     public static void main( String[] args )
     {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("QueriesDBUnit");
@@ -18,30 +20,75 @@ public class App
         try {
             entityManager.getTransaction().begin();
 
-//            inner joins
+//          Aggregates
 
-//            inner fetch join
+//          Count of Categories
 
-            TypedQuery<Category> fetchJoinQuery = entityManager.createQuery("SELECT c FROM Categories c INNER JOIN FETCH c.products p WHERE c.name = :name AND p.price > :price", Category.class);
+            TypedQuery<Long> categoryCount = entityManager.createQuery("SELECT COUNT(c) FROM Categories c", Long.class);
 
-            fetchJoinQuery.setParameter("name", "Electronics");
-            fetchJoinQuery.setParameter("price", 35000F);
+            System.out.println("Category count");
+            System.out.println(categoryCount.getSingleResult());
 
-            List<Category> categories = fetchJoinQuery.getResultList();
+//          Products average
 
-            System.out.println(categories);
+            TypedQuery<Double> productPriceAverage = entityManager.createQuery("SELECT AVG(p.price) FROM Products p", Double.class);
 
-//            inner join
+            System.out.println("Products average");
+            System.out.println(productPriceAverage.getSingleResult());
 
-            TypedQuery<Category> innerJoinQuery = entityManager.createQuery("SELECT c FROM Categories c INNER JOIN c.products p WHERE p.name IN (?1, ?2, ?3)", Category.class);
+//          Average price for each category
 
-            innerJoinQuery.setParameter(1, "Learning Java");
-            innerJoinQuery.setParameter(2, "T-shirt");
-            innerJoinQuery.setParameter(3, "iPhone 13");
+            Query averagePriceForEachCategory = entityManager.createQuery(
+                    "SELECT c.name, AVG(p.price) FROM Categories c " +
+                            "INNER JOIN c.products p GROUP BY c.name");
 
-            categories = innerJoinQuery.getResultList();
+            List<Object[]> averagePriceForEachCategoryList = averagePriceForEachCategory.getResultList();
 
-            System.out.println(categories);
+            System.out.println("Average price for each category");
+            averagePriceForEachCategoryList.forEach(result -> System.out.println(Arrays.toString(result)));
+
+//          Maximum price for each category greater than a value
+
+            Query maxPriceForEachCategory = entityManager.createQuery(
+                    "SELECT c.name, MAX(p.price) FROM Categories c " +
+                            "INNER JOIN c.products p GROUP BY c.name " +
+                            "HAVING MAX(p.price) > ?1");
+
+            maxPriceForEachCategory.setParameter(1, 34000F);
+
+            List<Object[]> maxPriceForEachCategoryList = maxPriceForEachCategory.getResultList();
+
+            System.out.println("Maximum price for each category greater than a value");
+            maxPriceForEachCategoryList.forEach(result -> System.out.println(Arrays.toString(result)));
+
+//          Exists clause and sub query
+
+            Query existsAndSubQuery = entityManager.createQuery(
+                    "SELECT c.name, c.id FROM Categories c " +
+                            "WHERE EXISTS " +
+                            "(SELECT p FROM Products p WHERE p.price > ?1 AND p.category.id = c.id)");
+
+            existsAndSubQuery.setParameter(1, 34000F);
+
+            List<Object[]> existsAndSubQueryList = existsAndSubQuery.getResultList();
+
+            System.out.println("Exists clause and sub query");
+            existsAndSubQueryList.forEach(result -> System.out.println(Arrays.toString(result)));
+
+//          Case and statements
+
+            Query caseQuery = entityManager.createQuery(
+                    "SELECT p.name, p.price, " +
+                            "CASE p.category.id " +
+                            "WHEN 1 THEN 'Electronics' " +
+                            "WHEN 2 THEN 'Fashion' " +
+                            "ELSE p.category.name END " +
+                            "FROM Products p");
+
+            List<Object[]> caseQueryList = caseQuery.getResultList();
+
+            System.out.println("Case and statements");
+            caseQueryList.forEach(result -> System.out.println(Arrays.toString(result)));
         } catch(Exception e) {
             e.printStackTrace();
         } finally {
