@@ -47,6 +47,17 @@ public class App
             System.out.println("Average price for each category");
             averagePriceForEachCategoryList.forEach(result -> System.out.println(Arrays.toString(result)));
 
+//          Constructing objects in query (average price)
+
+            TypedQuery<CategoryAveragePrice> averagePriceForEachCategoryObject = entityManager.createQuery(
+                    "SELECT new com.demo.CategoryAveragePrice(c.name, AVG(p.price)) FROM Categories c " +
+                            "INNER JOIN c.products p GROUP BY c.name", CategoryAveragePrice.class);
+
+            List<CategoryAveragePrice> averagePriceForEachCategoryObjectList = averagePriceForEachCategoryObject.getResultList();
+
+            System.out.println("Constructing objects in query (average)");
+            averagePriceForEachCategoryObjectList.forEach(System.out::println);
+
 //          Maximum price for each category greater than a value
 
             Query maxPriceForEachCategory = entityManager.createQuery(
