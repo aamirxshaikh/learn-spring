@@ -100,6 +100,37 @@ public class App
 
             System.out.println("Case and statements");
             caseQueryList.forEach(result -> System.out.println(Arrays.toString(result)));
+
+//            update
+
+            Query updateQuery = entityManager.createQuery("UPDATE Products p SET p.name = 'iPhone 13 Pro' WHERE p.name = :name");
+
+            updateQuery.setParameter("name", "iPhone 13");
+
+            int rowsUpdated = updateQuery.executeUpdate();
+
+            System.out.println(rowsUpdated);
+
+            updateQuery = entityManager.createQuery("UPDATE Categories c SET c.name = " +
+                    "CASE " +
+                    "WHEN c.id = 3 THEN 't-shirt' " +
+                    "WHEN c.id = 2 THEN 'fashion' " +
+                    "ELSE c.name " +
+                    "END");
+
+            rowsUpdated = updateQuery.executeUpdate();
+
+            System.out.println(rowsUpdated);
+
+//            delete
+
+            Query deleteQuery = entityManager.createQuery("DELETE FROM Products p WHERE p.id > :id");
+
+            deleteQuery.setParameter("id", 1);
+
+            int rowsDeleted = deleteQuery.executeUpdate();
+
+            System.out.println(rowsDeleted);
         } catch(Exception e) {
             e.printStackTrace();
         } finally {
