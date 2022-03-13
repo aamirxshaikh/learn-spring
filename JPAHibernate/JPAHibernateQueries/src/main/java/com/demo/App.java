@@ -103,34 +103,59 @@ public class App
 
 //            update
 
-            Query updateQuery = entityManager.createQuery("UPDATE Products p SET p.name = 'iPhone 13 Pro' WHERE p.name = :name");
-
-            updateQuery.setParameter("name", "iPhone 13");
-
-            int rowsUpdated = updateQuery.executeUpdate();
-
-            System.out.println(rowsUpdated);
-
-            updateQuery = entityManager.createQuery("UPDATE Categories c SET c.name = " +
-                    "CASE " +
-                    "WHEN c.id = 3 THEN 't-shirt' " +
-                    "WHEN c.id = 2 THEN 'fashion' " +
-                    "ELSE c.name " +
-                    "END");
-
-            rowsUpdated = updateQuery.executeUpdate();
-
-            System.out.println(rowsUpdated);
+//            Query updateQuery = entityManager.createQuery("UPDATE Products p SET p.name = 'iPhone 13 Pro' WHERE p.name = :name");
+//
+//            updateQuery.setParameter("name", "iPhone 13");
+//
+//            int rowsUpdated = updateQuery.executeUpdate();
+//
+//            System.out.println(rowsUpdated);
+//
+//            updateQuery = entityManager.createQuery("UPDATE Categories c SET c.name = " +
+//                    "CASE " +
+//                    "WHEN c.id = 3 THEN 't-shirt' " +
+//                    "WHEN c.id = 2 THEN 'fashion' " +
+//                    "ELSE c.name " +
+//                    "END");
+//
+//            rowsUpdated = updateQuery.executeUpdate();
+//
+//            System.out.println(rowsUpdated);
 
 //            delete
 
-            Query deleteQuery = entityManager.createQuery("DELETE FROM Products p WHERE p.id > :id");
+//            Query deleteQuery = entityManager.createQuery("DELETE FROM Products p WHERE p.id > :id");
+//
+//            deleteQuery.setParameter("id", 1);
+//
+//            int rowsDeleted = deleteQuery.executeUpdate();
+//
+//            System.out.println(rowsDeleted);
 
-            deleteQuery.setParameter("id", 1);
+//            Named Query
 
-            int rowsDeleted = deleteQuery.executeUpdate();
+            TypedQuery<Category> namedQueryCategory = entityManager.createNamedQuery(Category.SELECT_CATEGORY, Category.class);
 
-            System.out.println(rowsDeleted);
+            namedQueryCategory.setParameter("name", "Fitness");
+
+            System.out.println("Named Query for Category");
+            System.out.println(namedQueryCategory.getResultList());
+
+            TypedQuery<Product> namedQueryProductsInCategory = entityManager.createNamedQuery(Product.SELECT_PRODUCTS_IN_CATEGORY, Product.class);
+
+            namedQueryProductsInCategory.setParameter("categoryId", 4);
+
+            System.out.println("Named Query for Products in Category");
+            System.out.println(namedQueryProductsInCategory.getResultList());
+
+            TypedQuery<Product> namedQueryProductsInPriceRange = entityManager.createNamedQuery(Product.SELECT_PRODUCTS_IN_PRICE_RANGE, Product.class);
+
+            namedQueryProductsInPriceRange.setParameter("low", 40000F);
+            namedQueryProductsInPriceRange.setParameter("high", 90000F);
+
+            System.out.println("Named Query for Products in price range");
+            System.out.println(namedQueryProductsInPriceRange.getResultList());
+
         } catch(Exception e) {
             e.printStackTrace();
         } finally {

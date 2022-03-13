@@ -6,8 +6,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity(name = "Categories")
+@NamedQuery(name = Category.SELECT_CATEGORY,
+        query = "SELECT c FROM Categories c WHERE c.name = :name")
 public class Category implements Serializable {
     private static final long serialVersionUID = 1L;
+
+    public static final String SELECT_CATEGORY = "selectCategory";
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
