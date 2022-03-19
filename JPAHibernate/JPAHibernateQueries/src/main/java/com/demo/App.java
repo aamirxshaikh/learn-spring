@@ -1,6 +1,9 @@
 package com.demo;
 
 import javax.persistence.*;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.util.Arrays;
 import java.util.List;
 
@@ -156,6 +159,20 @@ public class App
             System.out.println("Named Query for Products in price range");
             System.out.println(namedQueryProductsInPriceRange.getResultList());
 
+//            Criteria API
+
+            CriteriaBuilder builder = entityManager.getCriteriaBuilder();
+
+            CriteriaQuery<Category> categoryCriteriaQuery = builder.createQuery(Category.class);
+
+            Root<Category> categoryRoot = categoryCriteriaQuery.from(Category.class);
+
+            categoryCriteriaQuery.select(categoryRoot);
+
+            TypedQuery<Category> categoryTypedQuery = entityManager.createQuery(categoryCriteriaQuery);
+
+            System.out.println("Criteria API - Select Query");
+            System.out.println(categoryTypedQuery.getResultList());
         } catch(Exception e) {
             e.printStackTrace();
         } finally {

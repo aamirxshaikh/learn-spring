@@ -29,6 +29,8 @@ public class Product implements Serializable {
 
     private Float price;
 
+    private boolean inStock;
+
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
@@ -65,6 +67,14 @@ public class Product implements Serializable {
         this.price = price;
     }
 
+    public boolean isInStock() {
+        return inStock;
+    }
+
+    public void setInStock(boolean inStock) {
+        this.inStock = inStock;
+    }
+
     public Category getCategory() {
         return category;
     }
@@ -79,6 +89,7 @@ public class Product implements Serializable {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", price=" + price +
+                ", inStock=" + inStock +
                 '}';
     }
 }
