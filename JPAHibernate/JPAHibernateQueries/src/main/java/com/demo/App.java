@@ -3,6 +3,7 @@ package com.demo;
 import javax.persistence.*;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import java.util.Arrays;
 import java.util.List;
@@ -173,6 +174,32 @@ public class App
 
             System.out.println("Criteria API - Select Query");
             System.out.println(categoryTypedQuery.getResultList());
+
+            // Criteria API = where clause
+
+            CriteriaQuery<Product> productCriteriaQuery = builder.createQuery(Product.class);
+
+            Root<Product> productRoot = productCriteriaQuery.from(Product.class);
+
+            Predicate equalToId = builder.equal(productRoot.get("id"), 2);
+
+            productCriteriaQuery.select(productRoot)
+                    .where(equalToId.not());
+
+            TypedQuery<Product> productTypedQuery = entityManager.createQuery(productCriteriaQuery);
+
+            System.out.println("Criteria API - Where clause");
+            System.out.println(productTypedQuery.getResultList());
+
+            // Criteria API - order by clause
+
+            productCriteriaQuery.select(productRoot)
+                    .orderBy(builder.asc(productRoot.get("price")));
+
+            productTypedQuery = entityManager.createQuery(productCriteriaQuery);
+
+            System.out.println("Criteria API - order by clause");
+            System.out.println(productTypedQuery.getResultList());
         } catch(Exception e) {
             e.printStackTrace();
         } finally {
