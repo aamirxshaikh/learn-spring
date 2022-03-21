@@ -244,6 +244,22 @@ public class App
 
             System.out.println("Criteria API - returning multiple field values - group by clause");
             groupByTypedQuery.getResultList().forEach(result -> System.out.println(Arrays.toString(result)));
+
+            // persistence callbacks
+
+            Employee aamir = new Employee("Aamir");
+            Employee xyz = new Employee("Xyz");
+
+            Department tech = new Department("Tech");
+            Department hr = new Department("HR");
+
+            tech.addEmployee(aamir);
+            hr.addEmployee(xyz);
+
+            System.out.println("persistence callbacks");
+
+            entityManager.persist(tech);
+            entityManager.persist(hr);
         } catch(Exception e) {
             e.printStackTrace();
         } finally {
