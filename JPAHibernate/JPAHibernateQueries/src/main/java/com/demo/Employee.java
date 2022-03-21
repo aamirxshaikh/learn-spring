@@ -25,12 +25,17 @@ public class Employee {
 
     @PrePersist
     public void onPrePersist() {
-        System.out.println("pre persist " + name);
+        System.out.println("pre persist employee: " + name);
     }
 
     @PostPersist
     public void onPostPersist() {
-        System.out.println("post persist " + name);
+        System.out.println("post persist employee: " + name);
+    }
+
+    @PostLoad
+    public void onPostLoad() {
+        System.out.println("post load employee: " + name);
     }
 
     public Integer getId() {

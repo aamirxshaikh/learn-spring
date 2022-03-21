@@ -245,21 +245,49 @@ public class App
             System.out.println("Criteria API - returning multiple field values - group by clause");
             groupByTypedQuery.getResultList().forEach(result -> System.out.println(Arrays.toString(result)));
 
+            // callbacks
+
             // persistence callbacks
 
-            Employee aamir = new Employee("Aamir");
-            Employee xyz = new Employee("Xyz");
-
-            Department tech = new Department("Tech");
-            Department hr = new Department("HR");
-
-            tech.addEmployee(aamir);
-            hr.addEmployee(xyz);
+//            Employee aamir = new Employee("Aamir");
+//            Employee xyz = new Employee("Xyz");
+//
+//            Department tech = new Department("Tech");
+//            Department hr = new Department("HR");
+//
+//            tech.addEmployee(aamir);
+//            hr.addEmployee(xyz);
 
             System.out.println("persistence callbacks");
 
-            entityManager.persist(tech);
-            entityManager.persist(hr);
+//            entityManager.persist(tech);
+//            entityManager.persist(hr);
+
+            // load callbacks
+
+//            Department tech = entityManager.find(Department.class, 1);
+//
+//            System.out.println(tech);
+
+//            Department hr = entityManager.find(Department.class, 2);
+//
+//            System.out.println(hr);
+
+            // typed query - Department
+
+//            TypedQuery<Department> departmentTypedQuery = entityManager.createQuery("SELECT d FROM Departments d", Department.class);
+//
+//            List<Department> departmentList = departmentTypedQuery.getResultList();
+//
+//            System.out.println(departmentList);
+
+            // typed query - Employee
+
+            TypedQuery<Employee> employeeTypedQuery = entityManager.createQuery("SELECT e FROM Employees e", Employee.class);
+
+            List<Employee> employeeList = employeeTypedQuery.getResultList();
+
+            System.out.println(employeeList);
         } catch(Exception e) {
             e.printStackTrace();
         } finally {

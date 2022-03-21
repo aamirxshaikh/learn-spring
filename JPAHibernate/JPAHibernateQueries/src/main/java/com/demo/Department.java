@@ -28,12 +28,17 @@ public class Department implements Serializable {
 
     @PrePersist
     public void onPrePersist() {
-        System.out.println("pre persist " + name);
+        System.out.println("pre persist department: " + name);
     }
 
     @PostPersist
     public void onPostPersist() {
-        System.out.println("post persist " + name);
+        System.out.println("post persist department: " + name);
+    }
+
+    @PostLoad
+    public void onPostLoad() {
+        System.out.println("post load department: " + name);
     }
 
     public Integer getId() {
