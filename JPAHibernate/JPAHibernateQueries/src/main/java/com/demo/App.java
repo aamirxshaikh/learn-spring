@@ -200,6 +200,50 @@ public class App
 
             System.out.println("Criteria API - order by clause");
             System.out.println(productTypedQuery.getResultList());
+
+            // Criteria API - returning value in a single field
+
+            CriteriaQuery<String> singleFieldCriteriaQuery = builder.createQuery(String.class);
+
+            productRoot = singleFieldCriteriaQuery.from(Product.class);
+
+            singleFieldCriteriaQuery.select(productRoot.get("name"));
+
+            TypedQuery<String> singleFieldTypedQuery = entityManager.createQuery(singleFieldCriteriaQuery);
+
+            System.out.println("Criteria API - returning value in a single field");
+            singleFieldTypedQuery.getResultList().forEach(System.out::println);
+
+            // Criteria API - returning multiple field values
+
+            CriteriaQuery<Object[]> multipleFieldsCriteriaQuery = builder.createQuery(Object[].class);
+
+            productRoot = multipleFieldsCriteriaQuery.from(Product.class);
+
+//            multipleFieldsCriteriaQuery.select(builder.array(productRoot.get("name"), productRoot.get("price")));
+
+            // or
+
+            multipleFieldsCriteriaQuery.multiselect(productRoot.get("name"), productRoot.get("price"));
+
+            TypedQuery<Object[]> multipleFieldsTypedQuery = entityManager.createQuery(multipleFieldsCriteriaQuery);
+
+            System.out.println("Criteria API - returning multiple field values");
+            multipleFieldsTypedQuery.getResultList().forEach(result -> System.out.println(Arrays.toString(result)));
+
+            // Criteria API - returning multiple field values - group by clause
+
+            CriteriaQuery<Object[]> groupByCriteriaQuery = builder.createQuery(Object[].class);
+
+            productRoot = groupByCriteriaQuery.from(Product.class);
+
+            groupByCriteriaQuery.multiselect(productRoot.get("category"), builder.count(productRoot))
+                    .groupBy(productRoot.get("category"));
+
+            TypedQuery<Object[]> groupByTypedQuery = entityManager.createQuery(groupByCriteriaQuery);
+
+            System.out.println("Criteria API - returning multiple field values - group by clause");
+            groupByTypedQuery.getResultList().forEach(result -> System.out.println(Arrays.toString(result)));
         } catch(Exception e) {
             e.printStackTrace();
         } finally {
