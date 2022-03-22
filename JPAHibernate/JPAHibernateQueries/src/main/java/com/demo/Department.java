@@ -51,6 +51,16 @@ public class Department implements Serializable {
         System.out.println("post update department: " + name);
     }
 
+    @PreRemove
+    public void onPreRemove() {
+        System.out.println("pre remove department: " + name);
+    }
+
+    @PostRemove
+    public void onPostRemove() {
+        System.out.println("post remove department: " + name);
+    }
+
     public Integer getId() {
         return id;
     }

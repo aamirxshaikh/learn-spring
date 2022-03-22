@@ -305,11 +305,25 @@ public class App
 
             // updating Employee name
 
-            Employee xyz = entityManager.find(Employee.class, 2);
+//            Employee xyz = entityManager.find(Employee.class, 2);
+//
+//            xyz.setName("XYZ");
+//
+//            entityManager.merge(xyz);
 
-            xyz.setName("XYZ");
+            // remove callbacks
 
-            entityManager.merge(xyz);
+            // remove Employee
+
+//            Employee aamir = entityManager.find(Employee.class, 1);
+//
+//            entityManager.remove(aamir);
+
+            // remove Department
+
+            Department it = entityManager.find(Department.class, 1);
+
+            entityManager.remove(it);
         } catch(Exception e) {
             e.printStackTrace();
         } finally {

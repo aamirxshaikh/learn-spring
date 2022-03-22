@@ -48,6 +48,16 @@ public class Employee {
         System.out.println("post update employee: " + name);
     }
 
+    @PreRemove
+    public void onPreRemove() {
+        System.out.println("pre remove employee: " + name);
+    }
+
+    @PostRemove
+    public void onPostRemove() {
+        System.out.println("post remove employee: " + name);
+    }
+
     public Integer getId() {
         return id;
     }
