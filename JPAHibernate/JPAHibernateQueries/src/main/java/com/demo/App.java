@@ -283,11 +283,33 @@ public class App
 
             // typed query - Employee
 
-            TypedQuery<Employee> employeeTypedQuery = entityManager.createQuery("SELECT e FROM Employees e", Employee.class);
+//            TypedQuery<Employee> employeeTypedQuery = entityManager.createQuery("SELECT e FROM Employees e", Employee.class);
+//
+//            List<Employee> employeeList = employeeTypedQuery.getResultList();
+//
+//            System.out.println(employeeList);
 
-            List<Employee> employeeList = employeeTypedQuery.getResultList();
+            // update callbacks
 
-            System.out.println(employeeList);
+            // updating Department name and adding new Employee
+
+//            Department tech = entityManager.find(Department.class, 1);
+//
+//            tech.setName("Information technology");
+//
+//            Employee john = new Employee("John");
+//
+//            tech.addEmployee(john);
+//
+//            entityManager.merge(tech);
+
+            // updating Employee name
+
+            Employee xyz = entityManager.find(Employee.class, 2);
+
+            xyz.setName("XYZ");
+
+            entityManager.merge(xyz);
         } catch(Exception e) {
             e.printStackTrace();
         } finally {

@@ -41,6 +41,16 @@ public class Department implements Serializable {
         System.out.println("post load department: " + name);
     }
 
+    @PreUpdate
+    public void onPreUpdate() {
+        System.out.println("pre update department: " + name);
+    }
+
+    @PostUpdate
+    public void onPostUpdate() {
+        System.out.println("post update department: " + name);
+    }
+
     public Integer getId() {
         return id;
     }

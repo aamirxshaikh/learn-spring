@@ -38,6 +38,16 @@ public class Employee {
         System.out.println("post load employee: " + name);
     }
 
+    @PreUpdate
+    public void onPreUpdate() {
+        System.out.println("pre update employee: " + name);
+    }
+
+    @PostUpdate
+    public void onPostUpdate() {
+        System.out.println("post update employee: " + name);
+    }
+
     public Integer getId() {
         return id;
     }
