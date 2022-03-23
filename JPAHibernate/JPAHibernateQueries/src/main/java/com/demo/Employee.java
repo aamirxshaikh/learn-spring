@@ -3,6 +3,7 @@ package com.demo;
 import javax.persistence.*;
 
 @Entity(name = "Employees")
+@EntityListeners(EmployeeListener.class)
 public class Employee {
     private static final long serialVersionUID = 1L;
 
@@ -21,41 +22,6 @@ public class Employee {
 
     public Employee(String name) {
         this.name = name;
-    }
-
-    @PrePersist
-    public void onPrePersist() {
-        System.out.println("pre persist employee: " + name);
-    }
-
-    @PostPersist
-    public void onPostPersist() {
-        System.out.println("post persist employee: " + name);
-    }
-
-    @PostLoad
-    public void onPostLoad() {
-        System.out.println("post load employee: " + name);
-    }
-
-    @PreUpdate
-    public void onPreUpdate() {
-        System.out.println("pre update employee: " + name);
-    }
-
-    @PostUpdate
-    public void onPostUpdate() {
-        System.out.println("post update employee: " + name);
-    }
-
-    @PreRemove
-    public void onPreRemove() {
-        System.out.println("pre remove employee: " + name);
-    }
-
-    @PostRemove
-    public void onPostRemove() {
-        System.out.println("post remove employee: " + name);
     }
 
     public Integer getId() {
